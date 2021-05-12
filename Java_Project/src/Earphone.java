@@ -2,16 +2,15 @@
 public class Earphone extends Accessorie {
 	
 	
-	public boolean equals (Earphone otherEarphone) {
+	
+	public Earphone() {
 		
-		
-		return (brand.equalsIgnoreCase(otherEarPhone.brand) &&
-				name.equalsIgnoreCase(otherEarphone.name)&&
-				color.equals(otherEarphone.color)
-				wireless == otherEarphone.wireless);
-		
-		
+		super();
+	
 	}
+	
+	
+	
 	
 	
 }
