@@ -8,7 +8,7 @@ public class Mouse extends Accessorie {
 			
 			return (brand.equalsIgnoreCase(otherMouse.brand) &&
 					name.equalsIgnoreCase(otherMouse.name)&&
-					color.equals(otherMouse.color)
+					color.equals(otherMouse.color)&&
 					wireless == otherMouse.wireless);
 			
 			
