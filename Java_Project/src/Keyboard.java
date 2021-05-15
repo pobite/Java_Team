@@ -8,7 +8,7 @@ public class Keyboard extends Accessorie {
 			
 			return (brand.equalsIgnoreCase(otherKeyboard.brand) &&
 					name.equalsIgnoreCase(otherKeyboard.name)&&
-					color.equals(otherKeyboard.color)
+					color.equals(otherKeyboard.color)&&
 					wireless == otherKeyboard.wireless);
 			
 			
