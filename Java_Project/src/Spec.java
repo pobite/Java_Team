@@ -1,10 +1,26 @@
 public class Spec extends Gapple{
+	
+	
 	private String cpu;
 	private int ram;
 	private double display;
 	private int storage;
 	
-  //constructor
+    /* constructor */
+	
+	// default	
+	public Spec() {
+		
+		super();
+		
+		cpu = "Not cpu yet";
+		ram = 0;
+		display = 0;
+		storage = 0;
+		
+	}
+	
+	// with value
 	public Spec(String cpu, int ram, double display, int storage)
 	{
 		super();	
@@ -42,16 +58,27 @@ public class Spec extends Gapple{
 		this.storage = storage;
 	}
 	
+	
+	
+	public String toString() {
+		
+		return super.toString() + "cpu: \n" + getCpu() +
+				"ram: \n" + getRam() +
+				"display: \n" + getDisplay() +
+				"storage: \n" + getStorage();		
+		
+	}
+	
+	
 	public boolean equals (Spec otherSpec) {
-		return  (brand.equalsIgnoreCase(otherSpec.brand)) &&
-				(name.equalsIgnoreCase(otherSpec.name)) &&
-				(price == otherSpec.price) &&
-				(weight == otherSpec.weight) &&
-				(color.equals(otherSpec.color)) &&
+		
+		return  super.equals(otherSpec) &&
 				(this.cpu.equals(otherSpec.cpu)) &&
 				(this.ram == otherSpec.ram) &&
 				(this.display == otherSpec.display) &&
 				(this.storage == otherSpec.storage);
 	}
+	
+
 	
 }

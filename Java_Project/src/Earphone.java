@@ -9,8 +9,17 @@ public class Earphone extends Accessorie {
 	
 	}
 	
+	public String toString() {
+		
+		return super.toString();
+		
+	}
 	
-	
+	public boolean equals (Earphone otherEarphone) {
+		
+		return super.equls(otherEarphone);
+		
+	}
 	
 	
 }

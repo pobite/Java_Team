@@ -9,7 +9,14 @@ public class Gapple {
 	private String color;
 	
 	
+	/* add new information for storing user's info */ 
 	
+	private String userName;
+	private String userNumber;
+	
+	
+
+	/* default constructor */ 
 	public Gapple() {
 		
 		brand = "No brand yet";
@@ -21,6 +28,45 @@ public class Gapple {
 	
 	
 	
+	/* output */
+	
+	public void writeOutput() {
+		
+		System.out.println("Brand: " + brand);
+		System.out.println("Name: " + name);
+		System.out.println("Price: " + price);
+		System.out.println("Weight: " + weight);
+		System.out.println("Color: " + color);
+		
+			
+	}
+	
+	
+	public String toString() {
+		
+		
+		return  "name: \n" + getName() +
+				"user name: \n" + getUserName() +
+				"Tel: \n" + getUserNumber() +
+				"color: \n" + getColor();
+					
+	}
+			
+
+	
+	/* method for subclasses to inherit */
+	/* brand is always same, so compare only name and color */
+	
+	public boolean equls(Gapple otherGapple) {
+		
+		return this.name.equalsIgnoreCase (otherGapple.name) &&
+				this.color.equalsIgnoreCase (otherGapple.color);
+					
+	}
+	
+	
+	
+	/* getter and setter */ 
 	
 	public String getBrand() {
 		return brand;
@@ -79,24 +125,30 @@ public class Gapple {
 		color = newColor;
 	}
 
-
-	public void writeOutput() {
-		
-		System.out.println("Brand: " + brand);
-		System.out.println("Name: " + name);
-		System.out.println("Price: " + price);
-		System.out.println("Weight: " + weight);
-		System.out.println("Color: " + color);
-		
-			
+	public String getUserName() {
+		return userName;
 	}
+
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+
+
+	public String getUserNumber() {
+		return userNumber;
+	}
+
+
+
+	public void setUserNumber(String userNumber) {
+		this.userNumber = userNumber;
+	}
+
 	
-			
 
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
+	
 }

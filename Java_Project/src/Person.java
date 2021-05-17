@@ -8,6 +8,17 @@ public class Person {
 	private int number;
 	
 	
+	public Person() {
+		
+		name = "Not name yet";
+		email = "Not email yet";
+		number = 0;
+		
+		
+	}
+	
+	
+	/* getter and setter */
 	
 	public String getName() {
 		return name;
@@ -23,9 +34,11 @@ public class Person {
 	public void setEmail(String newEmail) {
 		email = newEmail;
 	}
+	
 	public int getNumber() {
 		return number;
 	}
+	
 	public void setNumber(int newnumber) {
 		number = newnumber;
 	}

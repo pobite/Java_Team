@@ -1,18 +1,24 @@
 
 public class Mouse extends Accessorie {
 	
+	public Mouse() {
+		
+		super();
+	}
 	
+	
+	public String toString() {
+		
+		return super.toString();
+		
+	}
 	
 	public boolean equals (Mouse otherMouse) {
 			
 			
-			return (brand.equalsIgnoreCase(otherMouse.brand) &&
-					name.equalsIgnoreCase(otherMouse.name)&&
-					color.equals(otherMouse.color)&&
-					wireless == otherMouse.wireless);
+			return super.equls(otherMouse);
 			
-			
-		}
+	}
 		
-	
+
 }

@@ -13,6 +13,8 @@ public class Accessorie extends Gapple {
 	}
 	
 	
+	/* getter and setter */ 
+	
 	public int getWireless() {
 		return wireless;
 	}
@@ -22,7 +24,19 @@ public class Accessorie extends Gapple {
 	}
 	
 	
-
+	public String toString() {
+		
+		return super.toString() +
+				"wireless: \n" + getWireless();
+		
+	}
+	
+	
+	public boolean equals (Accessorie otherAccessorie) {
+		
+		return  super.equals(otherAccessorie) &&
+				(this.wireless == otherAccessorie.wireless);
+	}
 	
 	
 }
