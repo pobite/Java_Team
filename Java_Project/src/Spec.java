@@ -49,6 +49,12 @@ public class Spec extends Gapple{
 		return storage;
 	}
 	
+	
+	
+	public void setStorage(int storage) {
+		this.storage = storage;
+	}
+
 	//Mutator
 	public void setSpec(String cpu, int ram, double display, int storage)
 	{

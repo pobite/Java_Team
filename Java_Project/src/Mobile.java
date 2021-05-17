@@ -8,6 +8,15 @@ public class Mobile extends Spec
 		
 	}
 	
+	/* 可记俊 措茄 积己磊 */
+	public Mobile(String newColor, int newStorage) {
+		
+		super();
+		setColor(newColor);
+		setStorage(newStorage);
+		
+		
+	}
 	
 	public String toString() {
 		
