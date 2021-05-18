@@ -13,6 +13,14 @@ public class Laptop extends Spec
 		
 	}
 	
+	public Laptop(String newColor, String newStorage) {
+		
+		super();
+		setColor(newColor);
+		setStorage(newStorage);
+		
+		
+	}
 	
 	public boolean eauqls(Laptop otherLaptop)
 	{

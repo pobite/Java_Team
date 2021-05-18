@@ -14,32 +14,26 @@ public class Main {
 		Mobile[] mobile2 = new Mobile[100];		
 		Mobile[] mobile3 = new Mobile[100];
 		
-		/* Tablet */
-		Tablet[] tablet1 = new Tablet[100];
-		Tablet[] tablet2 = new Tablet[100];
-		Tablet[] tablet3 = new Tablet[100];
-		
 		/* Lap top */
 		Laptop[] laptop1 = new Laptop[100];
 		Laptop[] laptop2 = new Laptop[100];
-		Laptop[] laptop3 = new Laptop[100];
+		
+		/* Tablet */
+		Tablet[] tablet1 = new Tablet[100];
+		Tablet[] tablet2 = new Tablet[100];
+		
 		
 		/* Keyboard */
-		Keyboard[] keyboard1 = new Keyboard[100];
-		Keyboard[] keyboard2 = new Keyboard[100];
-		Keyboard[] keyboard3 = new Keyboard[100];
+		Keyboard[] Gkeyboard = new Keyboard[100];
 
 			
 		/* Mouse */
-		Mouse[] mouse1 =  new Mouse[100];
-		Mouse[] mouse2 =  new Mouse[100];
-		Mouse[] mouse3 =  new Mouse[100];
+		Mouse[] Gmouse =  new Mouse[100];
 		
 		
 		/* Earphone */
 		Earphone[] earphone1 = new Earphone[100];
 		Earphone[] earphone2 = new Earphone[100];
-		Earphone[] earphone3 = new Earphone[100];
 		
  	
 		
@@ -165,70 +159,347 @@ public class Main {
 		
 		/* User, type == 1 */
 		
-
-		Mobile gmobile1 = new Mobile();
-		
-		
-		gmobile.setName("아이폰8");
-		gmobile.setCpu("쿼드코어");
-		
-		세팅을 할 수 있겠죠
-		
-		
-		
-		Mobile gmobile2 = new Mobile();
-		
-		gmobile.setName("아이폰11");
-		gmmobile.setCpu("쿼드코어");
-		Mobile gmobile3 = new Mobile();
-		
-		gmobile.setName("아이폰미니");
-		gmmobile.setCpu("쿼드코어");
-		
-		
-		3개 세팅 끝
 		
 		
 		
 		
 		
-		1. 5개 품목이 뜸
+		//To show User, Set All Value 
+		
+		//GPhone
+		Mobile gMobile1 = new Mobile();
+		
+		gMobile1.setName("GPhone13 cutie");
+		gMobile1.setPrice(899.99);
+		gMobile1.setWeight(130.77);		
+		gMobile1.setSpec("G13 Bionic","4GB RAM" ,"LED 4.7-inch display");
+		gMobile1.setColor("Space Gray, Emerald Green, Bad Red");
+		gMobile1.setStorage("64GB, 256GB");
 		
 		
-		System.out.println("1. 핸드폰 2. 노트북 ..");
 		
-		1. 핸드폰, 2번 랩탐 ..
+		Mobile gMobile2 = new Mobile();
 		
-		핸드폰 눌렀을 때
-		
-		2~3개의 핸드폰에 관한 것을 세팅을 해놓아야 함.
-		
-		
-		System.out.println("1." + gmobile);	// 아이폰8
-		System.out.println("2." + gmobile2);
-		System.out.println("3" + gmobile3);
+		gMobile2.setName("GPhone13 standard");
+		gMobile2.setPrice(1299.99);
+		gMobile2.setWeight(162.77);		
+		gMobile2.setSpec("G13X Bionic", "8GB RAM", "OLED 6.1-inch display");
+		gMobile2.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown");	
+		gMobile1.setStorage("64GB, 256GB, 512GB");
 		
 		
-		int i= 0;
 		
-		/* 컬러, 용량, 이름, 번호 */
-		if ( 1번을 골랐따 ) {	// 1번은 아이폰8
-			
-			
-			System.out.println("옵션을 선택하세요.");
-			
-			System.out.println("컬러입력: ");
-			Stirng c1 = keyboard.nextLine();
+		Mobile gMobile3 = new Mobile();
+		
+		gMobile2.setName("GPhone13 Maximus");
+		gMobile2.setPrice(2599.99);
+		gMobile2.setWeight(238.77);		
+		gMobile2.setSpec("G14 Bionic","32GB RAM" ,"OLED 6.7-inch display");
+		gMobile2.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown, Sunny Gold");
+		gMobile1.setStorage("64GB, 256GB, 512GB, 3TB");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//GBook
+		Laptop gLaptop1 = new Laptop();
+		
+		gLaptop1.setName("GacBook Air");
+		gLaptop1.setPrice(2499.99);
+		gLaptop1.setWeight(130.77);		
+		gLaptop1.setSpec("Gapple G1 Chip","16GB DDR4" ,"OLED 13.3-inch display");
+		gLaptop1.setColor("Space Gray, Silver, Sunny Gold");
+		gLaptop1.setStorage("256GB, 512GB, 1TB, 2TB");
+		
+		Laptop gLaptop2 = new Laptop();
+		
+		gLaptop2.setName("GacBook Pro");
+		gLaptop2.setPrice(7700.00);
+		gLaptop2.setWeight(130.77);		
+		gLaptop2.setSpec("Gapple G1X Chip","64GB DDR4" ,"OLED 16-inch display");
+		gLaptop2.setColor("Space Gray, Silver, Sunny Gold");
+		gLaptop2.setStorage("1TB, 4TB, 8TB");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//GPad
+		Tablet gTablet1 = new Tablet();
+		
+		gTablet1.setName("GPad Air");
+		gTablet1.setPrice(1099.99);
+		gTablet1.setWeight(457.77);		
+		gTablet1.setSpec("G13X Bionic","4GB RAM" ,"OLED 10-inch display");
+		gTablet1.setColor("Space Gray, Silver, Woody Brown");
+		gTablet1.setStorage("128GB, 256GB");
+		
+		Tablet gTablet2 = new Tablet();
+		
+		gTablet2.setName("GPad Pro");
+		gTablet2.setPrice(2799.99);
+		gTablet2.setWeight(647.77);		
+		gTablet2.setSpec("Gapple G1 Chip","8GB RAM" ,"OLED 11-inch display");
+		gTablet2.setColor("Space Gray, Silver, Woody Brown");
+		gTablet2.setStorage("1TB, 2TB");
+		
+		
+		
+		
+		//Set Accessories
+		
+		
+		//GKeyboard
+		Keyboard gKeyboard = new Keyboard();
+		
+		gKeyboard.setName("G-Keyboard");
+		gKeyboard.setPrice(59.99);
+		gKeyboard.setWeight(1100.00);		
+		gKeyboard.setColor("White");
+		
+		
+		
+		
+		
+		//GMouse
+		Mouse gMouse = new Mouse();
+		
+		gMouse.setName("G-Mouse");
+		gMouse.setPrice(29.99);
+		gMouse.setWeight(85.00);		
+		gMouse.setColor("White");
+		
+		
+		
+		
+		
+		
+		//GEarphone
+		Earphone gEarphone1 = new Earphone();
+		
+		gMouse.setName("GPod");
+		gMouse.setPrice(156.75);
+		gMouse.setWeight(35.55);		
+		gMouse.setColor("White");
+		
+		Earphone gEarphone2 = new Earphone();
+		
+		gMouse.setName("GPod Pro");
+		gMouse.setPrice(320.25);
+		gMouse.setWeight(37.77);		
+		gMouse.setColor("White");
+		
+		//End Set
+		
+		
+		
+		
+		
+		
+		
+		//menu choice
+		
+		int choiceMenu = keyboard.nextInt();
+		int choiceDevice = keyboard.nextInt();
+		String colorChoice;
+		String storageChoice;
+		System.out.println("1.GPhone 2.GBook 3.GPad"+"\n"
+				+ "4.Keyboard 5.Mouse 6.Gpod");
+		
+		int count = 0;
+		
+		switch(choiceMenu)
+		{
+			case 1:
+				System.out.println("1." + gMobile1);	
+				System.out.println("2." + gMobile2);
+				System.out.println("3" + gMobile3);
 				
-			System.out.println("용량: ");
-			Stirng c2 = keyboard.nextInt();
-			
-			
-			mobile1[i] = new Mobile3("아이폰8", "쿼드코어", "ram내용", "display", c1, c2);
-			i++;
-			
 				
-		}
+				
+				
+				
+				//고른 기종따라 다르게 출력 
+				//Mobile
+				if ( choiceDevice == 1 ) {	
+//method로 만들기						
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+					
+					mobile1[count] = new Mobile(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				if ( choiceDevice == 2 ) {
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+											
+					mobile2[count] = new Mobile(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				if ( choiceDevice == 3 ) {
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+											
+					mobile3[count] = new Mobile(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				
+				
+				
+				break;
+				
+				
+				
+				
+				
+				//Laptop
+			case 2:
+				System.out.println("1." + gLaptop1);	
+				System.out.println("2." + gLaptop2);
+				
+				
+				
+				
+				if ( choiceDevice == 1 ) {
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+											
+					laptop1[count] = new Laptop(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				if ( choiceDevice == 2 ) {
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+											
+					laptop2[count] = new Laptop(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				
+				
+				
+				break;
+				
+				
+				
+				//Tablet
+			case 3:
+				System.out.println("1." + gTablet1);	
+				System.out.println("2." + gTablet2);
+				
+				
+				
+				
+				
+				if ( choiceDevice == 1 ) {
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+											
+					tablet1[count] = new Tablet(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				if ( choiceDevice == 2 ) {
+					System.out.println("Select Option");
+					System.out.println("Choose your color: ");
+					colorChoice = keyboard.nextLine();
+					System.out.println("Choose your capacity: ");
+					storageChoice = keyboard.nextLine();
+											
+					tablet2[count] = new Tablet(colorChoice, storageChoice);
+					count++;		
+				}
+				
+				
+				
+				break;
+				
+				
+				
+				
+				//Keyboard
+			case 4:
+				
+				System.out.println(gKeyboard);	
+				System.out.println("Select Option");						
+				Gkeyboard[count] = new Keyboard();
+				count++;
+				
+				break;
+				
+				
+				
+				
+//option in accessories??
+				
+				//Mouse
+			case 5:
+				System.out.println(gMouse);	
+				System.out.println("Select Option");					
+				Gmouse[count] = new Mouse();
+				count++;
+				
+				
+				break;
+				
+				
+				//Earphone
+			case 6:
+				System.out.println("1." + gEarphone1);	
+				System.out.println("2." + gEarphone2);
+				
+				
+				if ( choiceDevice == 1 ) {
+					System.out.println("Select Option");						
+					earphone1[count] = new Earphone();
+					count++;		
+				}
+				
+				if ( choiceDevice == 2 ) {
+					System.out.println("Select Option");
+					earphone2[count] = new Earphone();
+					count++;		
+				}
+				
+				
+				break;
+				
+			default:
+				System.out.println("Choose between menu");
+				break;
+				
+		}//end switch
 		
 		
 		
@@ -237,12 +508,6 @@ public class Main {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-	}
+	}//end main
 
-}
+}//end Main
