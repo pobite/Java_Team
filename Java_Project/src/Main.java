@@ -45,8 +45,7 @@ public class Main {
 		
 		
 		
-		
-		
+	
 		
 		Mobile m1 = new Mobile();
 		Mobile m2 = new Mobile();
