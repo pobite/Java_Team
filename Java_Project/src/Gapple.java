@@ -1,6 +1,10 @@
 
 public class Gapple {
-
+	
+	
+	
+	public static int total_order = 0;
+	public static int stock = 50;	// default stock
 		
 	private String brand;
 	private String name;

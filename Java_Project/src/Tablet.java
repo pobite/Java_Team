@@ -1,12 +1,12 @@
 public class Tablet extends Spec
 {	
 	
-	public static int tablet_num; 
-	
+
 	public Tablet() {
 	
 		super();
-		tablet_num++;
+		total_order++;
+		stock--;
 		
 	}
 	

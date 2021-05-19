@@ -37,13 +37,28 @@ public class Main {
 		
  	
 		
-		/* seller who manages this program, set default pw as 1234 */
+		/* seller who manages this program, set default PW as 1234 */
 		Seller master = new Seller(1234);
 		
 	
 		
 		
 		
+		
+		
+		
+		
+		Mobile m1 = new Mobile();
+		Mobile m2 = new Mobile();
+		Mobile m3 = new Mobile();
+		Mobile m4 = new Mobile();
+		
+		
+		System.out.println(m1.total_order);
+		System.out.println(m2.total_order);
+		System.out.println(Mobile.total_order);
+		System.out.println(Laptop.total_order);
+		System.out.println(Earphone.total_order);
 		
 		///////////////////////////////////
 		///////////* Program */////////////
@@ -126,6 +141,13 @@ public class Main {
 		if (selType == 2) {
 			
 			
+			// 원래 품목, 전체주문 수량, 수량(추가하는 거)로 이뤄져 있었으나
+			// 재고 수량도 추가함
+			
+			System.out.println("================ Stock =================");
+			System.out.println("   Product   /  Total order quantity   /  Stock  /  Quantity  ");
+			
+			
 			
 		}
 		
@@ -144,6 +166,8 @@ public class Main {
 			
 			/* new PW setting */
 			master.setAccessKey(newPW);
+			
+			System.out.println("You enter: " + master.getAccessKey() );
 			
 			
 		}
@@ -201,10 +225,7 @@ public class Main {
 		
 		
 		
-		
-		
-		
-		
+	
 		
 		//GBook
 		Laptop gLaptop1 = new Laptop();
@@ -224,8 +245,6 @@ public class Main {
 		gLaptop2.setSpec("Gapple G1X Chip","64GB DDR4" ,"OLED 16-inch display");
 		gLaptop2.setColor("Space Gray, Silver, Sunny Gold");
 		gLaptop2.setStorage("1TB, 4TB, 8TB");
-		
-		
 		
 		
 		
