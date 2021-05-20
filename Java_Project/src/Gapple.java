@@ -1,6 +1,15 @@
+interface Bluetooth
+{
+	public static final int bth = 0;
+   public void methodBluetooth();
+}
 
-public class Gapple {
-	
+public class Gapple implements Bluetooth{
+	public void methodBluetooth()
+	   {
+		System.out.println("Bluetooth Demo");
+	   }
+	  
 	
 	
 	public static int total_order = 0;
@@ -37,10 +46,10 @@ public class Gapple {
 	public void writeOutput() {
 		
 		System.out.println("Brand: " + brand);
-		System.out.println("Name: " + name);
-		System.out.println("Price: " + price);
-		System.out.println("Weight: " + weight);
-		System.out.println("Color: " + color);
+		System.out.println("\n"+"Name: " + name);
+		System.out.println("\n"+"Price: " + price);
+		System.out.println("\n"+"Weight: " + weight);
+		System.out.println("\n"+"Color: " + color);
 		
 			
 	}
@@ -49,10 +58,10 @@ public class Gapple {
 	public String toString() {
 		
 		
-		return  "name: \n" + getName() +
-				"user name: \n" + getUserName() +
-				"Tel: \n" + getUserNumber() +
-				"color: \n" + getColor();
+		return  "\n" + "user name: " + getUserName() + "\n"+
+				"Tel: " + getUserNumber() + "\n============"+ "\n"+
+				"Device name: " + getName() + "\n"+
+				"color: " + getColor() +"\n"; 
 					
 	}
 			

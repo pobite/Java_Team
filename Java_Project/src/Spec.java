@@ -67,10 +67,10 @@ public class Spec extends Gapple{
 	
 	public String toString() {
 		
-		return super.toString() + "cpu: \n" + getCpu() +
-				"ram: \n" + getRam() +
-				"display: \n" + getDisplay() +
-				"storage: \n" + getStorage();		
+		return super.toString() + "cpu: " + getCpu() + "\n" +
+				"ram: " + getRam() + "\n" +
+				"display: " + getDisplay() + "\n" +
+				"storage: " + getStorage() + "\n";		
 		
 	}
 	

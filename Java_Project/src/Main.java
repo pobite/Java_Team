@@ -1,7 +1,54 @@
 import java.util.Scanner;
 
 public class Main {
-
+	private String colorChoice;
+	private String storageChoice;
+	
+	public String getColorChoice() {
+		return colorChoice;
+	}
+	public void setColorChoice(String colorChoice) {
+		this.colorChoice = colorChoice;
+	}
+	public String getStorageChoice() {
+		return storageChoice;
+	}
+	public void setStorageChoice(String storageChoice) {
+		this.storageChoice = storageChoice;
+	}
+	
+	
+	 public void options() {
+		Scanner keyboard1 = new Scanner(System.in);
+		System.out.println("Select Option");
+		System.out.println("Choose your color: (string)");
+		this.colorChoice = keyboard1.nextLine();
+		System.out.println("Choose your capacity: (string) ");
+		this.storageChoice = keyboard1.nextLine();
+		keyboard1.close();
+	 }
+	 
+	 
+	 
+	 
+	 static int countMobile1;
+	 static int countMobile2;
+	 static int countMobile3;
+	 
+	 static int countLaptop1;
+	 static int countLaptop2;
+	 
+	 static int countTablet1;
+	 static int countTablet2;
+	 
+	 static int countKeyboard;
+	 
+	 static int countMouse;
+	 
+	 static int countEarphone1;
+	 static int countEarphone2;
+	 
+	 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -50,14 +97,48 @@ public class Main {
 		Mobile m1 = new Mobile();
 		Mobile m2 = new Mobile();
 		Mobile m3 = new Mobile();
-		Mobile m4 = new Mobile();
 		
+		Laptop l1 = new Laptop();
+		Laptop l2 = new Laptop();
 		
+		Tablet t1 = new Tablet();
+		Tablet t2 = new Tablet();
+		
+		Keyboard k1 = new Keyboard();
+		
+		Mouse mse1 = new Mouse();
+		
+		Earphone e1 = new Earphone();
+		Earphone e2 = new Earphone();
+		
+		/*
+		// modify needed
+		 
 		System.out.println(m1.total_order);
 		System.out.println(m2.total_order);
+		System.out.println(m3.total_order);
+		
+		System.out.println(l1.total_order);
+		System.out.println(l2.total_order);
+		
+		System.out.println(t1.total_order);
+		System.out.println(t2.total_order);
+		
+		System.out.println(k1.total_order);
+		
+		System.out.println(mse1.total_order);
+		
+		System.out.println(e1.total_order);
+		System.out.println(e2.total_order);
+		
+		
 		System.out.println(Mobile.total_order);
 		System.out.println(Laptop.total_order);
+		System.out.println(Tablet.total_order);
+		System.out.println(Keyboard.total_order);
+		System.out.println(Mouse.total_order);
 		System.out.println(Earphone.total_order);
+		*/
 		
 		///////////////////////////////////
 		///////////* Program */////////////
@@ -75,7 +156,8 @@ public class Main {
 		int type = keyboard.nextInt();
 		
 		
-		
+		if(type==2)
+		{
 		
 		/////////////////////////////////////////////
 		/////////////////* Seller *////////////////////
@@ -173,7 +255,7 @@ public class Main {
 		
 		
 		
-		
+		}//if type==2 ends
 		
 		/////////////////////////////////////////////
 		/////////////////* User *////////////////////
@@ -184,6 +266,16 @@ public class Main {
 		
 		
 		
+		if(type == 1)
+		{
+			
+			keyboard.nextLine();
+			
+		System.out.println("Type your Name: ");
+		String userName = keyboard.nextLine();
+		
+		System.out.println("Type your TEL: ");
+		String userTel = keyboard.nextLine();
 		
 		
 		
@@ -191,6 +283,11 @@ public class Main {
 		
 		//GPhone
 		Mobile gMobile1 = new Mobile();
+//////////////////////////////////////////////////////////////test		
+		gMobile1.setUserName(userName);
+		gMobile1.setUserNumber(userTel);
+//////////////////////////////////////////////////////////////////
+		
 		
 		gMobile1.setName("GPhone13 cutie");
 		gMobile1.setPrice(899.99);
@@ -203,6 +300,9 @@ public class Main {
 		
 		Mobile gMobile2 = new Mobile();
 		
+		gMobile2.setUserName(userName);
+		gMobile2.setUserNumber(userTel);
+		
 		gMobile2.setName("GPhone13 standard");
 		gMobile2.setPrice(1299.99);
 		gMobile2.setWeight(162.77);		
@@ -214,12 +314,15 @@ public class Main {
 		
 		Mobile gMobile3 = new Mobile();
 		
-		gMobile2.setName("GPhone13 Maximus");
-		gMobile2.setPrice(2599.99);
-		gMobile2.setWeight(238.77);		
-		gMobile2.setSpec("G14 Bionic","32GB RAM" ,"OLED 6.7-inch display");
-		gMobile2.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown, Sunny Gold");
-		gMobile1.setStorage("64GB, 256GB, 512GB, 3TB");
+		gMobile3.setUserName(userName);
+		gMobile3.setUserNumber(userTel);
+		
+		gMobile3.setName("GPhone13 Maximus");
+		gMobile3.setPrice(2599.99);
+		gMobile3.setWeight(238.77);		
+		gMobile3.setSpec("G14 Bionic","32GB RAM" ,"OLED 6.7-inch display");
+		gMobile3.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown, Sunny Gold");
+		gMobile3.setStorage("64GB, 256GB, 512GB, 3TB");
 		
 		
 		
@@ -304,44 +407,52 @@ public class Main {
 		//GEarphone
 		Earphone gEarphone1 = new Earphone();
 		
-		gMouse.setName("GPod");
-		gMouse.setPrice(156.75);
-		gMouse.setWeight(35.55);		
-		gMouse.setColor("White");
+		gEarphone1.setName("GPod");
+		gEarphone1.setPrice(156.75);
+		gEarphone1.setWeight(35.55);		
+		gEarphone1.setColor("White");
 		
 		Earphone gEarphone2 = new Earphone();
 		
-		gMouse.setName("GPod Pro");
-		gMouse.setPrice(320.25);
-		gMouse.setWeight(37.77);		
-		gMouse.setColor("White");
+		gEarphone2.setName("GPod Pro");
+		gEarphone2.setPrice(320.25);
+		gEarphone2.setWeight(37.77);		
+		gEarphone2.setColor("White");
 		
 		//End Set
 		
 		
 		
+		int choiceMenu;
+		int choiceDevice;
+		Main myOption = new Main();
+	
 		
-		
-		
+		while(true)
+		{
+			
+			
+			
 		
 		//menu choice
 		
-		int choiceMenu = keyboard.nextInt();
-		int choiceDevice = keyboard.nextInt();
-		String colorChoice;
-		String storageChoice;
-		System.out.println("1.GPhone 2.GBook 3.GPad"+"\n"
-				+ "4.Keyboard 5.Mouse 6.Gpod");
 		
-		int count = 0;
+		System.out.println("1.GPhone 2.GBook 3.GPad"+"\n"
+				+ "4.Keyboard 5.Mouse 6.Gpod"+"\n"+"\n");
+		choiceMenu = keyboard.nextInt();
+		keyboard.nextLine();
+		
+		
 		
 		switch(choiceMenu)
 		{
 			case 1:
 				System.out.println("1." + gMobile1);	
 				System.out.println("2." + gMobile2);
-				System.out.println("3" + gMobile3);
-				
+				System.out.println("3." + gMobile3);
+				System.out.println("Choose Device: ");
+				choiceDevice = keyboard.nextInt();
+				keyboard.nextLine();
 				
 				
 				
@@ -350,36 +461,24 @@ public class Main {
 				//Mobile
 				if ( choiceDevice == 1 ) {	
 //method로 만들기						
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 					
-					mobile1[count] = new Mobile(colorChoice, storageChoice);
-					count++;		
+					mobile1[countMobile1] = new Mobile(myOption.getColorChoice(), myOption.getStorageChoice());
+					countMobile1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 											
-					mobile2[count] = new Mobile(colorChoice, storageChoice);
-					count++;		
+					mobile2[countMobile2] = new Mobile(myOption.getColorChoice(), myOption.getStorageChoice());
+					countMobile2++;		
 				}
 				
 				if ( choiceDevice == 3 ) {
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 											
-					mobile3[count] = new Mobile(colorChoice, storageChoice);
-					count++;		
+					mobile3[countMobile3] = new Mobile(myOption.getColorChoice(), myOption.getStorageChoice());
+					countMobile3++;		
 				}
 				
 				
@@ -395,30 +494,22 @@ public class Main {
 			case 2:
 				System.out.println("1." + gLaptop1);	
 				System.out.println("2." + gLaptop2);
-				
+				choiceDevice = keyboard.nextInt();
 				
 				
 				
 				if ( choiceDevice == 1 ) {
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 											
-					laptop1[count] = new Laptop(colorChoice, storageChoice);
-					count++;		
+					laptop1[countLaptop1] = new Laptop(myOption.getColorChoice(), myOption.getStorageChoice());
+					countLaptop1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 											
-					laptop2[count] = new Laptop(colorChoice, storageChoice);
-					count++;		
+					laptop2[countLaptop2] = new Laptop(myOption.getColorChoice(), myOption.getStorageChoice());
+					countLaptop2++;		
 				}
 				
 				
@@ -432,31 +523,19 @@ public class Main {
 			case 3:
 				System.out.println("1." + gTablet1);	
 				System.out.println("2." + gTablet2);
-				
-				
-				
-				
-				
+				choiceDevice = keyboard.nextInt();
 				if ( choiceDevice == 1 ) {
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 											
-					tablet1[count] = new Tablet(colorChoice, storageChoice);
-					count++;		
+					tablet1[countTablet1] = new Tablet(myOption.getColorChoice(), myOption.getStorageChoice());
+					countTablet1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
-					System.out.println("Select Option");
-					System.out.println("Choose your color: ");
-					colorChoice = keyboard.nextLine();
-					System.out.println("Choose your capacity: ");
-					storageChoice = keyboard.nextLine();
+					myOption.options();
 											
-					tablet2[count] = new Tablet(colorChoice, storageChoice);
-					count++;		
+					tablet2[countTablet2] = new Tablet(myOption.getColorChoice(), myOption.getStorageChoice());
+					countTablet2++;		
 				}
 				
 				
@@ -470,23 +549,24 @@ public class Main {
 			case 4:
 				
 				System.out.println(gKeyboard);	
-				System.out.println("Select Option");						
-				Gkeyboard[count] = new Keyboard();
-				count++;
+				System.out.println("Select Option");	
+				
+				Gkeyboard[countKeyboard] = new Keyboard();
+				countKeyboard++;
 				
 				break;
 				
 				
 				
-				
-//option in accessories??
+	
 				
 				//Mouse
 			case 5:
 				System.out.println(gMouse);	
-				System.out.println("Select Option");					
-				Gmouse[count] = new Mouse();
-				count++;
+				System.out.println("Select Option");
+				
+				Gmouse[countMouse] = new Mouse();
+				countMouse++;
 				
 				
 				break;
@@ -494,22 +574,36 @@ public class Main {
 				
 				//Earphone
 			case 6:
+				
+				
+				//GOAL: 'wireless' access and set by option
+				/////////////////////////////////////////////////
+				Earphone obj = new Earphone();
+				obj.methodBluetooth();
+				/////////////////////////////////////////////////
+				
+				
+				
+				
+				
+				
+				
+				
 				System.out.println("1." + gEarphone1);	
 				System.out.println("2." + gEarphone2);
-				
+				choiceDevice = keyboard.nextInt();
 				
 				if ( choiceDevice == 1 ) {
 					System.out.println("Select Option");						
-					earphone1[count] = new Earphone();
-					count++;		
+					earphone1[countEarphone1] = new Earphone();
+					countEarphone1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
 					System.out.println("Select Option");
-					earphone2[count] = new Earphone();
-					count++;		
+					earphone2[countEarphone2] = new Earphone();
+					countEarphone2++;		
 				}
-				
 				
 				break;
 				
@@ -518,14 +612,11 @@ public class Main {
 				break;
 				
 		}//end switch
+			
+	}//end while
 		
-		
-		
-		
-		
-		
-		
-		
+	}//end if type ==1
+	
 	}//end main
 
 }//end Main

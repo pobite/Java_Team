@@ -3,7 +3,7 @@ public class Accessorie extends Gapple {
 	
 	
 	private int wireless;
-
+	
 	
 	public Accessorie() {
 		
