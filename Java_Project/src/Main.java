@@ -1,7 +1,31 @@
 import java.util.Scanner;
 import java.io.*;
 
+
+
 public class Main {
+	
+	
+	
+	 static String userName;
+	 static String userTel;
+	 
+	 static Mobile gMobile1 = new Mobile();
+	 static Mobile gMobile2 = new Mobile();
+	 static Mobile gMobile3 = new Mobile();
+	 
+	 static Laptop gLaptop1 = new Laptop();
+	 static Laptop gLaptop2 = new Laptop();
+	 
+	 static Tablet gTablet1 = new Tablet();
+	 static Tablet gTablet2 = new Tablet();
+	 
+	 static Keyboard gKeyboard = new Keyboard();
+	 static Mouse gMouse = new Mouse();
+	 
+	 static Earphone gEarphone1 = new Earphone();
+	 static Earphone gEarphone2 = new Earphone();
+	
 	
 	
 	private static String colorChoice;
@@ -79,6 +103,137 @@ public class Main {
 	 
 	 
 	 
+	
+	 
+	 
+	 public static void setItem() {
+		 
+		 
+			//To show User, Set All Value 
+			
+			//GPhone
+			
+			gMobile1.setUserName(userName);
+			gMobile1.setUserNumber(userTel);
+
+			
+			gMobile1.setName("GPhone13 cutie");
+			gMobile1.setPrice(899.99);
+			gMobile1.setWeight(130.77);		
+			gMobile1.setSpec("G13 Bionic","4GB RAM" ,"LED 4.7-inch display");
+			gMobile1.setColor("Space Gray, Emerald Green, Bad Red");
+			gMobile1.setStorage("64GB, 256GB");
+			
+			
+			
+			
+			
+			gMobile2.setUserName(userName);
+			gMobile2.setUserNumber(userTel);
+			
+			gMobile2.setName("GPhone13 standard");
+			gMobile2.setPrice(1299.99);
+			gMobile2.setWeight(162.77);		
+			gMobile2.setSpec("G13X Bionic", "8GB RAM", "OLED 6.1-inch display");
+			gMobile2.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown");	
+			gMobile1.setStorage("64GB, 256GB, 512GB");
+			
+			
+			
+			gMobile3.setUserName(userName);
+			gMobile3.setUserNumber(userTel);
+			
+			gMobile3.setName("GPhone13 Maximus");
+			gMobile3.setPrice(2599.99);
+			gMobile3.setWeight(238.77);		
+			gMobile3.setSpec("G14 Bionic","32GB RAM" ,"OLED 6.7-inch display");
+			gMobile3.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown, Sunny Gold");
+			gMobile3.setStorage("64GB, 256GB, 512GB, 3TB");
+			
+			
+
+			//GBook
+			
+			gLaptop1.setName("GacBook Air");
+			gLaptop1.setPrice(2499.99);
+			gLaptop1.setWeight(130.77);		
+			gLaptop1.setSpec("Gapple G1 Chip","16GB DDR4" ,"OLED 13.3-inch display");
+			gLaptop1.setColor("Space Gray, Silver, Sunny Gold");
+			gLaptop1.setStorage("256GB, 512GB, 1TB, 2TB");
+			
+			
+			gLaptop2.setName("GacBook Pro");
+			gLaptop2.setPrice(7700.00);
+			gLaptop2.setWeight(130.77);		
+			gLaptop2.setSpec("Gapple G1X Chip","64GB DDR4" ,"OLED 16-inch display");
+			gLaptop2.setColor("Space Gray, Silver, Sunny Gold");
+			gLaptop2.setStorage("1TB, 4TB, 8TB");
+			
+			
+
+			//GPad
+			
+			
+			gTablet1.setName("GPad Air");
+			gTablet1.setPrice(1099.99);
+			gTablet1.setWeight(457.77);		
+			gTablet1.setSpec("G13X Bionic","4GB RAM" ,"OLED 10-inch display");
+			gTablet1.setColor("Space Gray, Silver, Woody Brown");
+			gTablet1.setStorage("128GB, 256GB");
+			
+			
+			
+			gTablet2.setName("GPad Pro");
+			gTablet2.setPrice(2799.99);
+			gTablet2.setWeight(647.77);		
+			gTablet2.setSpec("Gapple G1 Chip","8GB RAM" ,"OLED 11-inch display");
+			gTablet2.setColor("Space Gray, Silver, Woody Brown");
+			gTablet2.setStorage("1TB, 2TB");
+			
+			
+		
+			//Set Accessories
+			
+			
+			//GKeyboard
+			
+			
+			gKeyboard.setName("G-Keyboard");
+			gKeyboard.setPrice(59.99);
+			gKeyboard.setWeight(1100.00);		
+			gKeyboard.setColor("White");
+			
+			
+		
+			
+			//GMouse
+			
+			
+			gMouse.setName("G-Mouse");
+			gMouse.setPrice(29.99);
+			gMouse.setWeight(85.00);		
+			gMouse.setColor("White");
+		
+			
+			//GEarphone\
+			
+			
+			gEarphone1.setName("GPod");
+			gEarphone1.setPrice(156.75);
+			gEarphone1.setWeight(35.55);		
+			gEarphone1.setColor("White");
+			
+			
+			gEarphone2.setName("GPod Pro");
+			gEarphone2.setPrice(320.25);
+			gEarphone2.setWeight(37.77);		
+			gEarphone2.setColor("White");
+		 
+	 }
+	 
+	 
+	 
+	 
 	public static void main(String[] args) {		
 		
 		/* Maximum is 100 */
@@ -115,9 +270,7 @@ public class Main {
 		Seller master = new Seller(1234);
 		
 	
-		
-		
-		
+
 		
 		Mobile m1 = new Mobile();
 		Mobile m2 = new Mobile();
@@ -294,153 +447,16 @@ public class Main {
 			keyboard.nextLine();
 			
 		System.out.println("Type your Name: ");
-		String userName = keyboard.nextLine();
+		userName = keyboard.nextLine();
 		
 		System.out.println("Type your TEL: ");
-		String userTel = keyboard.nextLine();
+		userTel = keyboard.nextLine();
 		
 		
-		
-		//To show User, Set All Value 
-		
-		//GPhone
-		Mobile gMobile1 = new Mobile();
-//////////////////////////////////////////////////////////////test		
-		gMobile1.setUserName(userName);
-		gMobile1.setUserNumber(userTel);
-//////////////////////////////////////////////////////////////////
+		setItem();
 		
 		
-		gMobile1.setName("GPhone13 cutie");
-		gMobile1.setPrice(899.99);
-		gMobile1.setWeight(130.77);		
-		gMobile1.setSpec("G13 Bionic","4GB RAM" ,"LED 4.7-inch display");
-		gMobile1.setColor("Space Gray, Emerald Green, Bad Red");
-		gMobile1.setStorage("64GB, 256GB");
-		
-		
-		
-		Mobile gMobile2 = new Mobile();
-		
-		gMobile2.setUserName(userName);
-		gMobile2.setUserNumber(userTel);
-		
-		gMobile2.setName("GPhone13 standard");
-		gMobile2.setPrice(1299.99);
-		gMobile2.setWeight(162.77);		
-		gMobile2.setSpec("G13X Bionic", "8GB RAM", "OLED 6.1-inch display");
-		gMobile2.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown");	
-		gMobile1.setStorage("64GB, 256GB, 512GB");
-		
-		
-		
-		Mobile gMobile3 = new Mobile();
-		
-		gMobile3.setUserName(userName);
-		gMobile3.setUserNumber(userTel);
-		
-		gMobile3.setName("GPhone13 Maximus");
-		gMobile3.setPrice(2599.99);
-		gMobile3.setWeight(238.77);		
-		gMobile3.setSpec("G14 Bionic","32GB RAM" ,"OLED 6.7-inch display");
-		gMobile3.setColor("Space Gray, Emerald Green, Bad Red, Woody Brown, Sunny Gold");
-		gMobile3.setStorage("64GB, 256GB, 512GB, 3TB");
-		
-		
-		
-		
-	
-		
-		//GBook
-		Laptop gLaptop1 = new Laptop();
-		
-		gLaptop1.setName("GacBook Air");
-		gLaptop1.setPrice(2499.99);
-		gLaptop1.setWeight(130.77);		
-		gLaptop1.setSpec("Gapple G1 Chip","16GB DDR4" ,"OLED 13.3-inch display");
-		gLaptop1.setColor("Space Gray, Silver, Sunny Gold");
-		gLaptop1.setStorage("256GB, 512GB, 1TB, 2TB");
-		
-		Laptop gLaptop2 = new Laptop();
-		
-		gLaptop2.setName("GacBook Pro");
-		gLaptop2.setPrice(7700.00);
-		gLaptop2.setWeight(130.77);		
-		gLaptop2.setSpec("Gapple G1X Chip","64GB DDR4" ,"OLED 16-inch display");
-		gLaptop2.setColor("Space Gray, Silver, Sunny Gold");
-		gLaptop2.setStorage("1TB, 4TB, 8TB");
-		
-		
-		
-		
-		
-		
-		
-		//GPad
-		Tablet gTablet1 = new Tablet();
-		
-		gTablet1.setName("GPad Air");
-		gTablet1.setPrice(1099.99);
-		gTablet1.setWeight(457.77);		
-		gTablet1.setSpec("G13X Bionic","4GB RAM" ,"OLED 10-inch display");
-		gTablet1.setColor("Space Gray, Silver, Woody Brown");
-		gTablet1.setStorage("128GB, 256GB");
-		
-		Tablet gTablet2 = new Tablet();
-		
-		gTablet2.setName("GPad Pro");
-		gTablet2.setPrice(2799.99);
-		gTablet2.setWeight(647.77);		
-		gTablet2.setSpec("Gapple G1 Chip","8GB RAM" ,"OLED 11-inch display");
-		gTablet2.setColor("Space Gray, Silver, Woody Brown");
-		gTablet2.setStorage("1TB, 2TB");
-		
-		
-		
-		
-		//Set Accessories
-		
-		
-		//GKeyboard
-		Keyboard gKeyboard = new Keyboard();
-		
-		gKeyboard.setName("G-Keyboard");
-		gKeyboard.setPrice(59.99);
-		gKeyboard.setWeight(1100.00);		
-		gKeyboard.setColor("White");
-		
-		
-		
-		
-		
-		//GMouse
-		Mouse gMouse = new Mouse();
-		
-		gMouse.setName("G-Mouse");
-		gMouse.setPrice(29.99);
-		gMouse.setWeight(85.00);		
-		gMouse.setColor("White");
-		
-		
-		
-		
-		
-		
-		//GEarphone
-		Earphone gEarphone1 = new Earphone();
-		
-		gEarphone1.setName("GPod");
-		gEarphone1.setPrice(156.75);
-		gEarphone1.setWeight(35.55);		
-		gEarphone1.setColor("White");
-		
-		Earphone gEarphone2 = new Earphone();
-		
-		gEarphone2.setName("GPod Pro");
-		gEarphone2.setPrice(320.25);
-		gEarphone2.setWeight(37.77);		
-		gEarphone2.setColor("White");
-		
+
 		//End Set
 		
 		
@@ -482,7 +498,7 @@ public class Main {
 				//고른 기종따라 다르게 출력 
 				//Mobile
 				if ( choiceDevice == 1 ) {	
-//method로 만들기						
+					//method로 만들기						
 					options();
 					
 					mobile1[countMobile1] = new Mobile(getColorChoice(), getStorageChoice());
@@ -510,8 +526,7 @@ public class Main {
 				
 				
 				
-				
-				
+		
 				//Laptop
 			case 2:
 				System.out.println("1." + gLaptop1);	
@@ -543,6 +558,7 @@ public class Main {
 				
 				//Tablet
 			case 3:
+				
 				System.out.println("1." + gTablet1);	
 				System.out.println("2." + gTablet2);
 				choiceDevice = keyboard.nextInt();
@@ -607,10 +623,7 @@ public class Main {
 				
 				
 				
-				
-				
-				
-				
+	
 				System.out.println("1." + gEarphone1);	
 				System.out.println("2." + gEarphone2);
 				choiceDevice = keyboard.nextInt();
@@ -632,6 +645,7 @@ public class Main {
 			default:
 				System.out.println("Choose between menu");
 				break;
+				
 				
 		}//end switch
 			
