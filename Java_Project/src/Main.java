@@ -1,30 +1,33 @@
 import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-	private String colorChoice;
-	private String storageChoice;
 	
-	public String getColorChoice() {
+	
+	private static String colorChoice;
+	private static String storageChoice;
+	
+	public static String getColorChoice() {
 		return colorChoice;
 	}
-	public void setColorChoice(String colorChoice) {
-		this.colorChoice = colorChoice;
+	public static void setColorChoice(String colorChoice) {
+		colorChoice = colorChoice;
 	}
-	public String getStorageChoice() {
+	public static String getStorageChoice() {
 		return storageChoice;
 	}
-	public void setStorageChoice(String storageChoice) {
-		this.storageChoice = storageChoice;
+	public static void setStorageChoice(String storageChoice) {
+		storageChoice = storageChoice;
 	}
 	
 	
-	 public void options() {
+	 public static void options() {
 		Scanner keyboard1 = new Scanner(System.in);
 		System.out.println("Select Option");
 		System.out.println("Choose your color: (string)");
-		this.colorChoice = keyboard1.nextLine();
+		colorChoice = keyboard1.nextLine();
 		System.out.println("Choose your capacity: (string) ");
-		this.storageChoice = keyboard1.nextLine();
+		storageChoice = keyboard1.nextLine();
 		keyboard1.close();
 	 }
 	 
@@ -49,9 +52,34 @@ public class Main {
 	 static int countEarphone2;
 	 
 	 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	 
+	 public static void printOrder() {
+		 
+		 
+		 System.out.println("=============================== Gapple order list ================================");
+			System.out.println("   Product    /    Name   /    TEL    /    Color   /    Storage    /    Date   /");
+		 
+	 }
+	 
+	 
+	 public static void printInventory() {
+		 
+		 
+		 
+		// 원래 품목, 전체주문 수량, 수량(추가하는 거)로 이뤄져 있었으나
+					// 재고 수량도 추가함
+					
+		System.out.println("================ Stock =================");
+		System.out.println("   Product   /  Total order quantity   /  Stock  ");
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
+	public static void main(String[] args) {		
 		
 		/* Maximum is 100 */
 		
@@ -82,7 +110,6 @@ public class Main {
 		Earphone[] earphone1 = new Earphone[100];
 		Earphone[] earphone2 = new Earphone[100];
 		
- 	
 		
 		/* seller who manages this program, set default PW as 1234 */
 		Seller master = new Seller(1234);
@@ -91,8 +118,6 @@ public class Main {
 		
 		
 		
-		
-	
 		
 		Mobile m1 = new Mobile();
 		Mobile m2 = new Mobile();
@@ -110,6 +135,7 @@ public class Main {
 		
 		Earphone e1 = new Earphone();
 		Earphone e2 = new Earphone();
+		
 		
 		/*
 		// modify needed
@@ -152,6 +178,9 @@ public class Main {
 		
 		System.out.println("Select the type.");
 		System.out.println("1. User. 2. Seller: ");
+		
+		
+		/* it's for user or seller */
 		
 		int type = keyboard.nextInt();
 		
@@ -205,30 +234,23 @@ public class Main {
 		if (selType == 1) {
 			
 			
-			System.out.println("=============================== Gapple order list ================================");
-			System.out.println("   Product    /    Name   /    TEL    /    Color   /    Storage    /    Date   /");
+			/* function call for order list */
+			
+			printOrder();
 			
 			
-			
-			
-			
-			
-			
-			
+				
 		}
 		
 		/* 재고관리 selType == 2 */
 		
 		if (selType == 2) {
 			
-			
-			// 원래 품목, 전체주문 수량, 수량(추가하는 거)로 이뤄져 있었으나
-			// 재고 수량도 추가함
-			
-			System.out.println("================ Stock =================");
-			System.out.println("   Product   /  Total order quantity   /  Stock  /  Quantity  ");
-			
-			
+		
+			/* function call for inventory control */
+	
+			printInventory();
+				
 			
 		}
 		
@@ -425,7 +447,7 @@ public class Main {
 		
 		int choiceMenu;
 		int choiceDevice;
-		Main myOption = new Main();
+		//Main  = new Main();
 	
 		
 		while(true)
@@ -461,23 +483,23 @@ public class Main {
 				//Mobile
 				if ( choiceDevice == 1 ) {	
 //method로 만들기						
-					myOption.options();
+					options();
 					
-					mobile1[countMobile1] = new Mobile(myOption.getColorChoice(), myOption.getStorageChoice());
+					mobile1[countMobile1] = new Mobile(getColorChoice(), getStorageChoice());
 					countMobile1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
-					myOption.options();
+					options();
 											
-					mobile2[countMobile2] = new Mobile(myOption.getColorChoice(), myOption.getStorageChoice());
+					mobile2[countMobile2] = new Mobile(getColorChoice(), getStorageChoice());
 					countMobile2++;		
 				}
 				
 				if ( choiceDevice == 3 ) {
-					myOption.options();
+					options();
 											
-					mobile3[countMobile3] = new Mobile(myOption.getColorChoice(), myOption.getStorageChoice());
+					mobile3[countMobile3] = new Mobile(getColorChoice(), getStorageChoice());
 					countMobile3++;		
 				}
 				
@@ -499,16 +521,16 @@ public class Main {
 				
 				
 				if ( choiceDevice == 1 ) {
-					myOption.options();
+					options();
 											
-					laptop1[countLaptop1] = new Laptop(myOption.getColorChoice(), myOption.getStorageChoice());
+					laptop1[countLaptop1] = new Laptop(getColorChoice(), getStorageChoice());
 					countLaptop1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
-					myOption.options();
+					options();
 											
-					laptop2[countLaptop2] = new Laptop(myOption.getColorChoice(), myOption.getStorageChoice());
+					laptop2[countLaptop2] = new Laptop(getColorChoice(), getStorageChoice());
 					countLaptop2++;		
 				}
 				
@@ -525,16 +547,16 @@ public class Main {
 				System.out.println("2." + gTablet2);
 				choiceDevice = keyboard.nextInt();
 				if ( choiceDevice == 1 ) {
-					myOption.options();
+					options();
 											
-					tablet1[countTablet1] = new Tablet(myOption.getColorChoice(), myOption.getStorageChoice());
+					tablet1[countTablet1] = new Tablet(getColorChoice(), getStorageChoice());
 					countTablet1++;		
 				}
 				
 				if ( choiceDevice == 2 ) {
-					myOption.options();
+					options();
 											
-					tablet2[countTablet2] = new Tablet(myOption.getColorChoice(), myOption.getStorageChoice());
+					tablet2[countTablet2] = new Tablet(getColorChoice(), getStorageChoice());
 					countTablet2++;		
 				}
 				
