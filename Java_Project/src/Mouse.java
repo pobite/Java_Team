@@ -11,7 +11,6 @@ public class Mouse extends Accessorie {
 		stock--;
 	}
 	
-	
 	public String toString() {
 		
 		return super.toString();

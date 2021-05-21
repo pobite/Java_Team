@@ -19,14 +19,14 @@ public class Main {
 			public static String getColorChoice() {
 					return colorChoice;
 			}
-			public static void setColorChoice(String colorChoice) {
-					colorChoice = colorChoice;
+			public static void setColorChoice(String color_Choice) {
+					colorChoice = color_Choice;
 			}
 			public static String getStorageChoice() {
 					return storageChoice;
 			}
-			public static void setStorageChoice(String storageChoice) {
-					storageChoice = storageChoice;
+			public static void setStorageChoice(String storage_Choice) {
+					storageChoice = storage_Choice;
 			}
 			 
 		 
@@ -49,11 +49,11 @@ public class Main {
 		 
 	
 		 
-		 public static Keyboard gKeyboard = new Keyboard();
-		 public static Mouse gMouse = new Mouse();
+		 public static Keyboard gKeyboard = new Keyboard_first();
+		 public static Mouse gMouse = new Mouse_first();
 		 
-		 public static Earphone gEarphone1 = new Earphone();
-		 public static Earphone gEarphone2 = new Earphone();
+		 public static Earphone gEarphone1 = new Earphone_first();
+		 public static Earphone gEarphone2 = new Earphone_second();
 	
 		 
 		 
@@ -89,16 +89,16 @@ public class Main {
 		
 		
 		/* Keyboard */
-		public static Keyboard[] Gkeyboard = new Keyboard[100];
+		public static Keyboard[] Gkeyboard = new Keyboard_first[100];
 
 			
 		/* Mouse */
-		public static Mouse[] Gmouse =  new Mouse[100];
+		public static Mouse[] Gmouse =  new Mouse_first[100];
 		
 		
 		/* Earphone */
-		public static Earphone[] earphone1 = new Earphone[100];
-		public static Earphone[] earphone2 = new Earphone[100];
+		public static Earphone[] earphone1 = new Earphone_first[100];
+		public static Earphone[] earphone2 = new Earphone_second[100];
 		
 		
 		/* seller who manages this program, set default PW as 1234 */
@@ -111,9 +111,11 @@ public class Main {
 			Scanner keyboard1 = new Scanner(System.in);
 			System.out.println("Select Option");
 			System.out.println("Choose your color: (string)");
-			colorChoice = keyboard1.nextLine();
+			String color_Choice = keyboard1.nextLine();
+			setColorChoice(color_Choice);
 			System.out.println("Choose your capacity: (string) ");
-			storageChoice = keyboard1.nextLine();
+			String storage_Choice = keyboard1.nextLine();
+			setStorageChoice(storage_Choice);
 			keyboard1.close();
 		 }
 		 
@@ -136,54 +138,6 @@ public class Main {
 		 
 		 public static int countEarphone1;
 		 public static int countEarphone2;
-		 
-		 
-
-		 
-		 public static void setItem() {
-			 
-			 	///////////////////////////////////////
-			 
-			 	// 제가 클래스에서 만든 것처럼 만들어서 그 안에 세팅하고  이 함수 지우시면 됩니다!
-			 
-
-				//Set Accessories
-				
-				
-				//GKeyboard
-				
-				
-				gKeyboard.setName("G-Keyboard");
-				gKeyboard.setPrice(59.99);
-				gKeyboard.setWeight(1100.00);		
-				gKeyboard.setColor("White");
-				
-				
-			
-				
-				//GMouse
-			
-				gMouse.setName("G-Mouse");
-				gMouse.setPrice(29.99);
-				gMouse.setWeight(85.00);		
-				gMouse.setColor("White");
-			
-				
-				//GEarphone\
-			
-				gEarphone1.setName("GPod");
-				gEarphone1.setPrice(156.75);
-				gEarphone1.setWeight(35.55);		
-				gEarphone1.setColor("White");
-				
-				
-				gEarphone2.setName("GPod Pro");
-				gEarphone2.setPrice(320.25);
-				gEarphone2.setWeight(37.77);		
-				gEarphone2.setColor("White");
-			 
-		 }
-		 
 		 
 		 
 		 public static void printOrder() {
@@ -273,6 +227,7 @@ public class Main {
 				/* it's for user or seller */
 				
 				type = keyboard.nextInt();
+				keyboard.nextLine();
 				
 				if(type==3) {
 					
@@ -398,8 +353,6 @@ public class Main {
 				if(type == 1)
 				{
 					
-					keyboard.nextLine();
-					
 				System.out.println("Type your Name: ");
 				userName = keyboard.nextLine();
 				
@@ -411,7 +364,7 @@ public class Main {
 				System.out.println("Your number is " + userTel + "\n");
 
 				
-				setItem();
+				
 				
 				
 		
@@ -481,7 +434,7 @@ public class Main {
 						
 						
 				
-						//Laptop
+						//Lap top
 					case 2:
 						System.out.println("1." + gLaptop1);	
 						System.out.println("2." + gLaptop2);
@@ -539,11 +492,12 @@ public class Main {
 						
 						//Keyboard
 					case 4:
-						
+						System.out.println("Selected GKeyboard\n");	
 						System.out.println(gKeyboard);	
-						System.out.println("Select Option");	
+						//System.out.println("Select Option");	
 						
-						Gkeyboard[countKeyboard] = new Keyboard();
+						
+						Gkeyboard[countKeyboard] = new Keyboard_first(userName, userTel);
 						countKeyboard++;
 						
 						break;
@@ -554,42 +508,45 @@ public class Main {
 						
 						//Mouse
 					case 5:
+						System.out.println("Selected GMouse\n");
 						System.out.println(gMouse);	
-						System.out.println("Select Option");
+						//System.out.println("Select Option");
+							
 						
-						Gmouse[countMouse] = new Mouse();
+						Gmouse[countMouse] = new Mouse_first(userName, userTel);
 						countMouse++;
 						
 						
 						break;
 						
 						
-						//Earphone
+						//Ear phone
 					case 6:
 						
 						
 						//GOAL: 'wireless' access and set by option
-						/////////////////////////////////////////////////
+						/*
 						Earphone obj = new Earphone();
 						obj.methodBluetooth();
-						/////////////////////////////////////////////////
+						*/
 						
 						
 						
-
 						System.out.println("1." + gEarphone1);	
 						System.out.println("2." + gEarphone2);
 						choiceDevice = keyboard.nextInt();
 						
 						if ( choiceDevice == 1 ) {
-							System.out.println("Select Option");						
-							earphone1[countEarphone1] = new Earphone();
+							System.out.println("Selected GPod\n");
+							//System.out.println("Select Option");						
+							earphone1[countEarphone1] = new Earphone_first(userName, userTel);
 							countEarphone1++;		
 						}
 						
 						if ( choiceDevice == 2 ) {
-							System.out.println("Select Option");
-							earphone2[countEarphone2] = new Earphone();
+							System.out.println("Selected GPod Pro\n");
+							//System.out.println("Select Option");
+							earphone2[countEarphone2] = new Earphone_second(userName, userTel);
 							countEarphone2++;		
 						}
 						
