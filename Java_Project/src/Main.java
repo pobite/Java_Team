@@ -31,7 +31,7 @@ public class Main {
 			 
 		 
 		 
-		 
+			
 		 /* default setting items */
 			
 		 public static Mobile_first gMobile1 = new Mobile_first();
@@ -110,12 +110,26 @@ public class Main {
 		 public static void options() {
 			Scanner keyboard1 = new Scanner(System.in);
 			System.out.println("Select Option");
-			System.out.println("Choose your color: (string)");
+			System.out.print("Choose your color(string): ");
 			String color_Choice = keyboard1.nextLine();
 			setColorChoice(color_Choice);
-			System.out.println("Choose your capacity: (string) ");
+			System.out.print("Choose your capacity(string): ");
 			String storage_Choice = keyboard1.nextLine();
 			setStorageChoice(storage_Choice);
+			
+			clientInfo();
+		 }
+		 public static void clientInfo() {
+			Scanner keyboard2 = new Scanner(System.in);
+			System.out.print("\nEnter your Name: ");
+			userName = keyboard2.nextLine();
+			System.out.print("Your TEL: ");
+			userTel = keyboard2.nextLine();
+			System.out.println("loading...\n");
+			System.out.println("[Orderer Details]");
+			System.out.println("[Name] " + userName);
+			System.out.println("[TEL] " + userTel);
+			System.out.println("Ordered Successfully!!\n\n");
 		 }
 		 
 		 
@@ -149,7 +163,7 @@ public class Main {
 					 "Gkeyboard", "Gmouse", "earphone1", "earphone2"}; 
 			 */
 			 
-			 System.out.println("=============================== Gapple order list ================================");
+			 System.out.println("\n==================================== Gapple order list ====================================");
 			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
 			 
 			 
@@ -178,7 +192,7 @@ public class Main {
 			// 원래 품목, 전체주문 수량, 수량(추가하는 거)로 이뤄져 있었으나
 						// 재고 수량도 추가함
 						
-			System.out.println("================ Stock =================");
+			System.out.println("\n================ Stock =================");
 			System.out.println("   Product   /  Total order quantity   /  Stock  ");
 			System.out.println(gMobile1.getName() );  // 상속 정의 되면 수량이랑 재고 출력할 예정.
 			System.out.println(gMobile2.getName() );
@@ -218,9 +232,9 @@ public class Main {
 			 while(true) {
 			 		
 			 		
-			 		
-				System.out.println("Select the type.");
-				System.out.println("1. User. 2. Seller. 3. exit: ");
+				System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<G-Apple HOME>>>>>>>>>>>>>>>>>>>>>>>>>");	
+				System.out.println("1. User. 2. Seller. 3. exit");
+				System.out.print("Enter type: ");
 				
 				
 				/* it's for user or seller */
@@ -230,7 +244,7 @@ public class Main {
 				
 				if(type==3) {
 					
-					System.out.println("Thank your. Program is exit.");
+					System.out.println("Thank you. Program is exit.");
 					break;
 				}
 				
@@ -250,8 +264,8 @@ public class Main {
 					
 					
 					/* Check PW */
-				
-					System.out.println("Enter the PW: ");
+					System.out.println("\n<<<<<<<<<<<<<<<SELLER MODE>>>>>>>>>>>>>>>");
+					System.out.print("Enter the PW: ");
 					
 					int key = keyboard.nextInt();
 					
@@ -263,19 +277,19 @@ public class Main {
 						
 						/* if PW is incorrect */
 						
-						System.out.println("Wrong PW. Try again.");
+						System.out.println("\nWrong PW. Try again.");
 						
 						
-						System.out.println("Enter the PW: ");
+						System.out.println("\nEnter the PW: ");
 						
 						key = keyboard.nextInt();
 						isEqual = master.samePw(key);
 					}
 					
 					
-					System.out.println("PW is right, Welcome!");
+					System.out.println("\nPW is right, Welcome!");
 					
-					System.out.println("1. 주문내역 2. 재고관리 3. 비밀번호 변경 4. 뒤로가기: ");
+					System.out.print("1. 주문내역 2. 재고관리 3. 비밀번호 변경 4. 뒤로가기: ");
 					
 					int selType = keyboard.nextInt();
 					
@@ -351,26 +365,8 @@ public class Main {
 				
 				if(type == 1)
 				{
-					
-				System.out.println("Type your Name: ");
-				userName = keyboard.nextLine();
-				
-				System.out.println("Type your TEL: ");
-				userTel = keyboard.nextLine();
-				
-				
-				System.out.println("Your name is " + userName);
-				System.out.println("Your number is " + userTel + "\n");
-
-				
-				
-				
-				
-		
-				//End Set
-				
-				
-				
+				System.out.println("\n"+"\n");
+				System.out.println("Welcome to G-Apple Store!");	
 				int choiceMenu;
 				int choiceDevice;
 				//Main  = new Main();
@@ -383,21 +379,29 @@ public class Main {
 					
 				
 				//menu choice
-				
-				
-				System.out.println("1.GPhone 2.GBook 3.GPad"+"\n"
-						+ "4.Keyboard 5.Mouse 6.Gpod"+"\n"+"\n");
+				System.out.println("<<<<<<<<<<<<<<<G-Apple Line-Up>>>>>>>>>>>>>>>");
+				System.out.println(
+						"1.GPhone		2.GBook		3.GPad"+"\n"+
+						"4.Keyboard		5.Mouse		6.Gpod");
+				System.out.println("(0.back to HOME)");
+				System.out.print("\nWhat do you want? ");
 				choiceMenu = keyboard.nextInt();
 				keyboard.nextLine();
 				
+				//go HOME
+				if(choiceMenu==0)
+				{
+					break;
+				}
 				
 				switch(choiceMenu)
 				{
 					case 1:
-						System.out.println("1." + gMobile1);	
-						System.out.println("2." + gMobile2);
-						System.out.println("3." + gMobile3);
-						System.out.println("Choose Device: ");
+						System.out.println("\n\nWorld Best. Gphone." + "\n");
+						System.out.println("No.1" + "\n" + gMobile1);	
+						System.out.println("No.2" + "\n" + gMobile2);
+						System.out.println("No.3" + "\n" + gMobile3);
+						System.out.print("=====>>Choose Your Device(int): ");
 						choiceDevice = keyboard.nextInt();
 						keyboard.nextLine();
 						
@@ -434,8 +438,10 @@ public class Main {
 				
 						//Lap top
 					case 2:
-						System.out.println("1." + gLaptop1);	
-						System.out.println("2." + gLaptop2);
+						System.out.println("\n\nAlways Fast. GBook." + "\n");
+						System.out.println("No.1" + "\n" + gLaptop1);	
+						System.out.println("No.2" + "\n" + gLaptop2);
+						System.out.print("=====>>Choose Your Device(int): ");
 						choiceDevice = keyboard.nextInt();
 						
 						
@@ -463,9 +469,10 @@ public class Main {
 						
 						//Tablet
 					case 3:
-						
-						System.out.println("1." + gTablet1);	
-						System.out.println("2." + gTablet2);
+						System.out.println("\n\nBrilliant. GPad." + "\n");
+						System.out.println("No.1" + "\n" + gTablet1);	
+						System.out.println("No.2" + "\n" + gTablet2);
+						System.out.print("=====>>Choose Your Device(int): ");
 						choiceDevice = keyboard.nextInt();
 						if ( choiceDevice == 1 ) {
 							options();
@@ -487,14 +494,12 @@ public class Main {
 						
 						
 						
-						
+				//Accessories	
 						//Keyboard
 					case 4:
-						System.out.println("Selected GKeyboard\n");	
+						System.out.println("\n\nProgrammer's Identity. G-Keyboard." + "\n");
 						System.out.println(gKeyboard);	
-						//System.out.println("Select Option");	
-						
-						
+						clientInfo();
 						Gkeyboard[countKeyboard] = new Keyboard_first(userName, userTel);
 						countKeyboard++;
 						
@@ -506,14 +511,11 @@ public class Main {
 						
 						//Mouse
 					case 5:
-						System.out.println("Selected GMouse\n");
+						System.out.println("\n\nMagic. G-Mouse." + "\n");
 						System.out.println(gMouse);	
-						//System.out.println("Select Option");
-							
-						
+						clientInfo();
 						Gmouse[countMouse] = new Mouse_first(userName, userTel);
 						countMouse++;
-						
 						
 						break;
 						
@@ -524,26 +526,27 @@ public class Main {
 						
 						//GOAL: 'wireless' access and set by option
 						/*
-						Earphone obj = new Earphone();
-						obj.methodBluetooth();
+						Ear phone objects = new Ear phone();
+						objects.methodBluetooth();
 						*/
 						
 						
-						
-						System.out.println("1." + gEarphone1);	
-						System.out.println("2." + gEarphone2);
+						System.out.println("\n\nLive Concert. GPod." + "\n");
+						System.out.println("No.1" + "\n" + gEarphone1);	
+						System.out.println("No.2" + "\n" + gEarphone2);
+						System.out.print("=====>>Choose Your Device(int): ");
 						choiceDevice = keyboard.nextInt();
 						
 						if ( choiceDevice == 1 ) {
-							System.out.println("Selected GPod\n");
-							//System.out.println("Select Option");						
+							System.out.println("Selected GPod\n");		
+							clientInfo();
 							earphone1[countEarphone1] = new Earphone_first(userName, userTel);
 							countEarphone1++;		
 						}
 						
 						if ( choiceDevice == 2 ) {
 							System.out.println("Selected GPod Pro\n");
-							//System.out.println("Select Option");
+							clientInfo();
 							earphone2[countEarphone2] = new Earphone_second(userName, userTel);
 							countEarphone2++;		
 						}
