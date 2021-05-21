@@ -49,11 +49,11 @@ public class Main {
 		 
 	
 		 
-		 public static Keyboard gKeyboard = new Keyboard_first();
-		 public static Mouse gMouse = new Mouse_first();
+		 public static Keyboard_first gKeyboard = new Keyboard_first();
+		 public static Mouse_first gMouse = new Mouse_first();
 		 
-		 public static Earphone gEarphone1 = new Earphone_first();
-		 public static Earphone gEarphone2 = new Earphone_second();
+		 public static Earphone_first gEarphone1 = new Earphone_first();
+		 public static Earphone_second gEarphone2 = new Earphone_second();
 	
 		 
 		 
@@ -89,16 +89,16 @@ public class Main {
 		
 		
 		/* Keyboard */
-		public static Keyboard[] Gkeyboard = new Keyboard_first[100];
+		public static Keyboard_first[] Gkeyboard = new Keyboard_first[100];
 
 			
 		/* Mouse */
-		public static Mouse[] Gmouse =  new Mouse_first[100];
+		public static Mouse_first[] Gmouse =  new Mouse_first[100];
 		
 		
 		/* Earphone */
-		public static Earphone[] earphone1 = new Earphone_first[100];
-		public static Earphone[] earphone2 = new Earphone_second[100];
+		public static Earphone_first[] earphone1 = new Earphone_first[100];
+		public static Earphone_second[] earphone2 = new Earphone_second[100];
 		
 		
 		/* seller who manages this program, set default PW as 1234 */
