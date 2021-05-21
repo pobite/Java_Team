@@ -1,0 +1,33 @@
+
+public class Tablet_first extends Tablet {
+
+	public Tablet_first() {
+		
+		super();
+		
+		setName("GPad Air");
+		setPrice(1099.99);
+		setWeight(457.77);		
+		setSpec("G13X Bionic","4GB RAM" ,"OLED 10-inch display");
+		setColor("Space Gray, Silver, Woody Brown");
+		setStorage("128GB, 256GB");
+		
+	}
+	
+	
+	public Tablet_first (String color, String storage, String username, String tel) {
+		
+		super();
+	
+		
+		setColor(color);
+		setStorage(storage);
+		
+		setUserName(username);
+		setUserNumber(tel);
+		
+	
+	}
+	
+	
+}

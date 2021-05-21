@@ -4,7 +4,7 @@ public class Spec extends Gapple{
 	private String cpu;
 	private String ram;
 	private String display;
-	private String storage;
+
 	
     /* constructor */
 	
@@ -16,7 +16,7 @@ public class Spec extends Gapple{
 		cpu = "Not cpu yet";
 		ram = "Not ram yet";
 		display = "Not display yet";
-		storage = "Not storage yet";
+
 		
 	}
 	
@@ -27,7 +27,7 @@ public class Spec extends Gapple{
 		this.cpu = cpu;
 		this.ram = ram;
 		this.display = display;
-		this.storage = storage;
+	
 	}
 	
 	
@@ -43,16 +43,6 @@ public class Spec extends Gapple{
 	public String getDisplay()
 	{
 		return display;
-	}
-	public String getStorage()
-	{
-		return storage;
-	}
-	
-	
-	
-	public void setStorage(String storage) {
-		this.storage = storage;
 	}
 
 	//Mutator
@@ -80,8 +70,7 @@ public class Spec extends Gapple{
 		return  super.equals(otherSpec) &&
 				(this.cpu.equals(otherSpec.cpu)) &&
 				(this.ram.equals(otherSpec.ram)) &&
-				(this.display.equals(otherSpec.display)) &&
-				(this.storage.equals(otherSpec.storage));
+				(this.display.equals(otherSpec.display));
 	}
 	
 

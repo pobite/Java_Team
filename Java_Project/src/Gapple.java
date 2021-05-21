@@ -15,11 +15,12 @@ public class Gapple implements Bluetooth{
 	public static int total_order = 0;
 	public static int stock = 50;	// default stock
 		
-	private String brand;
+	
 	private String name;
 	private double price;
 	private double weight;
 	private String color;
+	private String storage;
 	
 	
 	/* add new information for storing user's info */ 
@@ -32,11 +33,13 @@ public class Gapple implements Bluetooth{
 	/* default constructor */ 
 	public Gapple() {
 		
-		brand = "No brand yet";
+		userName = "No user yet";
+		userNumber = "No number yet";
 		name = "No name yet";
 		price = 0;
 		weight = 0;
 		color = "No color yet";
+		storage = "Not storage yet";
 	}
 	
 	
@@ -45,11 +48,9 @@ public class Gapple implements Bluetooth{
 	
 	public void writeOutput() {
 		
-		System.out.println("Brand: " + brand);
-		System.out.println("\n"+"Name: " + name);
-		System.out.println("\n"+"Price: " + price);
-		System.out.println("\n"+"Weight: " + weight);
-		System.out.println("\n"+"Color: " + color);
+		System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
+		System.out.println( getName() + getUserName() + getUserNumber() + getPrice() + getColor() + getStorage() );
+	
 		
 			
 	}
@@ -81,15 +82,6 @@ public class Gapple implements Bluetooth{
 	
 	/* getter and setter */ 
 	
-	public String getBrand() {
-		return brand;
-	}
-
-
-	public void setBrand(String newBrand) {
-		brand = newBrand;
-	}
-
 
 
 	public String getName() {
@@ -160,7 +152,17 @@ public class Gapple implements Bluetooth{
 		this.userNumber = userNumber;
 	}
 
+	public String getStorage()
+	{
+		return storage;
+	}
 	
+	
+	
+	public void setStorage(String storage) {
+		this.storage = storage;
+	}
+
 
 	
 	
