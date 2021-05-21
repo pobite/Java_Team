@@ -20,6 +20,12 @@ public class Tablet_first extends Tablet {
 		super();
 	
 		
+		setName("GPad Air");
+		setPrice(1099.99);
+		setWeight(457.77);		
+		setSpec("G13X Bionic","4GB RAM" ,"OLED 10-inch display");
+
+		
 		setColor(color);
 		setStorage(storage);
 		

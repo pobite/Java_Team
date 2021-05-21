@@ -22,6 +22,10 @@ public class Tablet_second extends Tablet {
 		
 		super();
 	
+		setName("GPad Pro");
+		setPrice(2799.99);
+		setWeight(647.77);		
+		setSpec("Gapple G1 Chip","8GB RAM" ,"OLED 11-inch display");
 		
 		setColor(color);
 		setStorage(storage);

@@ -20,6 +20,12 @@ public class Mobile_third extends Mobile {
 		
 		super();
 		
+		setName("GPhone13 Maximus");
+		setPrice(2599.99);
+		setWeight(238.77);		
+		setSpec("G14 Bionic","32GB RAM" ,"OLED 6.7-inch display");
+
+
 	
 		setColor(color);
 		setStorage(storage);

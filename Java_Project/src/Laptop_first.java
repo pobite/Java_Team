@@ -20,6 +20,10 @@ public class Laptop_first extends Laptop {
 		
 		super();
 	
+		setName("GacBook Air");
+		setPrice(2499.99);
+		setWeight(130.77);		
+		setSpec("Gapple G1 Chip","16GB DDR4" ,"OLED 13.3-inch display");
 		
 		setColor(color);
 		setStorage(storage);

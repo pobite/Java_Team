@@ -18,6 +18,12 @@ public class Mobile_second extends Mobile {
 		
 		super();
 	
+		setName("GPhone13 standard");
+		setPrice(1299.99);
+		setWeight(162.77);		
+		setSpec("G13X Bionic", "8GB RAM", "OLED 6.1-inch display");
+
+	
 	
 		setColor(color);
 		setStorage(storage);

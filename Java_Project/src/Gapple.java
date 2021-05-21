@@ -59,8 +59,7 @@ public class Gapple implements Bluetooth{
 	public String toString() {
 		
 		
-		return  "\n" + "user name: " + getUserName() + "\n"+
-				"Tel: " + getUserNumber() + "\n============"+ "\n"+
+		return  "\n============"+ "\n"+
 				"Device name: " + getName() + "\n"+
 				"color: " + getColor() +"\n"; 
 					

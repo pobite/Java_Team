@@ -19,6 +19,11 @@ public class Mobile_first extends Mobile {
 		
 		super();
 	
+		setName("GPhone13 cutie");
+		setPrice(899.99);
+		setWeight(130.77);		
+		setSpec("G13 Bionic","4GB RAM" ,"LED 4.7-inch display");
+
 		
 		setColor(color);
 		setStorage(storage);

@@ -23,6 +23,11 @@ public class Laptop_second extends Laptop {
 		super();
 	
 		
+		setName("GacBook Pro");
+		setPrice(7700.00);
+		setWeight(130.77);		
+		setSpec("Gapple G1X Chip","64GB DDR4" ,"OLED 16-inch display");
+		
 		setColor(color);
 		setStorage(storage);
 		

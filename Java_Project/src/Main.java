@@ -1,8 +1,6 @@
 import java.util.Scanner;
 import java.io.*;
 
-
-
 public class Main {
 	
 	
@@ -31,7 +29,6 @@ public class Main {
 					storageChoice = storageChoice;
 			}
 			 
-		 
 		 
 		 
 		 
@@ -110,31 +107,6 @@ public class Main {
 	
 		
 		
-		// ÀÌ°Ç ¹º°¡¿ë? ////////////////////////
-		
-		public static Mobile m1 = new Mobile();
-		public static Mobile m2 = new Mobile();
-		public static Mobile m3 = new Mobile();
-		
-		public static Laptop l1 = new Laptop();
-		public static Laptop l2 = new Laptop();
-		
-		public static Tablet t1 = new Tablet();
-		public static Tablet t2 = new Tablet();
-		
-		public static Keyboard k1 = new Keyboard();
-		
-		public static Mouse mse1 = new Mouse();
-		
-		public static Earphone e1 = new Earphone();
-		public static Earphone e2 = new Earphone();
-	 
-	 
-		////////////////////////////////////////////////
-		
-		
-		
-		
 		 public static void options() {
 			Scanner keyboard1 = new Scanner(System.in);
 			System.out.println("Select Option");
@@ -211,6 +183,7 @@ public class Main {
 				gEarphone2.setColor("White");
 			 
 		 }
+		 
 		 
 		 
 		 public static void printOrder() {
@@ -434,6 +407,10 @@ public class Main {
 				userTel = keyboard.nextLine();
 				
 				
+				System.out.println("Your name is " + userName);
+				System.out.println("Your number is " + userTel + "\n");
+
+				
 				setItem();
 				
 				
@@ -472,7 +449,6 @@ public class Main {
 						System.out.println("Choose Device: ");
 						choiceDevice = keyboard.nextInt();
 						keyboard.nextLine();
-						
 						
 						
 						
@@ -600,8 +576,7 @@ public class Main {
 						
 						
 						
-						
-			
+
 						System.out.println("1." + gEarphone1);	
 						System.out.println("2." + gEarphone2);
 						choiceDevice = keyboard.nextInt();
@@ -631,13 +606,7 @@ public class Main {
 				
 			}//end if type ==1
 		 		
-			 		
-			 		
-			 		
-			 		
-			 		
-			 		
-			 		
+			 			
 			 		
 		 	}
 			 
@@ -647,43 +616,13 @@ public class Main {
 			 
 			 
 			 
-		 
-
+	
 		public static void main(String[] args) {		
 	
 			
 			
-			/*
-			// modify needed
-			 
-			System.out.println(m1.total_order);
-			System.out.println(m2.total_order);
-			System.out.println(m3.total_order);
-			
-			System.out.println(l1.total_order);
-			System.out.println(l2.total_order);
-			
-			System.out.println(t1.total_order);
-			System.out.println(t2.total_order);
-			
-			System.out.println(k1.total_order);
-			
-			System.out.println(mse1.total_order);
-			
-			System.out.println(e1.total_order);
-			System.out.println(e2.total_order);
-			
-			
-			System.out.println(Mobile.total_order);
-			System.out.println(Laptop.total_order);
-			System.out.println(Tablet.total_order);
-			System.out.println(Keyboard.total_order);
-			System.out.println(Mouse.total_order);
-			System.out.println(Earphone.total_order);
-			*/
-			
-			
 			simulate();
+			
 			System.out.println("End ");
 
 	
