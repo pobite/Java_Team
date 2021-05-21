@@ -116,7 +116,6 @@ public class Main {
 			System.out.println("Choose your capacity: (string) ");
 			String storage_Choice = keyboard1.nextLine();
 			setStorageChoice(storage_Choice);
-			keyboard1.close();
 		 }
 		 
 		 
@@ -390,7 +389,6 @@ public class Main {
 						+ "4.Keyboard 5.Mouse 6.Gpod"+"\n"+"\n");
 				choiceMenu = keyboard.nextInt();
 				keyboard.nextLine();
-				
 				
 				
 				switch(choiceMenu)
