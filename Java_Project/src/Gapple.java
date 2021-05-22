@@ -11,7 +11,8 @@ public class Gapple implements Bluetooth{
 	   }
 	  
 	
-	
+	//모든 클래스 생성자에서 total_order++, stock--, 수량오류 발생
+	//생성자 수정 후 Keyboard_first,Mouse_first 클래스 불필요, 삭제가능
 	public static int total_order = 0;
 	public static int stock = 50;	// default stock
 		
