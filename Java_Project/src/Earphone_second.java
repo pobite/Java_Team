@@ -22,6 +22,5 @@ public class Earphone_second extends Earphone {
 		setUserName(username);
 		setUserNumber(tel);
 		
-	
 	}
 }
