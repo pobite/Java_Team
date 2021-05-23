@@ -44,10 +44,6 @@ public class Main {
 		 public static Tablet_first gTablet1 = new Tablet_first();
 		 public static Tablet_second gTablet2 = new Tablet_second();
 		 
-		 ////////////////////////////
-		 // 하단 수정해야 함 클래스 만든 것처럼 */
-		 
-	
 		 
 		 public static Keyboard_first gKeyboard = new Keyboard_first();
 		 public static Mouse_first gMouse = new Mouse_first();
@@ -80,13 +76,6 @@ public class Main {
 		public static Tablet_second[] tablet2 = new Tablet_second[100];
 		
 
-		
-		////////////////////////////
-		// 클래스 만드시고 위처럼 클래스 이름 수정하셔야 됩
-		
-		
-
-		
 		
 		/* Keyboard */
 		public static Keyboard_first[] Gkeyboard = new Keyboard_first[100];
@@ -176,9 +165,10 @@ public class Main {
 				 } 
 				 
 			 }
+			 
 			 catch(NullPointerException e){
 				 
-				 System.out.println("ERROR: array is null.\n\n");
+				 System.out.println("There is no order at this time.\r\n" + ".\n\n");
 				 
 			 }
 				 
@@ -204,8 +194,8 @@ public class Main {
 			System.out.println(gTablet1.getName() );
 			System.out.println(gTablet2.getName() );
 			
-			//System.out.println(gMobile1.getName() );
-			//System.out.println(gMobile1.getName() );
+			//System.out.println(Gkeyboard.getName() );
+			//System.out.println(Gmouse.getName() );
 			//System.out.println(gMobile1.getName() );
 		 }
 		 
