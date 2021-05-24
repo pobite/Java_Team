@@ -1,10 +1,11 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class Main {
+public class Main implements Measurable{
 	
 	
 		
+	
 			private static String userName;
 			private static String userTel;
 			 
@@ -128,7 +129,40 @@ public class Main {
 			System.out.println("[Name] " + userName);
 			System.out.println("[TEL] " + userTel);
 			System.out.println("Ordered Successfully!!\n\n");
+			
 		 }
+		 
+		 
+		 /* for Measurable */
+		 
+		 /*
+		@Override
+		public int getTotal_mobile() {
+			
+			return Mobile_first.total + Mobile_second.total + Mobile_third.total;
+			
+		}
+		@Override
+		public int getTotal_laptop() {
+			
+			return Laptop_first.total + Laptop_second.total;
+			
+		}
+		@Override
+		public int getTotal_tablet() {
+			
+			return Tablet_first.total + Tablet_second.total;
+			
+		}
+		@Override
+		public int getTotal_acc() {
+			
+			return Keyboard_first.total + Mouse_first.total + Earphone_first.total + Earphone_second.total;
+			
+		}
+
+		 */
+		 
 		 
 		 
 		 
@@ -248,6 +282,10 @@ public class Main {
 			System.out.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stoke);
 			
 			
+			System.out.println("Total mobile is " + Gapple.getTotal_mobile() );
+			getTotal_laptop();
+		 
+		 
 		 }
 		 
 		 
@@ -567,6 +605,7 @@ public class Main {
 						
 						if ( choiceDevice == 2 ) {
 							System.out.println("Selected GPod Pro\n");
+							
 							clientInfo();
 							earphone2[Earphone_second.total++] = new Earphone_second(userName, userTel);
 						}
@@ -602,7 +641,6 @@ public class Main {
 			
 			System.out.println("===================== End, Thank you for using our system. =====================");
 
-	
 		}
 		
 }

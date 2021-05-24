@@ -1,19 +1,11 @@
-interface Bluetooth
-{
-	public static final int bth = 0;
-   public void methodBluetooth();
-}
 
-
-public class Gapple implements Bluetooth{
+public class Gapple {
 	
 		public void methodBluetooth()
 	   {
 		System.out.println("Bluetooth Demo");
 	   }
 	  
-	
-
 	
 	private String name;
 	private double price;

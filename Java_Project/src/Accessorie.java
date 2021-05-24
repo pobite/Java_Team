@@ -1,5 +1,5 @@
 
-public class Accessorie extends Gapple {
+public class Accessorie extends Gapple implements Bluetooth {
 	
 	
 	private int wireless;
@@ -36,6 +36,25 @@ public class Accessorie extends Gapple {
 		
 		return  super.equals(otherAccessorie) &&
 				(this.wireless == otherAccessorie.wireless);
+	}
+
+
+	
+	
+	@Override
+	public void blutooth(int val) {
+		
+		/* for checking user's request */
+		
+		wireless = val;
+		
+	}
+
+
+	@Override
+	public void Gairdrop() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
