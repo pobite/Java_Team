@@ -15,6 +15,25 @@ public class Main {
 				
 			
 			
+		   	public static int countMobile1;
+			 public static int countMobile2;
+			 public static int countMobile3;
+			 
+			 public static int countLaptop1;
+			 public static int countLaptop2;
+			 
+			 public static int countTablet1;
+			 public static int countTablet2;
+			 
+			 public static int countKeyboard;
+			 
+			 public static int countMouse;
+			 
+			 public static int countEarphone1;
+			 public static int countEarphone2;
+			
+			
+			
 			
 			public static String getColorChoice() {
 					return colorChoice;
@@ -54,9 +73,10 @@ public class Main {
 		 
 		 
 		 
-		 //////////////////////////
 		 
-		 /* Array */
+		/////////////////////////////////////////////////////////////
+		////////////////////// /*   Array    *///////////////////////
+		/////////////////////////////////////////////////////////////
 		 
 		 /* Maximum is 100 */
 		
@@ -76,7 +96,6 @@ public class Main {
 		public static Tablet_second[] tablet2 = new Tablet_second[100];
 		
 
-		
 		/* Keyboard */
 		public static Keyboard_first[] Gkeyboard = new Keyboard_first[100];
 
@@ -93,9 +112,16 @@ public class Main {
 		/* seller who manages this program, set default PW as 1234 */
 		public static Seller master = new Seller(1234);
 		
+		
+		
+		/////////////////////////////////////////////////////////////
+		////////////////////// /*   Method    *//////////////////////
+		/////////////////////////////////////////////////////////////
+		
+		
+		
 	
-		
-		
+		 /* To select an option */
 		 public static void options() {
 			Scanner keyboard1 = new Scanner(System.in);
 			System.out.println("Select Option");
@@ -108,6 +134,9 @@ public class Main {
 			
 			clientInfo();
 		 }
+		 
+		 
+		 /* to get info from user */
 		 public static void clientInfo() {
 			Scanner keyboard2 = new Scanner(System.in);
 			System.out.print("\nEnter your Name: ");
@@ -123,46 +152,47 @@ public class Main {
 		 
 		 
 		 
-		 
-		 public static int countMobile1;
-		 public static int countMobile2;
-		 public static int countMobile3;
-		 
-		 public static int countLaptop1;
-		 public static int countLaptop2;
-		 
-		 public static int countTablet1;
-		 public static int countTablet2;
-		 
-		 public static int countKeyboard;
-		 
-		 public static int countMouse;
-		 
-		 public static int countEarphone1;
-		 public static int countEarphone2;
-		 
+		 /* for order list */
 		 
 		 public static void printOrder() {
 			 
-			 /*
-			 String[] category = {"mobile1", "mobile2", "mobile3", "Laptop1", "Laptop2", "tablet1", "tablet2",
-					 "Gkeyboard", "Gmouse", "earphone1", "earphone2"}; 
 			 
-			 String[] category2 = {"Mobile", "mobile2", "mobile3", "Laptop1", "Laptop2", "tablet1", "tablet2",
-					 "Gkeyboard", "Gmouse", "earphone1", "earphone2"}; 
+			 
+			 /*
+			 String[] category = {"Mobile_first, Mobile_second, Mobile_third, Laptop_first, Laptop_second, Tablet_first, Tablet_second, Keyboard_first, Mouse_first, Earphone_first, Earphone_second"}; 
+			 
+			 
+			 String[] category2 = {"gMobile1", "gMobile2", "gMobile3", "gLaptop1", "gLaptop2", "gTablet1",
+					 "gTablet2", "gKeyboard", "gMouse", "gEarphone1", "gEarphone2"}; 
 			 */
 			 
-			 System.out.println("\n==================================== Gapple order list ====================================");
+			 
+			 System.out.println("\n==================================== Gapple order list =============================================");
 			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
 			 
 			 
+			 
+			 
+			 String[] category = {"Mobile_first, Mobile_second, Mobile_third"};  // class 이름
+			 
+			 String[] category2 = {"mobile1", "mobile2", "mobile3"};    // 배열 이름
+			
+			 
+			 int j = 0;
 			 try {
+				
+				 for (String clas : category) {
+					 
+					 for (String obj : category2) {      // for (category[j] obj : category2 ) 도 오류
+						 
+						 obj.writeOutput();
+						 
+						 
+					 } 
+					 
+				 }
 				 
-				 for (Mobile_first f : mobile1) {
-					 
-					 f.writeOutput();
-					 
-				 } 
+				 
 				 
 			 }
 			 
@@ -175,28 +205,33 @@ public class Main {
 		 }
 		 
 		 
+		 
+		 
 		 public static void printInventory() {
 			 
 			 
 			 
-			// 원래 품목, 전체주문 수량, 수량(추가하는 거)로 이뤄져 있었으나
-						// 재고 수량도 추가함
 						
 			System.out.println("\n================ Stock =================");
 			System.out.println("   Product   /  Total order quantity   /  Stock  ");
-			System.out.println(gMobile1.getName() );  // 상속 정의 되면 수량이랑 재고 출력할 예정.
-			System.out.println(gMobile2.getName() );
-			System.out.println(gMobile3.getName() );
+			System.out.println(gMobile1.getName() + " / " + countMobile1);  // 상속 정의 되면 수량이랑 재고 출력할 예정.
+			System.out.println(gMobile2.getName() + " / " + countMobile2);
+			System.out.println(gMobile3.getName() + " / " + countMobile3);
 			
-			System.out.println(gLaptop1.getName() );
-			System.out.println(gLaptop2.getName() );
+			System.out.println(gLaptop1.getName() + " / " + countLaptop1);
+			System.out.println(gLaptop2.getName() + " / " + countLaptop2);
 			
-			System.out.println(gTablet1.getName() );
-			System.out.println(gTablet2.getName() );
+			System.out.println(gTablet1.getName() + " / " + countTablet1);
+			System.out.println(gTablet2.getName() + " / " + countTablet2);
 			
-			//System.out.println(Gkeyboard.getName() );
-			//System.out.println(Gmouse.getName() );
-			//System.out.println(gMobile1.getName() );
+			System.out.println(gKeyboard.getName() + " / " + countKeyboard);
+			System.out.println(gMouse.getName() + " / " + countMouse);
+			
+			System.out.println(gEarphone1.getName() + " / " + countEarphone1);
+			System.out.println(gEarphone2.getName() + " / " + countEarphone2);
+			
+			
+			
 		 }
 		 
 		 
@@ -239,9 +274,7 @@ public class Main {
 				}
 				
 				
-				
-				
-				
+			
 				/////////////////////////////////////////////
 				/////////////////* Seller *////////////////////
 				/////////////////////////////////////////////
@@ -340,8 +373,7 @@ public class Main {
 			
 				
 			
-			 
-			 
+				 
 			 //if type==2 ends
 				
 				/////////////////////////////////////////////
@@ -364,7 +396,6 @@ public class Main {
 				
 				while(true)
 				{
-					
 					
 					
 				
@@ -425,7 +456,6 @@ public class Main {
 						
 						
 						
-				
 						//Lap top
 					case 2:
 						System.out.println("\n\nAlways Fast. GBook." + "\n");
@@ -450,9 +480,7 @@ public class Main {
 							countLaptop2++;		
 						}
 						
-						
-						
-						
+											
 						break;
 						
 						
@@ -479,7 +507,6 @@ public class Main {
 						}
 						
 						
-						
 						break;
 						
 						
@@ -496,8 +523,6 @@ public class Main {
 						break;
 						
 						
-						
-			
 						
 						//Mouse
 					case 5:
@@ -567,7 +592,6 @@ public class Main {
 	
 		public static void main(String[] args) {		
 	
-			
 			
 			simulate();
 			

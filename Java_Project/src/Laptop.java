@@ -5,8 +5,7 @@ public class Laptop extends Spec
 	public Laptop() {
 		
 		super();
-		total_order++;	
-		stock--;
+
 	}
 	
 	public String toString() {
@@ -20,8 +19,7 @@ public class Laptop extends Spec
 		super();
 		setColor(newColor);
 		setStorage(newStorage);
-		total_order++;	
-		stock--;
+
 	}
 	
 	public boolean eauqls(Laptop otherLaptop)

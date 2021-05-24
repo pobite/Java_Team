@@ -5,8 +5,7 @@ public class Tablet extends Spec
 	public Tablet() {
 	
 		super();
-		total_order++;
-		stock--;
+
 		
 	}
 	

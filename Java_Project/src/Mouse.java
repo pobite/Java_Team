@@ -7,8 +7,7 @@ public class Mouse extends Accessorie {
 	public Mouse() {
 		
 		super();
-		total_order++;
-		stock--;
+
 	}
 	
 	public String toString() {

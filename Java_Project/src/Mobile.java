@@ -6,8 +6,7 @@ public class Mobile extends Spec
 	public Mobile() {
 		
 		super();
-		total_order++;
-		stock--;
+
 	}
 	
 	
@@ -16,8 +15,7 @@ public class Mobile extends Spec
 		super();
 		setColor(newColor);
 		setStorage(newStorage);
-		total_order++;
-		stock--;
+
 	}
 	
 

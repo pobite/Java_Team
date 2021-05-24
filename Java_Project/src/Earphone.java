@@ -6,8 +6,7 @@ public class Earphone extends Accessorie {
 	public Earphone() {
 		
 		super();
-		total_order++;
-		stock--;
+
 	}
 	
 	public String toString() {
