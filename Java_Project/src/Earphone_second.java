@@ -1,6 +1,10 @@
 
 public class Earphone_second extends Earphone {
-
+	
+	public static int total;
+	public static int stoke = 50;
+	
+	
 	public Earphone_second() {
 		
 		super();
@@ -22,5 +26,7 @@ public class Earphone_second extends Earphone {
 		setUserName(username);
 		setUserNumber(tel);
 		
+		
+		stoke--;
 	}
 }

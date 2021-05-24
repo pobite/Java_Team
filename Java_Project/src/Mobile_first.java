@@ -1,6 +1,10 @@
 
 public class Mobile_first extends Mobile {
-
+	
+	
+	public static int total;
+	public static int stoke = 50;
+	
 	
 	public Mobile_first() {
 		
@@ -31,7 +35,7 @@ public class Mobile_first extends Mobile {
 		setUserName(username);
 		setUserNumber(tel);
 		
-	
+		stoke--;
 	}
 	
 	

@@ -13,27 +13,7 @@ public class Main {
 			private static String colorChoice;
 			private static String storageChoice;
 				
-			
-			
-		   	public static int countMobile1;
-			 public static int countMobile2;
-			 public static int countMobile3;
-			 
-			 public static int countLaptop1;
-			 public static int countLaptop2;
-			 
-			 public static int countTablet1;
-			 public static int countTablet2;
-			 
-			 public static int countKeyboard;
-			 
-			 public static int countMouse;
-			 
-			 public static int countEarphone1;
-			 public static int countEarphone2;
-			
-			
-			
+		
 			
 			public static String getColorChoice() {
 					return colorChoice;
@@ -156,53 +136,89 @@ public class Main {
 		 
 		 public static void printOrder() {
 			 
-			 
-			 
-			 /*
-			 String[] category = {"Mobile_first, Mobile_second, Mobile_third, Laptop_first, Laptop_second, Tablet_first, Tablet_second, Keyboard_first, Mouse_first, Earphone_first, Earphone_second"}; 
-			 
-			 
-			 String[] category2 = {"gMobile1", "gMobile2", "gMobile3", "gLaptop1", "gLaptop2", "gTablet1",
-					 "gTablet2", "gKeyboard", "gMouse", "gEarphone1", "gEarphone2"}; 
-			 */
-			 
-			 
+ 
 			 System.out.println("\n==================================== Gapple order list =============================================");
 			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
 			 
 			 
+			 String[] class_name = {"Mobile_first", "Mobile_second", " Mobile_third"};
+			 String[] obj_name = {"mobile1", "mobile2", "mobile3"};
 			 
 			 
-			 String[] category = {"Mobile_first, Mobile_second, Mobile_third"};  // class 이름
-			 
-			 String[] category2 = {"mobile1", "mobile2", "mobile3"};    // 배열 이름
-			
-			 
-			 int j = 0;
-			 try {
+			 		 
+			 for(int i = 0; i < Mobile_first.total; i++) {
 				
-				 for (String clas : category) {
-					 
-					 for (String obj : category2) {      // for (category[j] obj : category2 ) 도 오류
-						 
-						 obj.writeOutput();
-						 
-						 
-					 } 
-					 
-				 }
-				 
-				 
+				 mobile1[i].writeOutput(); 
 				 
 			 }
 			 
-			 catch(NullPointerException e){
-				 
-				 System.out.println("There is no order at this time.\r\n" + ".\n\n");
+			 for(int i = 0; i < Mobile_second.total; i++) {
+					
+				 mobile2[i].writeOutput(); 
 				 
 			 }
+			 
+			 for(int i = 0; i < Mobile_third.total; i++) {
+					
+				 mobile3[i].writeOutput(); 
 				 
-		 }
+			 }
+			 
+			 for(int i = 0; i< Laptop_first.total; i++) {
+				 
+				 laptop1[i].writeOutput(); 
+			 }
+						 
+			 
+			 for(int i = 0; i< Laptop_second.total; i++) {
+							 
+				 laptop2[i].writeOutput(); 
+			 }
+
+
+			 for(int i = 0; i< Tablet_first.total; i++) {
+				 
+				 tablet1[i].writeOutput(); 
+			 }
+			 
+			 
+			 for(int i = 0; i< Tablet_second.total; i++) {
+				 
+				 tablet2[i].writeOutput(); 
+			 }
+			 
+			 
+			 
+			 for(int i=0; i < Keyboard_first.total; i++) {
+				 
+				 Gkeyboard[i].writeOutput();
+				 
+			 }
+
+			 
+			 
+			 for(int i=0; i < Mouse_first.total; i++) {
+				 
+				 Gmouse[i].writeOutput();
+				 
+			 }
+			 
+			
+			 for(int i=0; i < Earphone_first.total; i++) {
+				 
+				 earphone1[i].writeOutput();
+				 
+			 }
+
+
+			 for(int i=0; i < Earphone_second.total; i++) {
+	 
+				 earphone2[i].writeOutput();
+	 
+			 }
+			 
+			 
+		 } 
 		 
 		 
 		 
@@ -214,22 +230,22 @@ public class Main {
 						
 			System.out.println("\n================ Stock =================");
 			System.out.println("   Product   /  Total order quantity   /  Stock  ");
-			System.out.println(gMobile1.getName() + " / " + countMobile1);  // 상속 정의 되면 수량이랑 재고 출력할 예정.
-			System.out.println(gMobile2.getName() + " / " + countMobile2);
-			System.out.println(gMobile3.getName() + " / " + countMobile3);
+			System.out.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stoke);  // 상속 정의 되면 수량이랑 재고 출력할 예정.
+			System.out.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stoke);
+			System.out.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stoke);
 			
-			System.out.println(gLaptop1.getName() + " / " + countLaptop1);
-			System.out.println(gLaptop2.getName() + " / " + countLaptop2);
 			
-			System.out.println(gTablet1.getName() + " / " + countTablet1);
-			System.out.println(gTablet2.getName() + " / " + countTablet2);
+			System.out.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stoke);
+			System.out.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stoke);
 			
-			System.out.println(gKeyboard.getName() + " / " + countKeyboard);
-			System.out.println(gMouse.getName() + " / " + countMouse);
+			System.out.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stoke);
+			System.out.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stoke);
 			
-			System.out.println(gEarphone1.getName() + " / " + countEarphone1);
-			System.out.println(gEarphone2.getName() + " / " + countEarphone2);
+			System.out.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stoke);
+			System.out.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stoke);
 			
+			System.out.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stoke);
+			System.out.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stoke);
 			
 			
 		 }
@@ -434,22 +450,19 @@ public class Main {
 							//method로 만들기						
 							options();
 							
-							mobile1[countMobile1] = new Mobile_first(getColorChoice(), getStorageChoice(), userName, userTel);
-							countMobile1++;		
+							mobile1[Mobile_first.total++] = new Mobile_first(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							options();
 													
-							mobile2[countMobile2] = new Mobile_second(getColorChoice(), getStorageChoice(), userName, userTel);
-							countMobile2++;		
+							mobile2[Mobile_second.total++] = new Mobile_second(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 						if ( choiceDevice == 3 ) {
 							options();
 													
-							mobile3[countMobile3] = new Mobile_third(getColorChoice(), getStorageChoice(), userName, userTel);
-							countMobile3++;		
+							mobile3[Mobile_third.total++] = new Mobile_third(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 						break;
@@ -469,15 +482,13 @@ public class Main {
 						if ( choiceDevice == 1 ) {
 							options();
 													
-							laptop1[countLaptop1] = new Laptop_first(getColorChoice(), getStorageChoice(), userName, userTel);
-							countLaptop1++;		
+							laptop1[Laptop_first.total++] = new Laptop_first(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							options();
 													
-							laptop2[countLaptop2] = new Laptop_second(getColorChoice(), getStorageChoice(), userName, userTel);
-							countLaptop2++;		
+							laptop2[Laptop_second.total++] = new Laptop_second(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 											
@@ -495,15 +506,13 @@ public class Main {
 						if ( choiceDevice == 1 ) {
 							options();
 													
-							tablet1[countTablet1] = new Tablet_first(getColorChoice(), getStorageChoice(), userName, userTel);
-							countTablet1++;		
+							tablet1[Tablet_first.total++] = new Tablet_first(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							options();
 													
-							tablet2[countTablet2] = new Tablet_second(getColorChoice(), getStorageChoice(), userName, userTel);
-							countTablet2++;		
+							tablet2[Tablet_second.total++] = new Tablet_second(getColorChoice(), getStorageChoice(), userName, userTel);
 						}
 						
 						
@@ -517,8 +526,7 @@ public class Main {
 						System.out.println("\n\nProgrammer's Identity. G-Keyboard." + "\n");
 						System.out.println(gKeyboard);	
 						clientInfo();
-						Gkeyboard[countKeyboard] = new Keyboard_first(userName, userTel);
-						countKeyboard++;
+						Gkeyboard[Keyboard_first.total++] = new Keyboard_first(userName, userTel);
 						
 						break;
 						
@@ -529,8 +537,7 @@ public class Main {
 						System.out.println("\n\nMagic. G-Mouse." + "\n");
 						System.out.println(gMouse);	
 						clientInfo();
-						Gmouse[countMouse] = new Mouse_first(userName, userTel);
-						countMouse++;
+						Gmouse[Mouse_first.total++] = new Mouse_first(userName, userTel);
 						
 						break;
 						
@@ -555,15 +562,13 @@ public class Main {
 						if ( choiceDevice == 1 ) {
 							System.out.println("Selected GPod\n");		
 							clientInfo();
-							earphone1[countEarphone1] = new Earphone_first(userName, userTel);
-							countEarphone1++;		
+							earphone1[Earphone_first.total++] = new Earphone_first(userName, userTel);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							System.out.println("Selected GPod Pro\n");
 							clientInfo();
-							earphone2[countEarphone2] = new Earphone_second(userName, userTel);
-							countEarphone2++;		
+							earphone2[Earphone_second.total++] = new Earphone_second(userName, userTel);
 						}
 						
 						break;
@@ -595,7 +600,7 @@ public class Main {
 			
 			simulate();
 			
-			System.out.println("End ");
+			System.out.println("===================== End, Thank you for using our system. =====================");
 
 	
 		}

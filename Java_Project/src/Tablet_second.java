@@ -1,7 +1,8 @@
 
 public class Tablet_second extends Tablet {
 	
-	
+	public static int total;
+	public static int stoke = 50;
 	
 	
 	public Tablet_second() {
@@ -32,6 +33,8 @@ public class Tablet_second extends Tablet {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		
+		stoke--;
 		
 	
 	}

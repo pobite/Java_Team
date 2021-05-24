@@ -47,8 +47,8 @@ public class Gapple implements Bluetooth{
 	
 	public void writeOutput() {
 		
-		System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
-		System.out.println( getName() + getUserName() + getUserNumber() + getPrice() + getColor() + getStorage() );
+
+		System.out.println( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
 	
 		
 			

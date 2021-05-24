@@ -1,6 +1,10 @@
 
 public class Keyboard_first extends Keyboard {
 	
+	public static int total;
+	public static int stoke = 50;
+	
+	
 	public Keyboard_first() {
 		
 		super();
@@ -23,6 +27,7 @@ public class Keyboard_first extends Keyboard {
 		setUserName(username);
 		setUserNumber(tel);
 		
+		stoke--;
 	
 	}
 	

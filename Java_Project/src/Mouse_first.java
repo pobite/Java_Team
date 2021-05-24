@@ -1,6 +1,9 @@
 
 public class Mouse_first extends Mouse {
 
+	public static int total;
+	public static int stoke = 50;
+	
 	public Mouse_first() {
 		
 		super();
@@ -22,6 +25,7 @@ public class Mouse_first extends Mouse {
 		setUserName(username);
 		setUserNumber(tel);
 		
+		stoke--;
 	
 	}
 	

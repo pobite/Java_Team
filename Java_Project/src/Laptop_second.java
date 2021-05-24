@@ -1,7 +1,8 @@
 
 public class Laptop_second extends Laptop {
 	
-	
+	public static int total;
+	public static int stoke = 50;
 	
 	
 	public Laptop_second() {
@@ -34,6 +35,7 @@ public class Laptop_second extends Laptop {
 		setUserName(username);
 		setUserNumber(tel);
 		
-	
+		
+		stoke--;
 	}
 }
