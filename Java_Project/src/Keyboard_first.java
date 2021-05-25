@@ -1,5 +1,5 @@
 
-public class Keyboard_first extends Keyboard {
+public class Keyboard_first extends Keyboard implements Calculate {
 	
 	public static int total;
 	public static int stoke = 50;
@@ -29,6 +29,10 @@ public class Keyboard_first extends Keyboard {
 		
 		stoke--;
 	
+	}
+	public double getSales() {
+		
+		return getPrice() * total;
 	}
 	
 }

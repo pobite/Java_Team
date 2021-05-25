@@ -1,5 +1,5 @@
 
-public class Earphone_first extends Earphone {
+public class Earphone_first extends Earphone implements Calculate {
 	
 	public static int total;
 	public static int stoke = 50;
@@ -28,6 +28,11 @@ public class Earphone_first extends Earphone {
 		
 		stoke--;
 	
+	}
+	
+	public double getSales() {
+		
+		return getPrice() * total;
 	}
 	
 }

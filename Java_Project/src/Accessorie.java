@@ -1,5 +1,5 @@
 
-public class Accessorie extends Gapple implements Bluetooth {
+public class Accessorie extends Gapple  {
 	
 	
 	private int wireless;
@@ -39,23 +39,6 @@ public class Accessorie extends Gapple implements Bluetooth {
 	}
 
 
-	
-	
-	@Override
-	public void blutooth(int val) {
-		
-		/* for checking user's request */
-		
-		wireless = val;
-		
-	}
 
-
-	@Override
-	public void Gairdrop() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 }

@@ -1,5 +1,5 @@
 
-public class Laptop_second extends Laptop {
+public class Laptop_second extends Laptop implements Calculate {
 	
 	public static int total;
 	public static int stoke = 50;
@@ -38,4 +38,9 @@ public class Laptop_second extends Laptop {
 		
 		stoke--;
 	}
+	public double getSales() {
+		
+		return getPrice() * total;
+	}
+	
 }

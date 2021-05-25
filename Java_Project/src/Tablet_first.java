@@ -1,5 +1,5 @@
 
-public class Tablet_first extends Tablet {
+public class Tablet_first extends Tablet implements Calculate {
 	
 	public static int total;
 	public static int stoke = 50;
@@ -37,6 +37,11 @@ public class Tablet_first extends Tablet {
 		setUserNumber(tel);
 		
 		stoke--;
+	}
+	
+	public double getSales() {
+		
+		return getPrice() * total;
 	}
 	
 	

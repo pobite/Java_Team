@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class Main implements Measurable{
+public class Main {
 	
 	
 		
@@ -132,39 +132,9 @@ public class Main implements Measurable{
 			
 		 }
 		 
-		 
-		 /* for Measurable */
-		 
-		 /*
-		@Override
-		public int getTotal_mobile() {
-			
-			return Mobile_first.total + Mobile_second.total + Mobile_third.total;
-			
-		}
-		@Override
-		public int getTotal_laptop() {
-			
-			return Laptop_first.total + Laptop_second.total;
-			
-		}
-		@Override
-		public int getTotal_tablet() {
-			
-			return Tablet_first.total + Tablet_second.total;
-			
-		}
-		@Override
-		public int getTotal_acc() {
-			
-			return Keyboard_first.total + Mouse_first.total + Earphone_first.total + Earphone_second.total;
-			
-		}
 
-		 */
-		 
-		 
-		 
+		  
+			 
 		 
 		 /* for order list */
 		 
@@ -250,8 +220,24 @@ public class Main implements Measurable{
 				 earphone2[i].writeOutput();
 	 
 			 }
+			
 			 
 			 
+			 double Mobile_sales = gMobile1.getSales() + gMobile2.getSales() + gMobile3.getSales();
+			 double Laptop_sales =  gLaptop1.getSales() + gLaptop2.getSales();
+			 double Tablet_sales = gTablet1.getSales() + gTablet2.getSales();
+			 double Acc_sales =  gKeyboard.getSales() + gMouse.getSales() + gEarphone1.getSales() + gEarphone2.getSales();
+			 
+			 double All_sales = Mobile_sales + Laptop_sales + Tablet_sales + Acc_sales;
+			 All_sales = Double.parseDouble(String.format("%.2f",All_sales));
+
+
+			 System.out.println("\nSales of mobile is " + Mobile_sales );
+			 System.out.println("Sales of laptop is " + Laptop_sales);
+			 System.out.println("Sales of tablet is " + Tablet_sales);	 
+			 System.out.println("Sales of acc is " + Acc_sales);
+			 System.out.println("** Sales of all item is " + All_sales);
+		 
 		 } 
 		 
 		 
@@ -282,9 +268,11 @@ public class Main implements Measurable{
 			System.out.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stoke);
 			
 			
-			System.out.println("Total mobile is " + Gapple.getTotal_mobile() );
-			getTotal_laptop();
-		 
+			System.out.println("\nTotal mobile is " + Measurable.getTotal_mobile() );
+			System.out.println("Total laptop is " + Measurable.getTotal_laptop() );
+			System.out.println("Total tablet is " + Measurable.getTotal_tablet() );
+			System.out.println("Total acc is " + Measurable.getTotal_acc() );
+			System.out.println("** All order item is " + Measurable.getAll() +"\n");
 		 
 		 }
 		 

@@ -1,5 +1,5 @@
 
-public class Mouse_first extends Mouse {
+public class Mouse_first extends Mouse implements Calculate {
 
 	public static int total;
 	public static int stoke = 50;
@@ -27,6 +27,11 @@ public class Mouse_first extends Mouse {
 		
 		stoke--;
 	
+	}
+	
+	public double getSales() {
+		
+		return getPrice() * total;
 	}
 	
 }

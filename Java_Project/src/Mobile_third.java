@@ -1,5 +1,5 @@
 
-public class Mobile_third extends Mobile {
+public class Mobile_third extends Mobile implements Calculate {
 
 	public static int total;
 	public static int stoke = 50;
@@ -37,6 +37,10 @@ public class Mobile_third extends Mobile {
 		stoke--;
 	}
 	
+	public double getSales() {
+		
+		return getPrice() * total;
+	}
 	
 	
 	
