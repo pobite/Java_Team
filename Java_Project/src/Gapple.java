@@ -41,7 +41,6 @@ public class Gapple {
 		
 
 		System.out.println( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
-	
 		
 			
 	}

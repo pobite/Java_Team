@@ -14,6 +14,7 @@ public class Main {
 			private static String colorChoice;
 			private static String storageChoice;
 				
+			static PrintWriter outputStream = null;
 		
 			
 			public static String getColorChoice() {
@@ -144,6 +145,8 @@ public class Main {
 			 System.out.println("\n==================================== Gapple order list =============================================");
 			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
 			 
+			 outputStream.println("\n==================================== Gapple order list =============================================");
+			 outputStream.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
 			 
 			 String[] class_name = {"Mobile_first", "Mobile_second", " Mobile_third"};
 			 String[] obj_name = {"mobile1", "mobile2", "mobile3"};
@@ -460,6 +463,8 @@ public class Main {
 				switch(choiceMenu)
 				{
 					case 1:
+						
+						
 						System.out.println("\n\nWorld Best. Gphone." + "\n");
 						System.out.println("No.1" + "\n" + gMobile1);	
 						System.out.println("No.2" + "\n" + gMobile2);
@@ -625,7 +630,28 @@ public class Main {
 		public static void main(String[] args) {		
 	
 			
+			
+			String fileName = "order_list.txt";
+			
+		
+			try {
+				
+				outputStream = new PrintWriter(new FileOutputStream(fileName, true));
+				
+			}
+			catch (FileNotFoundException e) {
+				
+				System.out.println("Error opening the file " + fileName);
+				System.exit(0);
+				
+			}
+			
+
 			simulate();
+			
+			
+			
+			outputStream.close();
 			
 			System.out.println("===================== End, Thank you for using our system. =====================");
 
