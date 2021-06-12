@@ -655,15 +655,6 @@ public class Main {
 						
 						//Ear phone
 					case 6:
-						
-						
-						//GOAL: 'wireless' access and set by option
-						/*
-						Ear phone objects = new Ear phone();
-						objects.methodBluetooth();
-						*/
-						
-						
 						System.out.println("\n\nLive Concert. GPod." + "\n");
 						System.out.println("No.1" + "\n" + gEarphone1);	
 						System.out.println("No.2" + "\n" + gEarphone2);
