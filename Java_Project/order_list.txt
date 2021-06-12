@@ -12,3 +12,50 @@ Sales of laptop is 7700.0
 Sales of tablet is 0.0
 Sales of acc is 216.74
 ** Sales of all item is 10516.73
+DATE: 2021-06-12 15:47:26
+
+======================== Gapple order list =================================
+   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /
+GPad Air / dfdsaf / 123123 / 1099.99 / 1123 / 123
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 1099.99
+Sales of acc is 0.0
+** Sales of all item is 1099.99
+DATE: 2021-06-12 15:48:39
+
+======================== Gapple order list =================================
+   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /
+GacBook Air / asdf / asdfsdaf / 2499.99 / asdf / asdf
+
+Sales of mobile is 0.0
+Sales of laptop is 2499.99
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 2499.99
+
+
+DATE: 2021-06-12 15:49:35
+
+======================== Gapple order list =================================
+   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /
+GPad Air / sadf / asdfdsaf / 1099.99 / dsafd / asdfdsa
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 1099.99
+Sales of acc is 0.0
+** Sales of all item is 1099.99
+
+DATE: 2021-06-12 15:50:05
+
+======================== Gapple order list =================================
+   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 0.0
+

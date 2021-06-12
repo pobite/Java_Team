@@ -162,10 +162,10 @@ public class Main {
 			 
 			 /* main order list */
 			 
-			 System.out.println("\n============================= Gapple order list ======================================");
+			 System.out.println("\n======================== Gapple order list =================================");
 			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /");
 			 
-			 outputStream.println("\n============================= Gapple order list ======================================");
+			 outputStream.println("\n======================== Gapple order list =================================");
 			 outputStream.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /");
 			 
 			 String[] class_name = {"Mobile_first", "Mobile_second", " Mobile_third"};
@@ -271,14 +271,14 @@ public class Main {
 			 System.out.println("Sales of laptop is " + Laptop_sales);
 			 System.out.println("Sales of tablet is " + Tablet_sales);	 
 			 System.out.println("Sales of acc is " + Acc_sales);
-			 System.out.println("** Sales of all item is " + All_sales);
+			 System.out.println("** Sales of all item is " + All_sales + "\n");
 		 
 			 
 			 outputStream.println("\nSales of mobile is " + Mobile_sales );
 			 outputStream.println("Sales of laptop is " + Laptop_sales);
 			 outputStream.println("Sales of tablet is " + Tablet_sales);	 
 			 outputStream.println("Sales of acc is " + Acc_sales);
-			 outputStream.println("** Sales of all item is " + All_sales);
+			 outputStream.println("** Sales of all item is " + All_sales + "\n");
 			 
 			 
 		 } 
@@ -710,7 +710,7 @@ public class Main {
 		public static void main(String[] args) {		
 	
 			
-			
+			/* file name */
 			String fileName_order = "order_list.txt";
 			String fileName_stoke = "stoke.txt";
 			
