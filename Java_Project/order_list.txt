@@ -1,0 +1,14 @@
+DATE: 2021-06-12 15:27:02
+
+============================= Gapple order list ======================================
+   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /
+GPhone13 Maximus / 신은지 / 1111-2222 / 2599.99 / BLACK / 128
+GacBook Pro / 이동학 / 010-1234-5678 / 7700.0 / red / 64
+G-Keyboard / 김재원 / 123-444 / 59.99 / White / No storage
+GPod / 수경님 / 9999-4444 / 156.75 / White / No storage
+
+Sales of mobile is 2599.99
+Sales of laptop is 7700.0
+Sales of tablet is 0.0
+Sales of acc is 216.74
+** Sales of all item is 10516.73

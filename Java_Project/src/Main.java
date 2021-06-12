@@ -1,5 +1,11 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
-import java.io.*;
+
 
 public class Main {
 	
@@ -15,6 +21,9 @@ public class Main {
 			private static String storageChoice;
 				
 			static PrintWriter outputStream = null;
+			static PrintWriter outputStream_stoke = null;
+			
+			
 		
 			
 			public static String getColorChoice() {
@@ -141,12 +150,23 @@ public class Main {
 		 
 		 public static void printOrder() {
 			 
- 
-			 System.out.println("\n==================================== Gapple order list =============================================");
-			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
 			 
-			 outputStream.println("\n==================================== Gapple order list =============================================");
-			 outputStream.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /    Date   /");
+			 /* for Date */
+			 SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+			 Date time = new Date();
+			 
+			 String time1 = format1.format(time);
+			 System.out.println("DATE: " + time1);
+			 outputStream.println("DATE: " + time1);
+			 
+			 
+			 /* main order list */
+			 
+			 System.out.println("\n============================= Gapple order list ======================================");
+			 System.out.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /");
+			 
+			 outputStream.println("\n============================= Gapple order list ======================================");
+			 outputStream.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /");
 			 
 			 String[] class_name = {"Mobile_first", "Mobile_second", " Mobile_third"};
 			 String[] obj_name = {"mobile1", "mobile2", "mobile3"};
@@ -157,41 +177,49 @@ public class Main {
 				
 				 mobile1[i].writeOutput(); 
 				 
+				 outputStream.println(mobile1[i].writeFileOutput());
+				 
 			 }
 			 
 			 for(int i = 0; i < Mobile_second.total; i++) {
 					
 				 mobile2[i].writeOutput(); 
+				 outputStream.println(mobile2[i].writeFileOutput());
 				 
 			 }
 			 
 			 for(int i = 0; i < Mobile_third.total; i++) {
 					
 				 mobile3[i].writeOutput(); 
+				 outputStream.println(mobile3[i].writeFileOutput());
 				 
 			 }
 			 
 			 for(int i = 0; i< Laptop_first.total; i++) {
 				 
 				 laptop1[i].writeOutput(); 
+				 outputStream.println(laptop1[i].writeFileOutput());
 			 }
 						 
 			 
 			 for(int i = 0; i< Laptop_second.total; i++) {
 							 
 				 laptop2[i].writeOutput(); 
+				 outputStream.println(laptop2[i].writeFileOutput());
 			 }
 
 
 			 for(int i = 0; i< Tablet_first.total; i++) {
 				 
 				 tablet1[i].writeOutput(); 
+				 outputStream.println(tablet1[i].writeFileOutput());
 			 }
 			 
 			 
 			 for(int i = 0; i< Tablet_second.total; i++) {
 				 
 				 tablet2[i].writeOutput(); 
+				 outputStream.println(tablet2[i].writeFileOutput());
 			 }
 			 
 			 
@@ -199,6 +227,7 @@ public class Main {
 			 for(int i=0; i < Keyboard_first.total; i++) {
 				 
 				 Gkeyboard[i].writeOutput();
+				 outputStream.println(Gkeyboard[i].writeFileOutput());
 				 
 			 }
 
@@ -207,6 +236,7 @@ public class Main {
 			 for(int i=0; i < Mouse_first.total; i++) {
 				 
 				 Gmouse[i].writeOutput();
+				 outputStream.println(Gmouse[i].writeFileOutput());
 				 
 			 }
 			 
@@ -214,6 +244,7 @@ public class Main {
 			 for(int i=0; i < Earphone_first.total; i++) {
 				 
 				 earphone1[i].writeOutput();
+				 outputStream.println(earphone1[i].writeFileOutput());
 				 
 			 }
 
@@ -221,6 +252,7 @@ public class Main {
 			 for(int i=0; i < Earphone_second.total; i++) {
 	 
 				 earphone2[i].writeOutput();
+				 outputStream.println(earphone2[i].writeFileOutput());
 	 
 			 }
 			
@@ -241,6 +273,14 @@ public class Main {
 			 System.out.println("Sales of acc is " + Acc_sales);
 			 System.out.println("** Sales of all item is " + All_sales);
 		 
+			 
+			 outputStream.println("\nSales of mobile is " + Mobile_sales );
+			 outputStream.println("Sales of laptop is " + Laptop_sales);
+			 outputStream.println("Sales of tablet is " + Tablet_sales);	 
+			 outputStream.println("Sales of acc is " + Acc_sales);
+			 outputStream.println("** Sales of all item is " + All_sales);
+			 
+			 
 		 } 
 		 
 		 
@@ -248,6 +288,14 @@ public class Main {
 		 
 		 public static void printInventory() {
 			 
+			 
+			 /* for Date */
+			SimpleDateFormat format2 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+			Date time = new Date();
+			 
+			String time2 = format2.format(time);
+			System.out.println("DATE: " + time2);
+			outputStream_stoke.println("DATE: " + time2);
 			 
 			 
 						
@@ -276,6 +324,38 @@ public class Main {
 			System.out.println("Total tablet is " + Measurable.getTotal_tablet() );
 			System.out.println("Total acc is " + Measurable.getTotal_acc() );
 			System.out.println("** All order item is " + Measurable.getAll() +"\n");
+			
+			
+			
+			/* File outputStream */
+			
+			outputStream_stoke.println("\n================ Stock =================");
+			outputStream_stoke.println("   Product   /  Total order quantity   /  Stock  ");
+			outputStream_stoke.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stoke);  // 상속 정의 되면 수량이랑 재고 출력할 예정.
+			outputStream_stoke.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stoke);
+			outputStream_stoke.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stoke);
+			
+			
+			outputStream_stoke.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stoke);
+			outputStream_stoke.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stoke);
+			
+			outputStream_stoke.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stoke);
+			outputStream_stoke.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stoke);
+			
+			outputStream_stoke.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stoke);
+			outputStream_stoke.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stoke);
+			
+			outputStream_stoke.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stoke);
+			outputStream_stoke.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stoke);
+			
+			
+			outputStream_stoke.println("\nTotal mobile is " + Measurable.getTotal_mobile() );
+			outputStream_stoke.println("Total laptop is " + Measurable.getTotal_laptop() );
+			outputStream_stoke.println("Total tablet is " + Measurable.getTotal_tablet() );
+			outputStream_stoke.println("Total acc is " + Measurable.getTotal_acc() );
+			outputStream_stoke.println("** All order item is " + Measurable.getAll() +"\n");
+			
+			
 		 
 		 }
 		 
@@ -631,27 +711,62 @@ public class Main {
 	
 			
 			
-			String fileName = "order_list.txt";
+			String fileName_order = "order_list.txt";
+			String fileName_stoke = "stoke.txt";
 			
-		
+			File outfileobject_order = new File(fileName_order);
+			File outfileobject_stoke = new File(fileName_stoke);
+			
+			/* file outputStream */
 			try {
 				
-				outputStream = new PrintWriter(new FileOutputStream(fileName, true));
 				
+				/* for order list */
+				if( outfileobject_order.exists() ) {
+					
+					/* overwrite */
+					outputStream = new PrintWriter(new FileOutputStream(fileName_order, true));
+					
+				}
+				else {
+					
+					/* not exists, just write */
+					outputStream = new PrintWriter(new FileOutputStream(fileName_order));
+				}
+				
+				
+				/* for stoke */
+				if( outfileobject_stoke.exists() ) {
+					
+					/* overwrite */
+					outputStream_stoke = new PrintWriter(new FileOutputStream(fileName_stoke, true));
+					
+				}
+				else {
+					
+					/* not exists, just write */
+					outputStream_stoke = new PrintWriter(new FileOutputStream(fileName_stoke));
+				}
+				
+				
+								
 			}
+			/* file exception */
 			catch (FileNotFoundException e) {
 				
-				System.out.println("Error opening the file " + fileName);
+				System.out.println("Error opening the file " + fileName_order + " or " + fileName_stoke);
 				System.exit(0);
 				
 			}
 			
-
+			
+			/* program start */
 			simulate();
 			
 			
-			
+			/* file outputStream close */
 			outputStream.close();
+			outputStream_stoke.close();
 			
 			System.out.println("===================== End, Thank you for using our system. =====================");
 

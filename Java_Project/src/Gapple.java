@@ -30,7 +30,7 @@ public class Gapple {
 		price = 0;
 		weight = 0;
 		color = "No color yet";
-		storage = "Not storage yet";
+		storage = "No storage";
 	}
 	
 	
@@ -41,6 +41,14 @@ public class Gapple {
 		
 
 		System.out.println( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
+		
+			
+	}
+	
+	public String writeFileOutput() {
+		
+
+		return ( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
 		
 			
 	}

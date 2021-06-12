@@ -1,0 +1,22 @@
+DATE: 2021-06-12 15:27:04
+
+================ Stock =================
+   Product   /  Total order quantity   /  Stock  
+GPhone13 cutie / 0 / 50
+GPhone13 standard / 0 / 50
+GPhone13 Maximus / 1 / 49
+GacBook Air / 0 / 50
+GacBook Pro / 1 / 49
+GPad Air / 0 / 50
+GPad Pro / 0 / 50
+G-Keyboard / 1 / 49
+G-Mouse / 0 / 50
+GPod / 1 / 49
+GPod Pro / 0 / 50
+
+Total mobile is 1
+Total laptop is 1
+Total tablet is 0
+Total acc is 2
+** All order item is 4
+
