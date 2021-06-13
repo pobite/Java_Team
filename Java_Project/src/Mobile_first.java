@@ -3,7 +3,7 @@ public class Mobile_first extends Mobile implements Calculate {
 	
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	public static int price;
 	
 	public Mobile_first() {
@@ -35,7 +35,7 @@ public class Mobile_first extends Mobile implements Calculate {
 		setUserName(username);
 		setUserNumber(tel);
 		
-		stoke--;
+		stock--;
 	}
 	
 	public double getSales() {

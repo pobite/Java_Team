@@ -2,7 +2,7 @@
 public class Laptop_second extends Laptop implements Calculate {
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	
 	public Laptop_second() {
@@ -36,7 +36,7 @@ public class Laptop_second extends Laptop implements Calculate {
 		setUserNumber(tel);
 		
 		
-		stoke--;
+		stock--;
 	}
 	public double getSales() {
 		

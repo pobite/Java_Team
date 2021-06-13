@@ -2,7 +2,7 @@
 public class Mouse_first extends Mouse implements Calculate {
 
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	public Mouse_first() {
 		
@@ -25,7 +25,7 @@ public class Mouse_first extends Mouse implements Calculate {
 		setUserName(username);
 		setUserNumber(tel);
 		
-		stoke--;
+		stock--;
 	
 	}
 	

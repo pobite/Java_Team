@@ -2,7 +2,7 @@
 public class Laptop_first extends Laptop implements Calculate {
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	public Laptop_first() {
 		
@@ -33,7 +33,7 @@ public class Laptop_first extends Laptop implements Calculate {
 		setUserName(username);
 		setUserNumber(tel);
 		
-		stoke--;
+		stock--;
 	
 	}
 	public double getSales() {

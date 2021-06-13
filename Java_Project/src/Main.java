@@ -16,12 +16,13 @@ public class Main {
 			private static String userTel;
 			 
 			 
-			 
 			private static String colorChoice;
 			private static String storageChoice;
-				
+			
+			
+			/* for file write */
 			static PrintWriter outputStream = null;
-			static PrintWriter outputStream_stoke = null;
+			static PrintWriter outputStream_stock = null;
 			
 			
 		
@@ -172,7 +173,8 @@ public class Main {
 			 String[] obj_name = {"mobile1", "mobile2", "mobile3"};
 			 
 			 
-			 		 
+			 /* print all of data in the arrays */
+			 
 			 for(int i = 0; i < Mobile_first.total; i++) {
 				
 				 mobile1[i].writeOutput(); 
@@ -295,28 +297,28 @@ public class Main {
 			 
 			String time2 = format2.format(time);
 			System.out.println("DATE: " + time2);
-			outputStream_stoke.println("DATE: " + time2);
+			outputStream_stock.println("DATE: " + time2);
 			 
 			 
-						
+			/* print in the console */
 			System.out.println("\n================ Stock =================");
 			System.out.println("   Product   /  Total order quantity   /  Stock  ");
-			System.out.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stoke);  // 상속 정의 되면 수량이랑 재고 출력할 예정.
-			System.out.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stoke);
-			System.out.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stoke);
+			System.out.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stock);  
+			System.out.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stock);
+			System.out.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stock);
 			
 			
-			System.out.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stoke);
-			System.out.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stoke);
+			System.out.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stock);
+			System.out.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stock);
 			
-			System.out.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stoke);
-			System.out.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stoke);
+			System.out.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stock);
+			System.out.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stock);
 			
-			System.out.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stoke);
-			System.out.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stoke);
+			System.out.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stock);
+			System.out.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stock);
 			
-			System.out.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stoke);
-			System.out.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stoke);
+			System.out.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stock);
+			System.out.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stock);
 			
 			
 			System.out.println("\nTotal mobile is " + Measurable.getTotal_mobile() );
@@ -329,31 +331,31 @@ public class Main {
 			
 			/* File outputStream */
 			
-			outputStream_stoke.println("\n================ Stock =================");
-			outputStream_stoke.println("   Product   /  Total order quantity   /  Stock  ");
-			outputStream_stoke.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stoke);  // 상속 정의 되면 수량이랑 재고 출력할 예정.
-			outputStream_stoke.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stoke);
-			outputStream_stoke.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stoke);
+			outputStream_stock.println("\n================ Stock =================");
+			outputStream_stock.println("   Product   /  Total order quantity   /  Stock  ");
+			outputStream_stock.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stock);  
+			outputStream_stock.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stock);
+			outputStream_stock.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stock);
 			
 			
-			outputStream_stoke.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stoke);
-			outputStream_stoke.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stoke);
+			outputStream_stock.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stock);
+			outputStream_stock.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stock);
 			
-			outputStream_stoke.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stoke);
-			outputStream_stoke.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stoke);
+			outputStream_stock.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stock);
+			outputStream_stock.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stock);
 			
-			outputStream_stoke.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stoke);
-			outputStream_stoke.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stoke);
+			outputStream_stock.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stock);
+			outputStream_stock.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stock);
 			
-			outputStream_stoke.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stoke);
-			outputStream_stoke.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stoke);
+			outputStream_stock.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stock);
+			outputStream_stock.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stock);
 			
 			
-			outputStream_stoke.println("\nTotal mobile is " + Measurable.getTotal_mobile() );
-			outputStream_stoke.println("Total laptop is " + Measurable.getTotal_laptop() );
-			outputStream_stoke.println("Total tablet is " + Measurable.getTotal_tablet() );
-			outputStream_stoke.println("Total acc is " + Measurable.getTotal_acc() );
-			outputStream_stoke.println("** All order item is " + Measurable.getAll() +"\n");
+			outputStream_stock.println("\nTotal mobile is " + Measurable.getTotal_mobile() );
+			outputStream_stock.println("Total laptop is " + Measurable.getTotal_laptop() );
+			outputStream_stock.println("Total tablet is " + Measurable.getTotal_tablet() );
+			outputStream_stock.println("Total acc is " + Measurable.getTotal_acc() );
+			outputStream_stock.println("** All order item is " + Measurable.getAll() +"\n");
 			
 			
 		 
@@ -447,7 +449,7 @@ public class Main {
 					}
 				
 				
-					/* 주문내역 selType == 1 */
+					/* order list, selType == 1 */
 				
 					if (selType == 1) {
 						
@@ -458,7 +460,7 @@ public class Main {
 							
 					}
 					
-					/* 재고관리 selType == 2 */
+					/* stock, selType == 2 */
 					
 					if (selType == 2) {
 						
@@ -703,10 +705,10 @@ public class Main {
 			
 			/* file name */
 			String fileName_order = "order_list.txt";
-			String fileName_stoke = "stoke.txt";
+			String fileName_stock = "stock.txt";
 			
 			File outfileobject_order = new File(fileName_order);
-			File outfileobject_stoke = new File(fileName_stoke);
+			File outfileobject_stock = new File(fileName_stock);
 			
 			/* file outputStream */
 			try {
@@ -726,17 +728,17 @@ public class Main {
 				}
 				
 				
-				/* for stoke */
-				if( outfileobject_stoke.exists() ) {
+				/* for stock */
+				if( outfileobject_stock.exists() ) {
 					
 					/* overwrite */
-					outputStream_stoke = new PrintWriter(new FileOutputStream(fileName_stoke, true));
+					outputStream_stock = new PrintWriter(new FileOutputStream(fileName_stock, true));
 					
 				}
 				else {
 					
 					/* not exists, just write */
-					outputStream_stoke = new PrintWriter(new FileOutputStream(fileName_stoke));
+					outputStream_stock = new PrintWriter(new FileOutputStream(fileName_stock));
 				}
 				
 				
@@ -745,7 +747,7 @@ public class Main {
 			/* file exception */
 			catch (FileNotFoundException e) {
 				
-				System.out.println("Error opening the file " + fileName_order + " or " + fileName_stoke);
+				System.out.println("Error opening the file " + fileName_order + " or " + fileName_stock);
 				System.exit(0);
 				
 			}
@@ -757,7 +759,7 @@ public class Main {
 			
 			/* file outputStream close */
 			outputStream.close();
-			outputStream_stoke.close();
+			outputStream_stock.close();
 			
 			System.out.println("===================== End, Thank you for using our system. =====================");
 

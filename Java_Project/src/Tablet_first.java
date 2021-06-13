@@ -2,7 +2,7 @@
 public class Tablet_first extends Tablet implements Calculate {
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	
 	public Tablet_first() {
@@ -36,7 +36,7 @@ public class Tablet_first extends Tablet implements Calculate {
 		setUserName(username);
 		setUserNumber(tel);
 		
-		stoke--;
+		stock--;
 	}
 	
 	public double getSales() {

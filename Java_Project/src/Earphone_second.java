@@ -2,7 +2,7 @@
 public class Earphone_second extends Earphone implements Calculate {
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	
 	public Earphone_second() {
@@ -27,7 +27,7 @@ public class Earphone_second extends Earphone implements Calculate {
 		setUserNumber(tel);
 		
 		
-		stoke--;
+		stock--;
 	}
 
 

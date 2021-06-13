@@ -2,7 +2,7 @@
 public class Mobile_second extends Mobile implements Calculate {
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	public Mobile_second() {
 		super();
@@ -33,7 +33,7 @@ public class Mobile_second extends Mobile implements Calculate {
 		setUserName(username);
 		setUserNumber(tel);
 		
-		stoke--;
+		stock--;
 	}
 	
 	public double getSales() {

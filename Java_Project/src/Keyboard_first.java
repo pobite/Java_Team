@@ -2,7 +2,7 @@
 public class Keyboard_first extends Keyboard implements Calculate {
 	
 	public static int total;
-	public static int stoke = 50;
+	public static int stock = 50;
 	
 	
 	public Keyboard_first() {
@@ -27,7 +27,7 @@ public class Keyboard_first extends Keyboard implements Calculate {
 		setUserName(username);
 		setUserNumber(tel);
 		
-		stoke--;
+		stock--;
 	
 	}
 	public double getSales() {
