@@ -16,7 +16,7 @@ public class Mobile_second extends Mobile implements Calculate {
 		setStorage("64GB, 256GB, 512GB");
 	}
 	
-	public Mobile_second(String color, String storage, String username, String tel) {
+	public Mobile_second(String color, String storage, String username, String tel, String address, String email) {
 		
 		super();
 	
@@ -32,6 +32,8 @@ public class Mobile_second extends Mobile implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserAddress(address);
+		setUserEmail(email);
 		
 		stock--;
 	}

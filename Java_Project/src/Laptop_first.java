@@ -18,7 +18,7 @@ public class Laptop_first extends Laptop implements Calculate {
 	}
 	
 	
-	public Laptop_first (String color, String storage, String username, String tel) {
+	public Laptop_first (String color, String storage, String username, String tel, String address, String email) {
 		
 		super();
 	
@@ -32,6 +32,8 @@ public class Laptop_first extends Laptop implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserEmail(email);
+		setUserAddress(address);
 		
 		stock--;
 	

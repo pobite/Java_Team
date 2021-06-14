@@ -16,7 +16,7 @@ public class Keyboard_first extends Keyboard implements Calculate {
 	}
 	
 	
-	public Keyboard_first (String username, String tel) {
+	public Keyboard_first (String username, String tel, String address, String email) {
 		
 		super();
 		setName("G-Keyboard");
@@ -26,6 +26,8 @@ public class Keyboard_first extends Keyboard implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserAddress(address);
+		setUserEmail(email);
 		
 		stock--;
 	

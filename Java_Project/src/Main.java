@@ -5,9 +5,6 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
 
 
 public class Main {
@@ -17,6 +14,8 @@ public class Main {
 	
 			private static String userName;
 			private static String userTel;
+			private static String userAddress;
+			private static String userEmail;
 			 
 			 
 			private static String colorChoice;
@@ -566,19 +565,19 @@ public class Main {
 							//method로 만들기						
 							options();
 							
-							mobile1[Mobile_first.total++] = new Mobile_first(getColorChoice(), getStorageChoice(), userName, userTel);
+							mobile1[Mobile_first.total++] = new Mobile_first(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							options();
 													
-							mobile2[Mobile_second.total++] = new Mobile_second(getColorChoice(), getStorageChoice(), userName, userTel);
+							mobile2[Mobile_second.total++] = new Mobile_second(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 						if ( choiceDevice == 3 ) {
 							options();
 													
-							mobile3[Mobile_third.total++] = new Mobile_third(getColorChoice(), getStorageChoice(), userName, userTel);
+							mobile3[Mobile_third.total++] = new Mobile_third(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 						break;
@@ -598,13 +597,13 @@ public class Main {
 						if ( choiceDevice == 1 ) {
 							options();
 													
-							laptop1[Laptop_first.total++] = new Laptop_first(getColorChoice(), getStorageChoice(), userName, userTel);
+							laptop1[Laptop_first.total++] = new Laptop_first(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							options();
 													
-							laptop2[Laptop_second.total++] = new Laptop_second(getColorChoice(), getStorageChoice(), userName, userTel);
+							laptop2[Laptop_second.total++] = new Laptop_second(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 											
@@ -622,13 +621,13 @@ public class Main {
 						if ( choiceDevice == 1 ) {
 							options();
 													
-							tablet1[Tablet_first.total++] = new Tablet_first(getColorChoice(), getStorageChoice(), userName, userTel);
+							tablet1[Tablet_first.total++] = new Tablet_first(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							options();
 													
-							tablet2[Tablet_second.total++] = new Tablet_second(getColorChoice(), getStorageChoice(), userName, userTel);
+							tablet2[Tablet_second.total++] = new Tablet_second(getColorChoice(), getStorageChoice(), userName, userTel, userAddress, userEmail);
 						}
 						
 						
@@ -642,7 +641,7 @@ public class Main {
 						System.out.println("\n\nProgrammer's Identity. G-Keyboard." + "\n");
 						System.out.println(gKeyboard);	
 						clientInfo();
-						Gkeyboard[Keyboard_first.total++] = new Keyboard_first(userName, userTel);
+						Gkeyboard[Keyboard_first.total++] = new Keyboard_first(userName, userTel, userAddress, userEmail);
 						
 						break;
 						
@@ -653,7 +652,7 @@ public class Main {
 						System.out.println("\n\nMagic. G-Mouse." + "\n");
 						System.out.println(gMouse);	
 						clientInfo();
-						Gmouse[Mouse_first.total++] = new Mouse_first(userName, userTel);
+						Gmouse[Mouse_first.total++] = new Mouse_first(userName, userTel, userAddress, userEmail);
 						
 						break;
 						
@@ -669,14 +668,14 @@ public class Main {
 						if ( choiceDevice == 1 ) {
 							System.out.println("Selected GPod\n");		
 							clientInfo();
-							earphone1[Earphone_first.total++] = new Earphone_first(userName, userTel);
+							earphone1[Earphone_first.total++] = new Earphone_first(userName, userTel, userAddress, userEmail);
 						}
 						
 						if ( choiceDevice == 2 ) {
 							System.out.println("Selected GPod Pro\n");
 							
 							clientInfo();
-							earphone2[Earphone_second.total++] = new Earphone_second(userName, userTel);
+							earphone2[Earphone_second.total++] = new Earphone_second(userName, userTel, userAddress, userEmail);
 						}
 						
 						break;

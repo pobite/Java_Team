@@ -15,7 +15,7 @@ public class Earphone_first extends Earphone implements Calculate {
 	}
 	
 	
-	public Earphone_first (String username, String tel) {
+	public Earphone_first (String username, String tel, String address, String email) {
 		
 		super();
 		setName("GPod");
@@ -25,6 +25,9 @@ public class Earphone_first extends Earphone implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserAddress(address);
+		setUserEmail(email);
+		
 		
 		stock--;
 	

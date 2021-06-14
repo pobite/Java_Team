@@ -17,7 +17,7 @@ public class Mobile_third extends Mobile implements Calculate {
 		
 	}
 	
-	public Mobile_third(String color, String storage, String username, String tel) {
+	public Mobile_third(String color, String storage, String username, String tel, String address, String email ) {
 		
 		super();
 		
@@ -33,6 +33,8 @@ public class Mobile_third extends Mobile implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserAddress(address);
+		setUserEmail(email);
 		
 		stock--;
 	}

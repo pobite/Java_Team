@@ -1,6 +1,28 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class Project {
 
@@ -31,23 +53,331 @@ public class Project {
    private String userNumber;
    private String userAddress;
    private String userEmail;
+   
+   
+   /* for check type */
+	boolean check_Mobile_first = false;
+	boolean check_Mobile_second = false;
+	boolean check_Mobile_third = false;
+			
+			
+	/* Lap top */
+	boolean check_Laptop_first = false;
+	boolean check_Laptop_second = false;
+	
+	/* Tablet */
+	boolean check_Tablet_first = false;
+	boolean check_Tablet_second = false;
+	
+
+	/* Keyboard */
+	boolean check_Keyboard_first = false;
+
+		
+	/* Mouse */
+	boolean check_Mouse_first = false;
+	
+	
+	/* Earphone */
+	boolean check_Earphone_first = false;
+	boolean check_Earphone_second = false;
+   
+   
+   
+   
+   String sellerPassword = "1234";	////
+   
+	/* for file write */
+	static PrintWriter outputStream = null;
+	static PrintWriter outputStream_stock = null;
+	
+
+	/* default setting items */
+	
+	 public static Mobile_first gMobile1 = new Mobile_first();
+	 public static Mobile_second gMobile2 = new Mobile_second();
+	 public static Mobile_third gMobile3 = new Mobile_third();
+	 
+	 public static Laptop_first gLaptop1 = new Laptop_first();
+	 public static Laptop_second gLaptop2 = new Laptop_second();
+	 
+	 public static Tablet_first gTablet1 = new Tablet_first();
+	 public static Tablet_second gTablet2 = new Tablet_second();
+	 
+	 
+	 public static Keyboard_first gKeyboard = new Keyboard_first();
+	 public static Mouse_first gMouse = new Mouse_first();
+	 
+	 public static Earphone_first gEarphone1 = new Earphone_first();
+	 public static Earphone_second gEarphone2 = new Earphone_second();
+	
+  
+   
+	/////////////////////////////////////////////////////////////
+	////////////////////// /*   Array    *///////////////////////
+	/////////////////////////////////////////////////////////////
+	
+	/* Maximum is 100 */
+	
+	
+	
+	/* Mobile */
+	public static Mobile_first[] mobile1 = new Mobile_first[100];	
+	public static Mobile_second[] mobile2 = new Mobile_second[100];		
+	public static Mobile_third[] mobile3 = new Mobile_third[100];
+	
+	/* Lap top */
+	public static Laptop_first[] laptop1 = new Laptop_first[100];
+	public static Laptop_second[] laptop2 = new Laptop_second[100];
+	
+	/* Tablet */
+	public static Tablet_first[] tablet1 = new Tablet_first[100];
+	public static Tablet_second[] tablet2 = new Tablet_second[100];
+	
+	
+	/* Keyboard */
+	public static Keyboard_first[] Gkeyboard = new Keyboard_first[100];
+	
+	
+	/* Mouse */
+	public static Mouse_first[] Gmouse =  new Mouse_first[100];
+	
+	
+	/* Earphone */
+	public static Earphone_first[] earphone1 = new Earphone_first[100];
+	public static Earphone_second[] earphone2 = new Earphone_second[100];
+	
+	
+	/* seller who manages this program, set default PW as 1234 */
+	public static Seller master = new Seller(1234);
+	
+	
+	/* getter and setter */
+	
+	
+	   public String getItemColor() {
+			return itemColor;
+		}
+
+		public void setItemColor(String itemColor) {
+			this.itemColor = itemColor;
+		}
+
+		public String getItemCapacity() {
+			return itemCapacity;
+		}
+
+		public void setItemCapacity(String itemCapacity) {
+			this.itemCapacity = itemCapacity;
+		}
+
+		public String getItemQuantity() {
+			return itemQuantity;
+		}
+
+		public void setItemQuantity(String itemQuantity) {
+			this.itemQuantity = itemQuantity;
+		}
+
+		public String getUserName() {
+			return userName;
+		}
+
+		public void setUserName(String userName) {
+			this.userName = userName;
+		}
+
+		public String getUserNumber() {
+			return userNumber;
+		}
+
+		public void setUserNumber(String userNumber) {
+			this.userNumber = userNumber;
+		}
+
+		public String getUserAddress() {
+			return userAddress;
+		}
+
+		public void setUserAddress(String userAddress) {
+			this.userAddress = userAddress;
+		}
+
+		public String getUserEmail() {
+			return userEmail;
+		}
+
+		public void setUserEmail(String userEmail) {
+			this.userEmail = userEmail;
+		}
+	  
+		 /* for order list */
+		 
+		 public static void printOrder() {
+			 
+			 			 
+			 /* for Date */
+			 SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+			 Date time = new Date();
+			 
+			 String time1 = format1.format(time);
+			 outputStream.println("DATE: " + time1);
+			 
+			 
+			 /* main order list */
+			 
+			 
+			 outputStream.println("\n======================== Gapple order list =================================");
+			 outputStream.println("   Product    /    Name   /    TEL    /  Price   /   Color   /    Storage    /");
+			 
+			 String[] class_name = {"Mobile_first", "Mobile_second", " Mobile_third"};
+			 String[] obj_name = {"mobile1", "mobile2", "mobile3"};
+			 
+			 
+			 /* print all of data in the arrays */
+			 
+			 for(int i = 0; i < Mobile_first.total; i++) {
+								 
+				 outputStream.println(mobile1[i].writeFileOutput());
+				 
+			 }
+			 
+			 for(int i = 0; i < Mobile_second.total; i++) {
+					
+				 outputStream.println(mobile2[i].writeFileOutput());
+				 
+			 }
+			 
+			 for(int i = 0; i < Mobile_third.total; i++) {
+					
+				 outputStream.println(mobile3[i].writeFileOutput());
+				 
+			 }
+			 
+			 for(int i = 0; i< Laptop_first.total; i++) {
+				 
+				 outputStream.println(laptop1[i].writeFileOutput());
+			 }
+						 
+			 
+			 for(int i = 0; i< Laptop_second.total; i++) {
+							 
+				 outputStream.println(laptop2[i].writeFileOutput());
+			 }
 
 
+			 for(int i = 0; i< Tablet_first.total; i++) {
+				 
+				 outputStream.println(tablet1[i].writeFileOutput());
+			 }
+			 
+			 
+			 for(int i = 0; i< Tablet_second.total; i++) {
+				 
+				 outputStream.println(tablet2[i].writeFileOutput());
+			 }
+			 
+			 
+			 
+			 for(int i=0; i < Keyboard_first.total; i++) {
+				 
+				 outputStream.println(Gkeyboard[i].writeFileOutput());
+				 
+			 }
+
+			 
+			 
+			 for(int i=0; i < Mouse_first.total; i++) {
+				 
+				 outputStream.println(Gmouse[i].writeFileOutput());
+				 
+			 }
+			 
+			
+			 for(int i=0; i < Earphone_first.total; i++) {
+				 
+				 outputStream.println(earphone1[i].writeFileOutput());
+				 
+			 }
+
+
+			 for(int i=0; i < Earphone_second.total; i++) {
+	 
+				 outputStream.println(earphone2[i].writeFileOutput());
+	 
+			 }
+			
+			 
+			 
+			 double Mobile_sales = gMobile1.getSales() + gMobile2.getSales() + gMobile3.getSales();
+			 double Laptop_sales =  gLaptop1.getSales() + gLaptop2.getSales();
+			 double Tablet_sales = gTablet1.getSales() + gTablet2.getSales();
+			 double Acc_sales =  gKeyboard.getSales() + gMouse.getSales() + gEarphone1.getSales() + gEarphone2.getSales();
+			 
+			 double All_sales = Mobile_sales + Laptop_sales + Tablet_sales + Acc_sales;
+			 All_sales = Double.parseDouble(String.format("%.2f",All_sales));
+
+			 
+			 outputStream.println("\nSales of mobile is " + Mobile_sales );
+			 outputStream.println("Sales of laptop is " + Laptop_sales);
+			 outputStream.println("Sales of tablet is " + Tablet_sales);	 
+			 outputStream.println("Sales of acc is " + Acc_sales);
+			 outputStream.println("** Sales of all item is " + All_sales + "\n");
+			 
+			 outputStream.flush();
+		 } 
+		 
+		 
+		 
+		 
+		 public static void printInventory() {
+			 
+			 
+			 /* for Date */
+			SimpleDateFormat format2 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+			Date time = new Date();
+			 
+			String time2 = format2.format(time);
+			outputStream_stock.println("DATE: " + time2);
+			 
+
+	
+			/* File outputStream */
+			
+			outputStream_stock.println("\n================ Stock =================");
+			outputStream_stock.println("   Product   /  Total order quantity   /  Stock  ");
+			outputStream_stock.println(gMobile1.getName() + " / " + Mobile_first.total + " / " + Mobile_first.stock);  
+			outputStream_stock.println(gMobile2.getName() + " / " + Mobile_second.total + " / " + Mobile_second.stock);
+			outputStream_stock.println(gMobile3.getName() + " / " + Mobile_third.total + " / " + Mobile_third.stock);
+			
+			
+			outputStream_stock.println(gLaptop1.getName() + " / " + Laptop_first.total + " / " + Laptop_first.stock);
+			outputStream_stock.println(gLaptop2.getName() + " / " + Laptop_second.total + " / " + Laptop_second.stock);
+			
+			outputStream_stock.println(gTablet1.getName() + " / " + Tablet_first.total + " / " + Tablet_first.stock);
+			outputStream_stock.println(gTablet2.getName() + " / " + Tablet_second.total + " / " + Tablet_second.stock);
+			
+			outputStream_stock.println(gKeyboard.getName() + " / " + Keyboard_first.total + " / " + Keyboard_first.stock);
+			outputStream_stock.println(gMouse.getName() + " / " + Mouse_first.total + " / " + Mouse_first.stock);
+			
+			outputStream_stock.println(gEarphone1.getName() + " / " + Earphone_first.total + " / " + Earphone_first.stock);
+			outputStream_stock.println(gEarphone2.getName() + " / " + Earphone_second.total + " / " + Earphone_second.stock);
+			
+			
+			outputStream_stock.println("\nTotal mobile is " + Measurable.getTotal_mobile() );
+			outputStream_stock.println("Total laptop is " + Measurable.getTotal_laptop() );
+			outputStream_stock.println("Total tablet is " + Measurable.getTotal_tablet() );
+			outputStream_stock.println("Total acc is " + Measurable.getTotal_acc() );
+			outputStream_stock.println("** All order item is " + Measurable.getAll() +"\n");
+			
+		 
+		 }
+		 
+   
    /**
     * Launch the application.
     */
-   public static void main(String[] args) {
-      EventQueue.invokeLater(new Runnable() {
-         public void run() {
-            try {
-               Project window = new Project();
-               window.frame.setVisible(true);
-            } catch (Exception e) {
-               e.printStackTrace();
-            }
-         }
-      });
-   }
+   
 
    /**
     * Create the application.
@@ -194,6 +524,73 @@ public class Project {
             userNumber = textField_number.getText();
             userAddress = textField_address.getText();
             userEmail = textField_email.getText();
+            
+            if(check_Mobile_first == true) {
+            	
+				mobile1[Mobile_first.total++] = new Mobile_first(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+
+            	check_Mobile_first = false;
+            }
+            else if(check_Mobile_second == true) {
+            	
+            	
+            	mobile2[Mobile_second.total++] = new Mobile_second(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+            	check_Mobile_second = false;
+            }
+			else if(check_Mobile_third == true) {
+			            	
+				
+				mobile3[Mobile_third.total++] = new Mobile_third(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+				check_Mobile_third = false;
+		    }
+			else if(check_Laptop_first == true) {
+				
+				laptop1[Laptop_first.total++] = new Laptop_first(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+				check_Laptop_first = false;
+				
+			}
+			else if(check_Laptop_second == true) {
+				
+				laptop2[Laptop_second.total++] = new Laptop_second(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+				check_Laptop_second = false;
+				
+			}
+			else if(check_Tablet_first == true) {
+				
+				tablet1[Tablet_first.total++] = new Tablet_first(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+				check_Tablet_first = false;
+			}
+			else if(check_Tablet_second == true) {
+				
+				tablet2[Tablet_second.total++] = new Tablet_second(getItemColor(), getItemCapacity(), userName, userNumber, userAddress, userEmail);
+				check_Tablet_second = false;
+				
+			}
+			else if(check_Keyboard_first == true) {
+				
+				Gkeyboard[Keyboard_first.total++] = new Keyboard_first(userName, userNumber, userAddress, userEmail);
+				check_Keyboard_first = false;
+			}
+			else if(check_Mouse_first == true) {
+				
+				Gmouse[Mouse_first.total++] = new Mouse_first(userName, userNumber, userAddress, userEmail);
+				check_Mouse_first = false;		
+			}
+			else if(check_Earphone_first == true) {
+				earphone1[Earphone_first.total++] = new Earphone_first(userName, userNumber, userAddress, userEmail);
+				check_Earphone_first = false;
+			}
+			else if(check_Earphone_second == true) {
+				earphone2[Earphone_second.total++] = new Earphone_second(userName, userNumber, userAddress, userEmail);
+				check_Earphone_second = false;
+			}
+			else {
+				
+				 JOptionPane.showMessageDialog(null, "ERROR: Something is wrong!","Message",JOptionPane.ERROR_MESSAGE);
+				 
+			}
+			            
+            
          }
       });
 
@@ -270,6 +667,8 @@ public class Project {
             itemColor = color1.getSelectedItem().toString();
             itemCapacity = capacity1.getSelectedItem().toString();
             itemQuantity = quantity1.getSelectedItem().toString();
+            check_Mobile_first = true;
+     
          }
       });
 
@@ -341,6 +740,7 @@ public class Project {
             itemColor = color1.getSelectedItem().toString();
             itemCapacity = capacity1.getSelectedItem().toString();
             itemQuantity = quantity1.getSelectedItem().toString();
+            check_Mobile_second = true;
          }
       });
       phone2.setVisible(false);
@@ -414,6 +814,7 @@ public class Project {
             itemColor = color.getSelectedItem().toString();
             itemCapacity = capacity.getSelectedItem().toString();
             itemQuantity = quantity.getSelectedItem().toString();
+            check_Mobile_third = true;
          }
       });
       phone3.setVisible(false);
@@ -484,6 +885,7 @@ public class Project {
             itemColor = color7.getSelectedItem().toString();
             itemCapacity = capacity7.getSelectedItem().toString();
             itemQuantity = quantity7.getSelectedItem().toString();
+            check_Tablet_first = true;
          }
       });
       pad1.setVisible(false);
@@ -554,6 +956,7 @@ public class Project {
             itemColor = color6.getSelectedItem().toString();
             itemCapacity = capacity6.getSelectedItem().toString();
             itemQuantity = quantity6.getSelectedItem().toString();
+            check_Tablet_second = true;
          }
       });
       pad2.setVisible(false);
@@ -624,6 +1027,7 @@ public class Project {
             itemColor = color4.getSelectedItem().toString();
             itemCapacity = capacity4.getSelectedItem().toString();
             itemQuantity = quantity4.getSelectedItem().toString();
+            check_Laptop_first = true;
          }
       });
       book1.setVisible(false);
@@ -694,6 +1098,7 @@ public class Project {
             itemColor = color5.getSelectedItem().toString();
             itemCapacity = capacity5.getSelectedItem().toString();
             itemQuantity = quantity5.getSelectedItem().toString();
+            check_Laptop_second = true;
          }
       });
       book2.setVisible(false);
@@ -753,6 +1158,7 @@ public class Project {
          public void actionPerformed(ActionEvent arge) {
             itemColor = color8.getSelectedItem().toString();
             itemQuantity = quantity8.getSelectedItem().toString();
+            check_Earphone_first = true;
          }
       });
       pod1.setVisible(false);
@@ -813,6 +1219,7 @@ public class Project {
          public void actionPerformed(ActionEvent arge) {
             itemColor = color9.getSelectedItem().toString();
             itemQuantity = quantity9.getSelectedItem().toString();
+            check_Earphone_second = true;
          }
       });
       pod2.setVisible(false);
@@ -873,6 +1280,7 @@ public class Project {
          public void actionPerformed(ActionEvent arge) {
             itemColor = color10.getSelectedItem().toString();
             itemQuantity = quantity10.getSelectedItem().toString();
+            check_Mouse_first = true;
          }
       });
       mouse.setVisible(false);
@@ -933,6 +1341,7 @@ public class Project {
          public void actionPerformed(ActionEvent arge) {
             itemColor = color11.getSelectedItem().toString();
             itemQuantity = quantity11.getSelectedItem().toString();
+            check_Keyboard_first = true;
          }
       });
       keyboard.setVisible(false);
@@ -1246,7 +1655,14 @@ public class Project {
       orderlistHome.setBackground(Color.LIGHT_GRAY);
       orderlistHome.setBounds(717, 455, 80, 46);
       orderlist.add(orderlistHome);
-
+      
+      btnNewButton.addActionListener(new ActionListener() {
+          public void actionPerformed(ActionEvent arge) {
+        	  printOrder();
+        	  outputStream.close();
+          }
+       });
+      
       //셀러전용 인벤토리 페이지
       JPanel inventory = new JPanel();
       inventory.setBounds(0, 0, 797, 501);
@@ -1277,7 +1693,14 @@ public class Project {
       inventoryHome.setBackground(Color.LIGHT_GRAY);
       inventoryHome.setBounds(717, 455, 80, 46);
       inventory.add(inventoryHome);
-
+      
+      btnNewButton_10.addActionListener(new ActionListener() {
+          public void actionPerformed(ActionEvent arge) {
+        	  printInventory();
+        	  outputStream_stock.flush();
+          }
+       });
+      
 
       //셀러전용 메뉴 페이지
       JPanel sellermode = new JPanel();
@@ -1339,7 +1762,7 @@ public class Project {
 
       JButton paswordOK = new JButton("OK");
       paswordOK.setFont(new Font("굴림", Font.PLAIN, 15));
-      String sellerPassword = "1234";
+      
       
       paswordOK.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
@@ -1414,4 +1837,80 @@ public class Project {
          }
       });
    }
+
+
+
+	public static void main(String[] args) {
+		   
+		   
+		   /* file name */
+			String fileName_order = "order_list.txt";
+			String fileName_stock = "stock.txt";
+			
+			File outfileobject_order = new File(fileName_order);
+			File outfileobject_stock = new File(fileName_stock);
+			
+			/* file outputStream */
+			try {
+				
+				
+				/* for order list */
+				if( outfileobject_order.exists() ) {
+					
+					/* overwrite */
+					outputStream = new PrintWriter(new FileOutputStream(fileName_order, true));
+					
+				}
+				else {
+					
+					/* not exists, just write */
+					outputStream = new PrintWriter(new FileOutputStream(fileName_order));
+				}
+				
+				
+				/* for stock */
+				if( outfileobject_stock.exists() ) {
+					
+					/* overwrite */
+					outputStream_stock = new PrintWriter(new FileOutputStream(fileName_stock, true));
+					
+				}
+				else {
+					
+					/* not exists, just write */
+					outputStream_stock = new PrintWriter(new FileOutputStream(fileName_stock));
+				}
+				
+				
+								
+			}
+			/* file exception */
+			catch (FileNotFoundException e) {
+				
+				System.out.println("Error opening the file " + fileName_order + " or " + fileName_stock);
+				System.exit(0);
+				
+			}
+		   
+		   
+	   EventQueue.invokeLater(new Runnable() {
+	      public void run() {
+	         try {
+	            Project window = new Project();
+	            window.frame.setVisible(true);
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	         }
+	      }
+	      
+	      
+	   });
+	   
+	   
+	   /* file outputStream close */
+			outputStream.close();
+			outputStream_stock.close();
+			
+	}
+	
 }

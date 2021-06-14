@@ -18,6 +18,8 @@ public class Gapple {
 	
 	private String userName;
 	private String userNumber;
+	private String userAddress;
+	private String userEmail;
 	
 	
 
@@ -26,6 +28,8 @@ public class Gapple {
 		
 		userName = "No user yet";
 		userNumber = "No number yet";
+		userAddress = "No address yet";
+		userEmail = "No email yet";
 		name = "No name yet";
 		price = 0;
 		weight = 0;
@@ -36,7 +40,8 @@ public class Gapple {
 	
 	
 	/* output */
-	
+
+
 	public void writeOutput() {
 		
 
@@ -161,6 +166,27 @@ public class Gapple {
 	}
 
 
-	
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+
+
+	public String getUserEmail() {
+		return userEmail;
+	}
+
+
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+
 	
 }

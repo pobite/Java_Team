@@ -19,7 +19,7 @@ public class Tablet_second extends Tablet implements Calculate {
 	}
 	
 	
-	public Tablet_second (String color, String storage, String username, String tel) {
+	public Tablet_second (String color, String storage, String username, String tel, String address, String email) {
 		
 		super();
 	
@@ -33,6 +33,9 @@ public class Tablet_second extends Tablet implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserAddress(address);
+		setUserEmail(email);
+		
 		
 		stock--;
 		

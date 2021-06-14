@@ -14,7 +14,7 @@ public class Mouse_first extends Mouse implements Calculate {
 	}
 	
 	
-	public Mouse_first (String username, String tel) {
+	public Mouse_first (String username, String tel, String address, String email) {
 		
 		super();
 		setName("G-Mouse");
@@ -24,6 +24,8 @@ public class Mouse_first extends Mouse implements Calculate {
 		
 		setUserName(username);
 		setUserNumber(tel);
+		setUserAddress(address);
+		
 		
 		stock--;
 	
