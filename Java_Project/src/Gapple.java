@@ -45,7 +45,7 @@ public class Gapple {
 	public void writeOutput() {
 		
 
-		System.out.println( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
+		System.out.println( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getUserAddress() + " / " + getUserEmail() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
 		
 			
 	}
@@ -53,7 +53,7 @@ public class Gapple {
 	public String writeFileOutput() {
 		
 
-		return ( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
+		return ( getName() + " / " + getUserName() + " / " + getUserNumber() + " / " + getUserAddress() + " / " + getUserEmail() + " / " + getPrice() + " / " + getColor() + " / " + getStorage() );
 		
 			
 	}
