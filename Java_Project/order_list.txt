@@ -9,3 +9,158 @@ Sales of tablet is 0.0
 Sales of acc is 0.0
 ** Sales of all item is 0.0
 
+DATE: 2021-06-15 13:22:33
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+G-Keyboard / rsf / sfsf / sfsf / sfsf / 59.99 / White / No storage
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 59.99
+** Sales of all item is 59.99
+
+DATE: 2021-06-15 13:22:57
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  / werwe /  / 1299.99 / choose the color / choose the capacity
+GacBook Pro /  /  /  / ererer / 7700.0 / choose the color / choose the capacity
+GPad Air /  /  /  / erer / 1099.99 / choose the color / choose the capacity
+G-Keyboard / rsf / sfsf / sfsf / sfsf / 59.99 / White / No storage
+
+Sales of mobile is 1299.99
+Sales of laptop is 7700.0
+Sales of tablet is 1099.99
+Sales of acc is 59.99
+** Sales of all item is 10159.97
+
+DATE: 2021-06-15 13:23:17
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  / werwe /  / 1299.99 / choose the color / choose the capacity
+GacBook Air /  / ew / ewwe / wewew / 2499.99 / choose the color / choose the capacity
+GacBook Pro /  /  /  / ererer / 7700.0 / choose the color / choose the capacity
+GPad Air /  /  /  / erer / 1099.99 / choose the color / choose the capacity
+GPad Air /  /  /  / we / 1099.99 / choose the color / choose the capacity
+GPad Air /  /  / we / ewwe / 1099.99 / choose the color / choose the capacity
+G-Keyboard / rsf / sfsf / sfsf / sfsf / 59.99 / White / No storage
+G-Keyboard /  /  /  /  / 59.99 / White / No storage
+
+Sales of mobile is 1299.99
+Sales of laptop is 10199.99
+Sales of tablet is 3299.9700000000003
+Sales of acc is 119.98
+** Sales of all item is 14919.93
+
+DATE: 2021-06-15 13:30:02
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GacBook Air /  /  /  /  / 2499.99 / choose the color / choose the capacity
+GPad Air /  /  /  /  / 1099.99 / choose the color / choose the capacity
+GPod Pro /  /  /  /  / 320.25 / White / No storage
+
+Sales of mobile is 1299.99
+Sales of laptop is 2499.99
+Sales of tablet is 1099.99
+Sales of acc is 320.25
+** Sales of all item is 5220.22
+
+DATE: 2021-06-15 13:30:18
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GacBook Air /  /  /  /  / 2499.99 / choose the color / choose the capacity
+GacBook Air /  /  /  /  / 2499.99 / choose the color / choose the capacity
+GPad Air /  /  /  /  / 1099.99 / choose the color / choose the capacity
+GPod Pro /  /  /  /  / 320.25 / White / No storage
+
+Sales of mobile is 2599.98
+Sales of laptop is 4999.98
+Sales of tablet is 1099.99
+Sales of acc is 320.25
+** Sales of all item is 9020.2
+
+DATE: 2021-06-15 13:30:25
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GacBook Air /  /  /  /  / 2499.99 / choose the color / choose the capacity
+GacBook Air /  /  /  /  / 2499.99 / choose the color / choose the capacity
+GPad Air /  /  /  /  / 1099.99 / choose the color / choose the capacity
+GPod Pro /  /  /  /  / 320.25 / White / No storage
+
+Sales of mobile is 3899.9700000000003
+Sales of laptop is 4999.98
+Sales of tablet is 1099.99
+Sales of acc is 320.25
+** Sales of all item is 10320.19
+
+DATE: 2021-06-15 13:36:40
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GacBook Pro /  /  /  /  / 7700.0 / choose the color / choose the capacity
+
+Sales of mobile is 11699.949999999999
+Sales of laptop is 7700.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 19399.95
+
+DATE: 2021-06-15 13:37:00
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GPhone13 standard /  /  /  /  / 1299.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GPhone13 Maximus /  /  /  /  / 2599.99 / choose the color / choose the capacity
+GacBook Air /  /  /  /  / 2499.99 / choose the color / choose the capacity
+GacBook Pro /  /  /  /  / 7700.0 / choose the color / choose the capacity
+
+Sales of mobile is 12999.939999999999
+Sales of laptop is 10199.99
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 23199.93
+
+DATE: 2021-06-15 13:41:10
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 0.0
+
+DATE: 2021-06-15 13:42:07
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GacBook Pro /  /  /  /  / 7700.0 / choose the color / choose the capacity
+
+Sales of mobile is 0.0
+Sales of laptop is 7700.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 7700.0
+

@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.ScrollPane;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,6 +24,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 
 public class Project {
@@ -315,7 +315,7 @@ public class Project {
 		textArea.append("Sales of acc is " + Acc_sales +"\n");
 		textArea.append("** Sales of all item is " + All_sales + "\n");
 		
-
+	
 	}
 
 	public static void printInventory() {
@@ -366,7 +366,7 @@ public class Project {
 	}
 
 	private void initialize() {
-		frame = new JFrame();
+		frame = new JFrame("Gapple Online Platform");
 		frame.setBounds(100, 100, 813, 540);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -556,7 +556,7 @@ public class Project {
 					check_Earphone_second = false;
 				} else {
 
-					JOptionPane.showMessageDialog(null, "ERROR: Something is wrong!", "Message",
+					JOptionPane.showMessageDialog(null, "ERROR: Try again!", "Message",
 							JOptionPane.ERROR_MESSAGE);
 
 				}
@@ -1606,16 +1606,16 @@ public class Project {
 		txtOrderList.setBounds(65, 74, 669, 59);
 		orderlist.add(txtOrderList);
 
-		/* table to textFiled */
-		// table = new JTable();
-		// table.setBounds(65, 165, 669, 287);
-		// orderlist.add(table);
+
 
 		/* text Area */
 		JTextArea textArea = new JTextArea();
 
 		textArea.setBounds(65, 165, 669, 287);
-		orderlist.add(new JScrollPane(textArea)); // 확인필요!!!!!!!!!!!
+		JScrollPane scrollPane = new JScrollPane(textArea);
+		
+		//orderlist.add(new JScrollPane(textArea)); // 확인필요!!!!!!!!!!!
+		
 		orderlist.add(textArea);
 
 		JButton btnNewButton = new JButton("EXPORT FILES");
@@ -1740,6 +1740,7 @@ public class Project {
 			public void actionPerformed(ActionEvent e) {
 				String inputPw = textField_7.getText();
 				if (inputPw.equals(sellerPassword)) {
+					textField_7.setText("");
 					password.setVisible(false);
 					sellermode.setVisible(true);
 				} else {
