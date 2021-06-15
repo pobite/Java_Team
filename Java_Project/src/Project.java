@@ -1959,7 +1959,6 @@ public class Project {
 		password.add(paswordOK);
 
 		
-	      //시작페이지(메인페이지)
 		//시작페이지(메인페이지)
         JPanel main = new JPanel();
         main.setBounds(0, 0, 797, 501);
@@ -1977,30 +1976,30 @@ public class Project {
                  }
               });
               
-                    JButton btnNewButton_2 = new JButton("SELLER");
-                    btnNewButton_2.setFont(new Font("굴림", Font.PLAIN, 17));
-                    btnNewButton_2.addActionListener(new ActionListener() {
-                       public void actionPerformed(ActionEvent e) {
-                          main.setVisible(false);
-                          sellermode.setVisible(true);
-                       }
-                    });
-                    btnNewButton_2.setBounds(412, 192, 294, 235);
-                    main.add(btnNewButton_2);
-                    
-                          txtMode = new JTextField();
-                          txtMode.setText("MODE");
-                          txtMode.setHorizontalAlignment(SwingConstants.CENTER);
-                          txtMode.setFont(new Font("굴림", Font.PLAIN, 20));
-                          txtMode.setColumns(10);
-                          txtMode.setBackground(SystemColor.inactiveCaption);
-                          txtMode.setBounds(65, 74, 669, 59);
-                          main.add(txtMode);
-                          
-                          JButton EXIT = new JButton("EXIT");
-                          EXIT.setForeground(Color.GRAY);
-                          EXIT.setBounds(671, 456, 97, 23);
-                          main.add(EXIT);
+	        JButton btnNewButton_2 = new JButton("SELLER");
+	        btnNewButton_2.setFont(new Font("굴림", Font.PLAIN, 17));
+	        btnNewButton_2.addActionListener(new ActionListener() {
+	           public void actionPerformed(ActionEvent e) {
+	        	   main.setVisible(false);
+	               password.setVisible(true);
+	           }
+	        });
+	        btnNewButton_2.setBounds(412, 192, 294, 235);
+	        main.add(btnNewButton_2);
+	        
+          txtMode = new JTextField();
+          txtMode.setText("MODE");
+          txtMode.setHorizontalAlignment(SwingConstants.CENTER);
+          txtMode.setFont(new Font("굴림", Font.PLAIN, 20));
+          txtMode.setColumns(10);
+          txtMode.setBackground(SystemColor.inactiveCaption);
+          txtMode.setBounds(65, 74, 669, 59);
+          main.add(txtMode);
+          
+          JButton EXIT = new JButton("EXIT");
+          EXIT.setForeground(Color.GRAY);
+          EXIT.setBounds(671, 456, 97, 23);
+          main.add(EXIT);
 
 	       btnNewButton_9.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e) {
