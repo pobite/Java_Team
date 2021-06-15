@@ -1624,8 +1624,9 @@ public class Project {
 
 		/* text Area */
 		JTextArea textArea = new JTextArea();
-
 		textArea.setBounds(65, 165, 669, 287);
+		
+		
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		
 		scrollPane.setHorizontalScrollBarPolicy( JScrollPane.HORIZONTAL_SCROLLBAR_NEVER );

@@ -20,3 +20,51 @@ Sales of tablet is 0.0
 Sales of acc is 0.0
 ** Sales of all item is 0.0
 
+DATE: 2021-06-15 22:40:06
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPad Air /  /  /  /  / 1099.99 / choose the color / choose the capacity
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 1099.99
+Sales of acc is 0.0
+** Sales of all item is 1099.99
+
+DATE: 2021-06-15 22:41:36
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 0.0
+
+DATE: 2021-06-15 22:45:58
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 0.0
+
+DATE: 2021-06-15 22:48:13
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard / Dong hak / 010-1515-1515- / fdfdf@naver.com / dafdasfDSAfasdf / 1299.99 / choose the color / choose the capacity
+GacBook Air / Àç¿ø´Ô / 123213 / 213231 / 213231 / 2499.99 / Space Gray / 64GB
+GPad Air / ¼ö°æ´Ô / 123-123¤² / 123132 / 13212 / 1099.99 / Space Gray / 128GB
+
+Sales of mobile is 1299.99
+Sales of laptop is 2499.99
+Sales of tablet is 1099.99
+Sales of acc is 0.0
+** Sales of all item is 4899.97
+

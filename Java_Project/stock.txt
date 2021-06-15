@@ -20,3 +20,25 @@ Total tablet is 0
 Total acc is 0
 ** All order item is 0
 
+DATE: 2021-06-15 22:42:48
+
+================ Stock =================
+   Product   /  Total order quantity   /  Stock  
+GPhone13 cutie / 0 / 53
+GPhone13 standard / 0 / 49
+GPhone13 Maximus / 0 / 49
+GacBook Air / 0 / 49
+GacBook Pro / 0 / 47
+GPad Air / 0 / 53
+GPad Pro / 0 / 48
+G-Keyboard / 0 / 50
+G-Mouse / 0 / 48
+GPod / 0 / 53
+GPod Pro / 0 / 47
+
+Total mobile is 0
+Total laptop is 0
+Total tablet is 0
+Total acc is 0
+** All order item is 0
+
