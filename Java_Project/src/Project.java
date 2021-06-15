@@ -315,9 +315,7 @@ public class Project {
 		textArea.append("Sales of acc is " + Acc_sales +"\n");
 		textArea.append("** Sales of all item is " + All_sales + "\n");
 		
-	
-		
-		outputStream.flush();
+
 	}
 
 	public static void printInventory() {
@@ -358,9 +356,6 @@ public class Project {
 
 	}
 
-	/**
-	 * Launch the application.
-	 */
 
 	/**
 	 * Create the application.
@@ -1497,7 +1492,7 @@ public class Project {
 		txtMobile.setBounds(65, 74, 669, 59);
 		mobile.add(txtMobile);
 
-		JButton btnNewButton_5 = new JButton("G-IPHONE 12");
+		JButton btnNewButton_5 = new JButton("G-PHONE 13");
 		btnNewButton_5.setBounds(84, 364, 172, 41);
 		mobile.add(btnNewButton_5);
 		btnNewButton_5.addActionListener(new ActionListener() {
@@ -1507,7 +1502,7 @@ public class Project {
 			}
 		});
 
-		JButton btnNewButton_5_1 = new JButton("G-IPHONE 12 PRO");
+		JButton btnNewButton_5_1 = new JButton("G-PHONE 13 PRO");
 		btnNewButton_5_1.setBounds(311, 364, 172, 41);
 		mobile.add(btnNewButton_5_1);
 		btnNewButton_5_1.addActionListener(new ActionListener() {
@@ -1517,7 +1512,7 @@ public class Project {
 			}
 		});
 
-		JButton btnNewButton_5_2 = new JButton("G-IPHONE 12 MINI");
+		JButton btnNewButton_5_2 = new JButton("G-PHONE 13 MINI");
 		btnNewButton_5_2.setBounds(537, 364, 172, 41);
 		mobile.add(btnNewButton_5_2);
 		btnNewButton_5_2.addActionListener(new ActionListener() {
@@ -1637,248 +1632,49 @@ public class Project {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arge) {
 				printOrder(textArea);
+				outputStream.flush();
 				
 
 			}
 		});
 
-		// ºø∑Ø¿¸øÎ ¿Œ∫•≈‰∏Æ ∆‰¿Ã¡ˆ
+		//ºø∑Ø¿¸øÎ ¿Œ∫•≈‰∏Æ ∆‰¿Ã¡ˆ
+	      JPanel inventory = new JPanel();
+	      inventory.setBounds(0, 0, 797, 501);
+	      frame.getContentPane().add(inventory);
+	      inventory.setLayout(null);
+	      inventory.setVisible(false);
 
-        JPanel inventory = new JPanel();
-        inventory.setBounds(0, 0, 797, 501);
-        frame.getContentPane().add(inventory);
-        inventory.setLayout(null);
-        inventory.setVisible(false);
-        
-		  txtInventory = new JTextField();
-		  txtInventory.setText("INVENTORY");
-		  txtInventory.setHorizontalAlignment(SwingConstants.CENTER);
-		  txtInventory.setFont(new Font("±º∏≤", Font.PLAIN, 20));
-		  txtInventory.setColumns(10);
-		  txtInventory.setBackground(SystemColor.inactiveCaption);
-		  txtInventory.setBounds(65, 74, 669, 59);
-		  inventory.add(txtInventory);
-	        
-	              JButton btnNewButton_10 = new JButton("EXPORT FILES");
+	      txtInventory = new JTextField();
+	      txtInventory.setText("INVENTORY");
+	      txtInventory.setHorizontalAlignment(SwingConstants.CENTER);
+	      txtInventory.setFont(new Font("±º∏≤", Font.PLAIN, 20));
+	      txtInventory.setColumns(10);
+	      txtInventory.setBackground(SystemColor.inactiveCaption);
+	      txtInventory.setBounds(65, 74, 669, 59);
+	      inventory.add(txtInventory);
+
+	      table_1 = new JTable();
+	      table_1.setBounds(65, 165, 669, 287);
+	      inventory.add(table_1);
+
+	      JButton btnNewButton_10 = new JButton("EXPORT FILES");
 	      btnNewButton_10.setBounds(608, 33, 126, 23);
 	      inventory.add(btnNewButton_10);
-	      
-	      JLabel cutie13 = new JLabel("G-phone 13 cutie");
-	      cutie13.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      cutie13.setBounds(130, 172, 151, 28);
-	      inventory.add(cutie13);
-	      
-	      JLabel standard13 = new JLabel("G-phone 13 standard");
-	      standard13.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      standard13.setBounds(130, 197, 167, 28);
-	      inventory.add(standard13);
-	      
-	      JLabel maximus13 = new JLabel("G-phone 13 maximus");
-	      maximus13.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      maximus13.setBounds(130, 223, 160, 28);
-	      inventory.add(maximus13);
-	      
-	      cutie13_b = new JTextField();
-	      cutie13_b.setBounds(330, 175, 190, 23);
-	      inventory.add(cutie13_b);
-	      cutie13_b.setColumns(10);
-	      
-	      JButton cutie13_p = new JButton("+");
-	      cutie13_p.setBounds(554, 175, 44, 23);
-	      inventory.add(cutie13_p);
-	      
-	      JButton cutie13_m = new JButton("-");
-	      cutie13_m.setBounds(608, 175, 44, 23);
-	      inventory.add(cutie13_m);
-	      
-	      standard13_b = new JTextField();
-	      standard13_b.setColumns(10);
-	      standard13_b.setBounds(330, 200, 190, 23);
-	      inventory.add(standard13_b);
-	      
-	      JButton standard13_p = new JButton("+");
-	      standard13_p.setBounds(554, 201, 44, 23);
-	      inventory.add(standard13_p);
-	      
-	      JButton standard13_m = new JButton("-");
-	      standard13_m.setBounds(608, 201, 44, 23);
-	      inventory.add(standard13_m);
-	      
-	      JLabel padair = new JLabel("G-pad air");
-	      padair.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      padair.setBounds(130, 249, 160, 28);
-	      inventory.add(padair);
-	      
-	      JLabel padpro = new JLabel("G-pad pro");
-	      padpro.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      padpro.setBounds(130, 275, 160, 28);
-	      inventory.add(padpro);
-	      
-	      JLabel bookair = new JLabel("G-acbook air");
-	      bookair.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      bookair.setBounds(130, 302, 160, 28);
-	      inventory.add(bookair);
-	      
-	      JLabel bookpro = new JLabel("G-acbook pro");
-	      bookpro.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      bookpro.setBounds(130, 328, 160, 28);
-	      inventory.add(bookpro);
-	      
-	      JLabel podstand = new JLabel("G-pod standard");
-	      podstand.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      podstand.setBounds(130, 354, 160, 28);
-	      inventory.add(podstand);
-	      
-	      JLabel podpro = new JLabel("G-pod pro");
-	      podpro.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      podpro.setBounds(130, 378, 160, 28);
-	      inventory.add(podpro);
-	      
-	      JLabel mouse = new JLabel("G-mouse");
-	      mouse.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      mouse.setBounds(130, 402, 160, 28);
-	      inventory.add(mouse);
-	      
-	      JLabel keyboard = new JLabel("G-keyboard");
-	      keyboard.setFont(new Font("±º∏≤", Font.PLAIN, 15));
-	      keyboard.setBounds(130, 426, 160, 28);
-	      inventory.add(keyboard);
-	      
-	      maximus13_b = new JTextField();
-	      maximus13_b.setColumns(10);
-	      maximus13_b.setBounds(330, 227, 190, 23);
-	      inventory.add(maximus13_b);
-	      
-	      JButton maximus13_p = new JButton("+");
-	      maximus13_p.setBounds(554, 228, 44, 23);
-	      inventory.add(maximus13_p);
-	      
-	      JButton maximus13_m = new JButton("-");
-	      maximus13_m.setBounds(608, 228, 44, 23);
-	      inventory.add(maximus13_m);
-	      
-	      padair_b = new JTextField();
-	      padair_b.setColumns(10);
-	      padair_b.setBounds(330, 253, 190, 23);
-	      inventory.add(padair_b);
-	      
-	      JButton padair_p = new JButton("+");
-	      padair_p.setBounds(554, 254, 44, 23);
-	      inventory.add(padair_p);
-	      
-	      JButton padair_m = new JButton("-");
-	      padair_m.setBounds(608, 254, 44, 23);
-	      inventory.add(padair_m);
-	      
-	      padpro_b = new JTextField();
-	      padpro_b.setColumns(10);
-	      padpro_b.setBounds(330, 279, 190, 23);
-	      inventory.add(padpro_b);
-	      
-	      JButton padpro_p = new JButton("+");
-	      padpro_p.setBounds(554, 280, 44, 23);
-	      inventory.add(padpro_p);
-	      
-	      JButton padpro_m = new JButton("-");
-	      padpro_m.setBounds(608, 280, 44, 23);
-	      inventory.add(padpro_m);
-	      
-	      bookair_b = new JTextField();
-	      bookair_b.setColumns(10);
-	      bookair_b.setBounds(330, 306, 190, 23);
-	      inventory.add(bookair_b);
-	      
-	      JButton bookair_p = new JButton("+");
-	      bookair_p.setBounds(554, 307, 44, 23);
-	      inventory.add(bookair_p);
-	      
-	      JButton bookair_m = new JButton("-");
-	      bookair_m.setBounds(608, 307, 44, 23);
-	      inventory.add(bookair_m);
-	      
-	      bookpro_b = new JTextField();
-	      bookpro_b.setColumns(10);
-	      bookpro_b.setBounds(330, 332, 190, 23);
-	      inventory.add(bookpro_b);
-	      
-	      JButton bookpro_p = new JButton("+");
-	      bookpro_p.setBounds(554, 333, 44, 23);
-	      inventory.add(bookpro_p);
-	      
-	      JButton bookpro_m = new JButton("-");
-	      bookpro_m.setBounds(608, 333, 44, 23);
-	      inventory.add(bookpro_m);
-	      
-	      podstand_b = new JTextField();
-	      podstand_b.setColumns(10);
-	      podstand_b.setBounds(330, 358, 190, 23);
-	      inventory.add(podstand_b);
-	      
-	      JButton podstand_p = new JButton("+");
-	      podstand_p.setBounds(554, 359, 44, 23);
-	      inventory.add(podstand_p);
-	      
-	      JButton podstand_m = new JButton("-");
-	      podstand_m.setBounds(608, 359, 44, 23);
-	      inventory.add(podstand_m);
-	      
-	      podpro_b = new JTextField();
-	      podpro_b.setColumns(10);
-	      podpro_b.setBounds(330, 382, 190, 23);
-	      inventory.add(podpro_b);
-	      
-	      JButton podpro_p = new JButton("+");
-	      podpro_p.setBounds(554, 383, 44, 23);
-	      inventory.add(podpro_p);
-	      
-	      JButton podpro_m = new JButton("-");
-	      podpro_m.setBounds(608, 383, 44, 23);
-	      inventory.add(podpro_m);
-	      
-	      mouse_b = new JTextField();
-	      mouse_b.setColumns(10);
-	      mouse_b.setBounds(330, 406, 190, 23);
-	      inventory.add(mouse_b);
-	      
-	      JButton mouse_p = new JButton("+");
-	      mouse_p.setBounds(554, 407, 44, 23);
-	      inventory.add(mouse_p);
-	      
-	      JButton mouse_m = new JButton("-");
-	      mouse_m.setBounds(608, 407, 44, 23);
-	      inventory.add(mouse_m);
-	      
-	      keyboard_b = new JTextField();
-	      keyboard_b.setColumns(10);
-	      keyboard_b.setBounds(330, 431, 190, 23);
-	      inventory.add(keyboard_b);
-	      
-	      JButton keyboard_p = new JButton("+");
-	      keyboard_p.setBounds(554, 431, 44, 23);
-	      inventory.add(keyboard_p);
-	      
-	      JButton keyboard_m = new JButton("-");
-	      keyboard_m.setBounds(608, 431, 44, 23);
-	      inventory.add(keyboard_m);
 
-
-		JButton btnNewButton_10 = new JButton("EXPORT FILES");
-		btnNewButton_10.setBounds(608, 33, 126, 23);
-		inventory.add(btnNewButton_10);
-
-		JButton inventoryHome = new JButton("HOME");
-		inventoryHome.setForeground(Color.BLUE);
-		inventoryHome.setFont(new Font("±º∏≤", Font.PLAIN, 14));
-		inventoryHome.setBackground(Color.LIGHT_GRAY);
-		inventoryHome.setBounds(717, 455, 80, 46);
-		inventory.add(inventoryHome);
-
-		btnNewButton_10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arge) {
-				printInventory();
-				outputStream_stock.flush();
-			}
-		});
+	      JButton inventoryHome = new JButton("HOME");
+	      inventoryHome.setForeground(Color.BLUE);
+	      inventoryHome.setFont(new Font("±º∏≤", Font.PLAIN, 14));
+	      inventoryHome.setBackground(Color.LIGHT_GRAY);
+	      inventoryHome.setBounds(717, 455, 80, 46);
+	      inventory.add(inventoryHome);
+	      
+	      btnNewButton_10.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent arge) {
+	             printInventory();
+	             outputStream_stock.flush();
+	          }
+	       });
 
 		// ºø∑Ø¿¸øÎ ∏ﬁ¥∫ ∆‰¿Ã¡ˆ
 		JPanel sellermode = new JPanel();
@@ -1955,62 +1751,64 @@ public class Project {
 		paswordOK.setBounds(379, 278, 91, 45);
 		password.add(paswordOK);
 
-		// Ω√¿€∆‰¿Ã¡ˆ(∏ﬁ¿Œ∆‰¿Ã¡ˆ)
-		//Ω√¿€∆‰¿Ã¡ˆ(∏ﬁ¿Œ∆‰¿Ã¡ˆ)
-        JPanel main = new JPanel();
-        main.setBounds(0, 0, 797, 501);
-        frame.getContentPane().add(main);
-        main.setLayout(null);
-        
-              JButton userBtn = new JButton("USER");
-              userBtn.setFont(new Font("±º∏≤", Font.PLAIN, 17));
-              userBtn.setBounds(87, 192, 294, 235);
-              main.add(userBtn);
-              userBtn.addActionListener(new ActionListener() {
-                 public void actionPerformed(ActionEvent arg1) {
-                    main.setVisible(false);
-                    menu.setVisible(true);
-                 }
-              });
-              
-                    JButton btnNewButton_2 = new JButton("SELLER");
-                    btnNewButton_2.setFont(new Font("±º∏≤", Font.PLAIN, 17));
-                    btnNewButton_2.addActionListener(new ActionListener() {
-                       public void actionPerformed(ActionEvent e) {
-                          main.setVisible(false);
-                          sellermode.setVisible(true);
-                       }
-                    });
-                    btnNewButton_2.setBounds(412, 192, 294, 235);
-                    main.add(btnNewButton_2);
-                    
-                          txtMode = new JTextField();
-                          txtMode.setText("MODE");
-                          txtMode.setHorizontalAlignment(SwingConstants.CENTER);
-                          txtMode.setFont(new Font("±º∏≤", Font.PLAIN, 20));
-                          txtMode.setColumns(10);
-                          txtMode.setBackground(SystemColor.inactiveCaption);
-                          txtMode.setBounds(65, 74, 669, 59);
-                          main.add(txtMode);
-                          
-                          JButton EXIT = new JButton("EXIT");
-                          EXIT.setForeground(Color.GRAY);
-                          EXIT.setBounds(671, 456, 97, 23);
-                          main.add(EXIT);
+		
+	      //Ω√¿€∆‰¿Ã¡ˆ(∏ﬁ¿Œ∆‰¿Ã¡ˆ)
+	      JPanel main = new JPanel();
+	      main.setBounds(0, 0, 797, 501);
+	      frame.getContentPane().add(main);
+	      main.setLayout(null);
 
-		
-		
-		
-		orderlistHome.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				/* reset */
-				textArea.setText("");
-				
-				orderlist.setVisible(false);
-				main.setVisible(true);
-			}
-		});
+	      JButton userBtn = new JButton("USER");
+	      userBtn.setFont(new Font("±º∏≤", Font.PLAIN, 17));
+	      userBtn.setBounds(87, 192, 294, 235);
+	      main.add(userBtn);
+	      userBtn.addActionListener(new ActionListener() {
+	         public void actionPerformed(ActionEvent arg1) {
+	            main.setVisible(false);
+	            menu.setVisible(true);
+	         }
+	      });
+
+	      JButton btnNewButton_2 = new JButton("SELLER");
+	      btnNewButton_2.setFont(new Font("±º∏≤", Font.PLAIN, 17));
+	      btnNewButton_2.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent e) {
+	             main.setVisible(false);
+	             password.setVisible(true);
+	          }
+	       });
+	       btnNewButton_2.setBounds(412, 192, 294, 235);
+	       main.add(btnNewButton_2);
+
+	       txtMode = new JTextField();
+	       txtMode.setText("MODE");
+	       txtMode.setHorizontalAlignment(SwingConstants.CENTER);
+	       txtMode.setFont(new Font("±º∏≤", Font.PLAIN, 20));
+	       txtMode.setColumns(10);
+	       txtMode.setBackground(SystemColor.inactiveCaption);
+	       txtMode.setBounds(65, 74, 669, 59);
+	       main.add(txtMode);
+	       btnNewButton_9.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent e) {
+	             order.setVisible(false);
+	             main.setVisible(true);
+	          }
+	       });
+	       inventoryHome.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent e) {
+	             inventory.setVisible(false);
+	             main.setVisible(true);
+	          }
+	       });
+	       orderlistHome.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent e) {
+	        	  
+	        	  /* reset */
+				 textArea.setText("");
+	             orderlist.setVisible(false);
+	             main.setVisible(true);
+	          }
+	       });
 	}
 
 	public static void main(String[] args) {
@@ -2070,9 +1868,8 @@ public class Project {
 
 		});
 
-		/* file outputStream close */
-		outputStream.close();
-		outputStream_stock.close();
+	
+		
 
 	}
 
