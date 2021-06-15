@@ -164,3 +164,14 @@ Sales of tablet is 0.0
 Sales of acc is 0.0
 ** Sales of all item is 7700.0
 
+DATE: 2021-06-15 20:58:25
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+
+Sales of mobile is 0.0
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 0.0
+
