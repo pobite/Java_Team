@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.ScrollPane;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +12,7 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.text.SimpleDateFormat;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -20,7 +21,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -45,6 +48,7 @@ public class Project {
    private JTextField txtMenu;
    private JTextField textField_7;
    
+   private JTextArea textArea;
    
    private String itemColor;
    private String itemCapacity;
@@ -222,6 +226,10 @@ public class Project {
 			 
 			 String time1 = format1.format(time);
 			 outputStream.println("DATE: " + time1);
+			 
+			 
+			 //
+			 //textArea = g
 			 
 			 
 			 /* main order list */
@@ -1640,11 +1648,21 @@ public class Project {
       txtOrderList.setBackground(SystemColor.inactiveCaption);
       txtOrderList.setBounds(65, 74, 669, 59);
       orderlist.add(txtOrderList);
+      
+      /* table to textFiled */
+      // table = new JTable();
+      // table.setBounds(65, 165, 669, 287);
+      //orderlist.add(table);
+      
+      /* text Area */
+      JTextArea textArea = new JTextArea();
+      
+      textArea.setBounds(65, 165, 669, 287);
+      orderlist.add(new JScrollPane(textArea));	// 확인필요!!!!!!!!!!!
+      orderlist.add(textArea);
+     
 
-      table = new JTable();
-      table.setBounds(65, 165, 669, 287);
-      orderlist.add(table);
-
+      
       JButton btnNewButton = new JButton("EXPORT FILES");
       btnNewButton.setBounds(608, 33, 126, 23);
       orderlist.add(btnNewButton);
@@ -1659,7 +1677,7 @@ public class Project {
       btnNewButton.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent arge) {
         	  printOrder();
-        	  outputStream.close();
+
           }
        });
       
