@@ -1965,27 +1965,27 @@ public class Project {
         frame.getContentPane().add(main);
         main.setLayout(null);
         
-              JButton userBtn = new JButton("USER");
-              userBtn.setFont(new Font("±¼¸²", Font.PLAIN, 17));
-              userBtn.setBounds(87, 192, 294, 235);
-              main.add(userBtn);
-              userBtn.addActionListener(new ActionListener() {
-                 public void actionPerformed(ActionEvent arg1) {
-                    main.setVisible(false);
-                    menu.setVisible(true);
-                 }
-              });
-              
-	        JButton btnNewButton_2 = new JButton("SELLER");
-	        btnNewButton_2.setFont(new Font("±¼¸²", Font.PLAIN, 17));
-	        btnNewButton_2.addActionListener(new ActionListener() {
-	           public void actionPerformed(ActionEvent e) {
-	        	   main.setVisible(false);
-	               password.setVisible(true);
-	           }
-	        });
-	        btnNewButton_2.setBounds(412, 192, 294, 235);
-	        main.add(btnNewButton_2);
+          JButton userBtn = new JButton("USER");
+          userBtn.setFont(new Font("±¼¸²", Font.PLAIN, 17));
+          userBtn.setBounds(87, 192, 294, 235);
+          main.add(userBtn);
+          userBtn.addActionListener(new ActionListener() {
+             public void actionPerformed(ActionEvent arg1) {
+                main.setVisible(false);
+                menu.setVisible(true);
+             }
+          });
+          
+        JButton btnNewButton_2 = new JButton("SELLER");
+        btnNewButton_2.setFont(new Font("±¼¸²", Font.PLAIN, 17));
+        btnNewButton_2.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+        	   main.setVisible(false);
+               password.setVisible(true);
+           }
+        });
+        btnNewButton_2.setBounds(412, 192, 294, 235);
+        main.add(btnNewButton_2);
 	        
           txtMode = new JTextField();
           txtMode.setText("MODE");
