@@ -1623,16 +1623,14 @@ public class Project {
 
 
 		/* text Area */
-		JTextArea textArea = new JTextArea();
+		JTextArea textArea = new JTextArea(7, 20);
 		textArea.setBounds(65, 165, 669, 287);
 		
-		
+		/*
 		JScrollPane scrollPane = new JScrollPane(textArea);
-		
-		scrollPane.setHorizontalScrollBarPolicy( JScrollPane.HORIZONTAL_SCROLLBAR_NEVER );
-		scrollPane.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS );
-		
-		orderlist.add(scrollPane);
+		scrollPane.setBounds(65, 165, 669, 287);
+		*/
+		orderlist.add(textArea);
 		
 		
 		//orderlist.add(new JScrollPane(textArea)); // 확인필요!!!!!!!!!!!
