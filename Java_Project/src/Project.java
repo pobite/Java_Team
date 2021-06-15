@@ -372,7 +372,9 @@ public class Project {
 	/**
 	 * Create the application.
 	 */
-
+	
+	
+	
 	public Project() {
 		initialize();
 	}
@@ -633,7 +635,7 @@ public class Project {
 
 		JLabel nameLabel1 = new JLabel("G-Phone 13 Cutie - $899.99");
 		nameLabel1.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel1.setBounds(40, 360, 370, 100);
+		nameLabel1.setBounds(80, 360, 370, 100);
 		phone1.add(nameLabel1);
 
 		JButton orderBtn1 = new JButton("Order");
@@ -707,7 +709,7 @@ public class Project {
 
 		JLabel nameLabel2 = new JLabel("G-Phone 13 Standard - $1299.99");
 		nameLabel2.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel2.setBounds(40, 360, 370, 100);
+		nameLabel2.setBounds(80, 360, 370, 100);
 		phone2.add(nameLabel2);
 
 		JButton orderBtn2 = new JButton("Order");
@@ -779,7 +781,7 @@ public class Project {
 
 		JLabel nameLabel = new JLabel("G-Phone 13 Maximus - $2599.99");
 		nameLabel.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel.setBounds(40, 360, 370, 100);
+		nameLabel.setBounds(80, 360, 370, 100);
 		phone3.add(nameLabel);
 
 		JButton orderBtn = new JButton("Order");
@@ -850,7 +852,7 @@ public class Project {
 
 		JLabel nameLabel7 = new JLabel("GPad Air -$1099.99");
 		nameLabel7.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel7.setBounds(40, 360, 370, 100);
+		nameLabel7.setBounds(80, 360, 370, 100);
 		pad1.add(nameLabel7);
 
 		JButton orderBtn7 = new JButton("Order");
@@ -921,7 +923,7 @@ public class Project {
 
 		JLabel nameLabel6 = new JLabel("GPad Pro - $2799.99");
 		nameLabel6.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel6.setBounds(40, 360, 370, 100);
+		nameLabel6.setBounds(80, 360, 370, 100);
 		pad2.add(nameLabel6);
 
 		JButton orderBtn6 = new JButton("Order");
@@ -992,7 +994,7 @@ public class Project {
 
 		JLabel nameLabel4 = new JLabel("Gac Book Air - $2499.99");
 		nameLabel4.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel4.setBounds(40, 360, 370, 100);
+		nameLabel4.setBounds(80, 360, 370, 100);
 		book1.add(nameLabel4);
 
 		JButton orderBtn4 = new JButton("Order");
@@ -1063,7 +1065,7 @@ public class Project {
 
 		JLabel nameLabel5 = new JLabel("Gac Book Pro - $7700.00");
 		nameLabel5.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel5.setBounds(40, 360, 370, 100);
+		nameLabel5.setBounds(80, 360, 370, 100);
 		book2.add(nameLabel5);
 
 		JButton orderBtn5 = new JButton("Order");
@@ -1124,7 +1126,7 @@ public class Project {
 
 		JLabel nameLabel8 = new JLabel("GPod Standard - $156.75");
 		nameLabel8.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel8.setBounds(40, 360, 370, 100);
+		nameLabel8.setBounds(80, 360, 370, 100);
 		pod1.add(nameLabel8);
 
 		JButton orderBtn8 = new JButton("Order");
@@ -1184,7 +1186,7 @@ public class Project {
 
 		JLabel nameLabel9 = new JLabel("GPod Pro - $320.25");
 		nameLabel9.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel9.setBounds(40, 360, 370, 100);
+		nameLabel9.setBounds(80, 360, 370, 100);
 		pod2.add(nameLabel9);
 
 		JButton orderBtn9 = new JButton("Order");
@@ -1244,7 +1246,7 @@ public class Project {
 
 		JLabel nameLabel10 = new JLabel("G-Mouse - $29.99");
 		nameLabel10.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel10.setBounds(40, 360, 370, 100);
+		nameLabel10.setBounds(80, 360, 370, 100);
 		mouse.add(nameLabel10);
 
 		JButton orderBtn10 = new JButton("Order");
@@ -1304,7 +1306,7 @@ public class Project {
 
 		JLabel nameLabel11 = new JLabel("G-Keyboard - $59.99");
 		nameLabel11.setFont(new Font("ÇÑÄÄ °íµñ", Font.BOLD, 20));
-		nameLabel11.setBounds(40, 360, 370, 100);
+		nameLabel11.setBounds(80, 360, 370, 100);
 		keyboard.add(nameLabel11);
 
 		JButton orderBtn11 = new JButton("Order");
@@ -1626,6 +1628,12 @@ public class Project {
 		textArea.setBounds(65, 165, 669, 287);
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		
+		scrollPane.setHorizontalScrollBarPolicy( JScrollPane.HORIZONTAL_SCROLLBAR_NEVER );
+		scrollPane.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS );
+		
+		orderlist.add(scrollPane);
+		
+		
 		//orderlist.add(new JScrollPane(textArea)); // È®ÀÎÇÊ¿ä!!!!!!!!!!!
 		
 		orderlist.add(textArea);
@@ -1681,6 +1689,14 @@ public class Project {
 	      JButton btnNewButton_10 = new JButton("EXPORT FILES");
 	      btnNewButton_10.setBounds(608, 33, 126, 23);
 	      inventory.add(btnNewButton_10);
+	      
+	      btnNewButton_10.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent arge) {
+	             printInventory();
+	             outputStream_stock.flush();
+	          }
+	       });
+	      
 	      
 	      JLabel cutie13 = new JLabel("G-phone 13 cutie");
 	      cutie13.setFont(new Font("±¼¸²", Font.PLAIN, 15));
@@ -1879,9 +1895,181 @@ public class Project {
 	      JButton keyboard_m = new JButton("-");
 	      keyboard_m.setBounds(608, 431, 44, 23);
 	      inventory.add(keyboard_m);
-
-
-
+	      
+	      
+	      /* plus & minus button listener */
+	      
+	      cutie13_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					cutie13_b.setText(Integer.toString(++Mobile_first.stock));
+				}
+			});
+	      
+	      cutie13_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					cutie13_b.setText(Integer.toString(--Mobile_first.stock));
+				}
+			});
+	      
+	      
+	      standard13_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					standard13_b.setText(Integer.toString(++Mobile_second.stock));
+				}
+			});
+	      
+	      standard13_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					int num = Integer.parseInt(standard13_b.getText().trim());
+					standard13_b.setText(Integer.toString(--Mobile_second.stock));
+				}
+			});
+	      
+	      
+	      maximus13_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					maximus13_b.setText(Integer.toString(++Mobile_third.stock));
+				}
+			});
+	      
+	      maximus13_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					maximus13_b.setText(Integer.toString(--Mobile_third.stock));
+				}
+			});
+	      
+	      
+	      padair_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					padair_b.setText(Integer.toString(++Tablet_first.stock));
+				}
+			});
+	      
+	      padair_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					padair_b.setText(Integer.toString(--Tablet_first.stock));
+				}
+			});
+	      
+	      
+	      padpro_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					padpro_b.setText(Integer.toString(++Tablet_second.stock));
+				}
+			});
+	      
+	      padpro_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					padpro_b.setText(Integer.toString(--Tablet_second.stock));
+				}
+			});
+	      
+	      
+	      bookair_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					bookair_b.setText(Integer.toString(++Laptop_first.stock));
+				}
+			});
+	      
+	      bookair_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					bookair_b.setText(Integer.toString(--Laptop_first.stock));
+				}
+			});
+	      
+	      
+	      bookpro_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					bookpro_b.setText(Integer.toString(++Laptop_second.stock));
+				}
+			});
+	      
+	      bookpro_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					bookpro_b.setText(Integer.toString(--Laptop_second.stock));
+				}
+			});
+	      
+	      
+	      podstand_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					podstand_b.setText(Integer.toString(++Earphone_first.stock));
+				}
+			});
+	      
+	      podstand_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					podstand_b.setText(Integer.toString(--Earphone_first.stock));
+				}
+			});
+	      
+	      
+	      podpro_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					podpro_b.setText(Integer.toString(++Earphone_second.stock));
+				}
+			});
+	      
+	      podpro_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					podpro_b.setText(Integer.toString(--Earphone_second.stock));
+				}
+			});
+	      
+	      
+	      mouse_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					mouse_b.setText(Integer.toString(++Mouse_first.stock));
+				}
+			});
+	      
+	      mouse_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					mouse_b.setText(Integer.toString(--Mouse_first.stock));
+				}
+			});
+	      
+	      
+	      keyboard_p.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					keyboard_b.setText(Integer.toString(++Keyboard_first.stock));
+				}
+			});
+	      
+	      keyboard_m.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arge) {
+					
+					keyboard_b.setText(Integer.toString(--Keyboard_first.stock));
+				}
+			});
+	      
+	      
+	      
+	      
+	      
+	      
+	     
 		// ¼¿·¯Àü¿ë ¸Þ´º ÆäÀÌÁö
 		JPanel sellermode = new JPanel();
 		sellermode.setBounds(0, 0, 797, 501);
@@ -1898,6 +2086,9 @@ public class Project {
 			public void actionPerformed(ActionEvent e) {
 				sellermode.setVisible(false);
 				orderlist.setVisible(true);
+				
+		
+				
 			}
 		});
 
@@ -1910,6 +2101,21 @@ public class Project {
 			public void actionPerformed(ActionEvent e) {
 				sellermode.setVisible(false);
 				inventory.setVisible(true);
+				
+				  cutie13_b.setText(Integer.toString(Mobile_first.stock));
+				  standard13_b.setText(Integer.toString(Mobile_second.stock));
+				  maximus13_b.setText(Integer.toString(Mobile_third.stock));
+				  padair_b.setText(Integer.toString(Tablet_first.stock));
+				  padpro_b.setText(Integer.toString(Tablet_second.stock));
+				  bookair_b.setText(Integer.toString(Laptop_first.stock));
+				  bookpro_b.setText(Integer.toString(Laptop_second.stock));
+				  podstand_b.setText(Integer.toString(Earphone_first.stock));
+				  podpro_b.setText(Integer.toString(Earphone_second.stock));
+				  mouse_b.setText(Integer.toString(Mouse_first.stock));;
+				  keyboard_b.setText(Integer.toString(Keyboard_first.stock));;
+				
+				
+				
 			}
 		});
 
