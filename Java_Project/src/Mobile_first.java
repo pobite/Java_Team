@@ -7,7 +7,7 @@ public class Mobile_first extends Mobile implements Calculate {
 	public static int price;
 	
 	public Mobile_first() {
-		
+		  
 		super();
 		
 		setName("GPhone13 cutie");

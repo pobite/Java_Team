@@ -68,10 +68,6 @@ public class Gapple {
 					
 	}
 			
-
-	
-	/* method for subclasses to inherit */
-	/* brand is always same, so compare only name and color */
 	
 	public boolean equls(Gapple otherGapple) {
 		
@@ -179,7 +175,7 @@ public class Gapple {
 
 
 	public String getUserEmail() {
-		return userEmail;
+		return userEmail; 
 	}
 
 
