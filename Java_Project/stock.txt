@@ -1,8 +1,30 @@
-DATE: 2021-06-16 14:12:00
+DATE: 2021-06-16 22:47:54
 
 ================ Stock =================
    Product   /  Total order quantity   /  Stock  
 GPhone13 cutie / 0 / 50
+GPhone13 standard / 1 / 57
+GPhone13 Maximus / 0 / 50
+GacBook Air / 0 / 50
+GacBook Pro / 0 / 55
+GPad Air / 1 / 46
+GPad Pro / 0 / 50
+G-Keyboard / 0 / 50
+G-Mouse / 0 / 50
+GPod / 0 / 49
+GPod Pro / 0 / 50
+
+Total mobile is 1
+Total laptop is 0
+Total tablet is 1
+Total acc is 0
+** All order item is 2
+
+DATE: 2021-06-16 22:49:24
+
+================ Stock =================
+   Product   /  Total order quantity   /  Stock  
+GPhone13 cutie / 1 / 49
 GPhone13 standard / 0 / 50
 GPhone13 Maximus / 0 / 50
 GacBook Air / 0 / 50
@@ -13,50 +35,6 @@ G-Keyboard / 0 / 50
 G-Mouse / 0 / 50
 GPod / 0 / 50
 GPod Pro / 0 / 50
-
-Total mobile is 0
-Total laptop is 0
-Total tablet is 0
-Total acc is 0
-** All order item is 0
-
-DATE: 2021-06-16 21:17:32
-
-================ Stock =================
-   Product   /  Total order quantity   /  Stock  
-GPhone13 cutie / 0 / 50
-GPhone13 standard / 1 / 49
-GPhone13 Maximus / 0 / 50
-GacBook Air / 1 / 49
-GacBook Pro / 0 / 50
-GPad Air / 0 / 50
-GPad Pro / 0 / 50
-G-Keyboard / 0 / 50
-G-Mouse / 0 / 50
-GPod / 0 / 50
-GPod Pro / 1 / 49
-
-Total mobile is 1
-Total laptop is 1
-Total tablet is 0
-Total acc is 1
-** All order item is 3
-
-DATE: 2021-06-16 21:34:19
-
-================ Stock =================
-   Product   /  Total order quantity   /  Stock  
-GPhone13 cutie / 0 / 50
-GPhone13 standard / 0 / 54
-GPhone13 Maximus / 1 / 61
-GacBook Air / 0 / 56
-GacBook Pro / 0 / 50
-GPad Air / 0 / 50
-GPad Pro / 0 / 46
-G-Keyboard / 0 / 49
-G-Mouse / 0 / 52
-GPod / 0 / 52
-GPod Pro / 0 / 43
 
 Total mobile is 1
 Total laptop is 0
