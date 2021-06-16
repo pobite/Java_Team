@@ -9,3 +9,29 @@ Sales of tablet is 0.0
 Sales of acc is 0.0
 ** Sales of all item is 0.0
 
+DATE: 2021-06-16 21:17:26
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 standard / LDH / 010-1234-1234 / Seoul / asdf@naver.com / 1299.99 / choose the color / choose the capacity
+GacBook Air / 신은지 / 010-1234-1234 / Gang won do / asdf@naver.com / 2499.99 / Silver / 64GB
+GPod Pro / 수경님 / 010-1234-1234 / 경기도 / asdf@naver.com / 320.25 / White / No storage
+
+Sales of mobile is 1299.99
+Sales of laptop is 2499.99
+Sales of tablet is 0.0
+Sales of acc is 320.25
+** Sales of all item is 4120.23
+
+DATE: 2021-06-16 21:33:19
+
+==================================== Gapple order list =========================================
+   Product    /    Name   /       TEL       /           Address           /            Email           /      Price     /   Color   /    Storage    /
+GPhone13 Maximus / asdfdasf / asdfsdaf / adsfdasf / asdfasdf / 2599.99 / Space Gray / 64GB
+
+Sales of mobile is 2599.99
+Sales of laptop is 0.0
+Sales of tablet is 0.0
+Sales of acc is 0.0
+** Sales of all item is 2599.99
+
